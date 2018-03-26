@@ -293,9 +293,9 @@
       <category term="freebsd" scheme="http://go2n.github.io/categories/freebsd/"/>
     
     
-      <category term="freebsd" scheme="http://go2n.github.io/tags/freebsd/"/>
-    
       <category term="linux" scheme="http://go2n.github.io/tags/linux/"/>
+    
+      <category term="freebsd" scheme="http://go2n.github.io/tags/freebsd/"/>
     
       <category term="php" scheme="http://go2n.github.io/tags/php/"/>
     
@@ -508,6 +508,32 @@
   </entry>
   
   <entry>
+    <title>Applet NetworkManagement digantikan Plasma-nm</title>
+    <link href="http://go2n.github.io/2013/12/22/applet-networkmanagement-digantikan-plasma-nm/"/>
+    <id>http://go2n.github.io/2013/12/22/applet-networkmanagement-digantikan-plasma-nm/</id>
+    <published>2013-12-22T08:31:18.000Z</published>
+    <updated>2018-03-26T08:50:38.674Z</updated>
+    
+    <content type="html"><![CDATA[<p>Saya baru sadar kalau ternyata <code>kdeplasma-applets-networkmanagement</code> sekarang masuk AUR. Sempat bingung juga kok bisa di-drop ke <a href="https://aur.archlinux.org/packages/kdeplasma-applets-networkmanagement/" target="_blank" rel="noopener">AUR</a>. Apakah ada antarmuka grafis baru untuk NetworkManager?<br><a id="more"></a></p><div class="figure center" style="width:;"><a class="fancybox" href="pacman.png" title="" data-caption="" data-fancybox="default"><img class="fig-img" src="pacman.png" alt=""></a></div><p>Setelah membaca <a href="https://wiki.archlinux.org/index.php/NetworkManager#KDE_Plasma" target="_blank" rel="noopener">wiki</a>, ternyata memang ada antarmuka grafis yang baru untuk KDE. Plasma-nm namanya, sama seperti yang lama <code>plasma-nm</code> ini juga merupakan sebuah plasma widget. Namun tampilan applet <code>networkmanagement</code> berbeda dengan applet <code>plasma-nm</code>.</p><p><strong>NetworkManagement vs Plasma-nm</strong><br><div class="figure center" style="width:;"><a class="fancybox" href="nm.png" title="NetworkManagement" data-caption="NetworkManagement" data-fancybox="plasma-nm"><img class="fig-img" src="nm.png" alt="NetworkManagement"></a><span class="caption">NetworkManagement</span></div></p><div class="figure center" style="width:;"><a class="fancybox" href="plasma-nm.png" title="Plasma-nm" data-caption="Plasma-nm" data-fancybox="plasma-nm"><img class="fig-img" src="plasma-nm.png" alt="Plasma-nm"></a><span class="caption">Plasma-nm</span></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Saya baru sadar kalau ternyata &lt;code&gt;kdeplasma-applets-networkmanagement&lt;/code&gt; sekarang masuk AUR. Sempat bingung juga kok bisa di-drop ke &lt;a href=&quot;https://aur.archlinux.org/packages/kdeplasma-applets-networkmanagement/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;AUR&lt;/a&gt;. Apakah ada antarmuka grafis baru untuk NetworkManager?&lt;br&gt;
+    
+    </summary>
+    
+      <category term="linux" scheme="http://go2n.github.io/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="http://go2n.github.io/tags/linux/"/>
+    
+      <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
+    
+      <category term="Plasma" scheme="http://go2n.github.io/tags/Plasma/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Plasma 2 Technology Preview</title>
     <link href="http://go2n.github.io/2013/12/21/plasma-2-technology-preview/"/>
     <id>http://go2n.github.io/2013/12/21/plasma-2-technology-preview/</id>
@@ -528,33 +554,6 @@
       <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
     
       <category term="Plasma" scheme="http://go2n.github.io/tags/Plasma/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>KDE 4.10 di Chakra Linux</title>
-    <link href="http://go2n.github.io/2013/02/11/kde-4-10-di-chakra-linux/"/>
-    <id>http://go2n.github.io/2013/02/11/kde-4-10-di-chakra-linux/</id>
-    <published>2013-02-11T05:59:00.000Z</published>
-    <updated>2018-03-26T07:27:57.000Z</updated>
-    
-    <content type="html"><![CDATA[<div class="figure center" style="width:;"><a class="fancybox" href="snapshot10.png" title="" data-caption="" data-fancybox="default"><img class="fig-img" src="snapshot10.png" alt=""></a></div><center>Woohooo…! Chakra Linux ane sudah pakai KDE 4.10 🤘🏼</center>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;div class=&quot;figure center&quot; style=&quot;width:;&quot;&gt;&lt;a class=&quot;fancybox&quot; href=&quot;snapshot10.png&quot; title=&quot;&quot; data-caption=&quot;&quot; data-fancybox=&quot;default&quot;&gt;&lt;img c
-      
-    
-    </summary>
-    
-      <category term="linux" scheme="http://go2n.github.io/categories/linux/"/>
-    
-    
-      <category term="chakra" scheme="http://go2n.github.io/tags/chakra/"/>
-    
-      <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
     
   </entry>
   
