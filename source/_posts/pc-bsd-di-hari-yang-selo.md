@@ -6,11 +6,11 @@ category: freebsd
 tags:
     - freebsd
     - pcbsd
-    - kde
-keywors:
+    - KDE
+keywords:
     - freebsd
     - pcbsd
-    - kde
+    - KDE
 comments: True
 ---
 
