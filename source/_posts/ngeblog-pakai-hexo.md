@@ -172,4 +172,4 @@ atau
 $ hexo generate -d  # <~ generate blog lalu deploy
 {% endcodeblock %}
 
-Yeaah! Sekarang [go2n.github.io](http://go2n.github.io) sudah pakai Hexo! 🤘 😎
+Yeaah! Sekarang [go2n.github.io](http://go2n.github.io) sudah pakai Hexo! 🤘🏼 😎

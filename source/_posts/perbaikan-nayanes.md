@@ -25,7 +25,7 @@ Saya merasa ada yang aneh dengan hasil pencarian katalog dengan Nayanes pada pen
 
 {% image fancybox nocaption center 2014-03-19-perbaikan-nayanes.png "Nayanes node search" %}
 
-Namun saat Nayanes melakukan pencarian katalog pada satu lokasi (single node search) tidak ada hasil yang ditampilkan. Padahal tidak ada pesan kesalahan, aneh to? :confused:
+Namun saat Nayanes melakukan pencarian katalog pada satu lokasi (single node search) tidak ada hasil yang ditampilkan. Padahal tidak ada pesan kesalahan, aneh to? 😕
 
 Pada mode multiple search node dengan kata kunci pencarian dan lokasi yang sama ada 574 rekaman yang ditampilkan. Nah piye jal? Saking frustasinya saya pun minta bantuan pak Aziz untuk membantu memperbaiki Nayanes.
 
@@ -41,7 +41,7 @@ menjadi:
 $('.no-result-list').append('<li>REQUEST TIMEOUT from <strong><?php echo $sysconf['node'][$nodeid]['desc']; ?></strong></li>')
 {% endcodeblock %}
 
-Setelah diuji coba, akhirnya ada hasil pencarian yang ditampilkan. Memang pak Aziz, senior saya ini juara! Jios pokoke! 👍
+Setelah diuji coba, akhirnya ada hasil pencarian yang ditampilkan. Memang pak Aziz, senior saya ini juara! Jios pokoke! 👍🏼
 
 {% image fancybox center 2014-03-19-perbaikan-nayanes-single.png "Single node search" %}
 
