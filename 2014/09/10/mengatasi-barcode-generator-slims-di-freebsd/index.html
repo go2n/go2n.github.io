@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+<html lang="id">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Gogon">
+    <title>Mengatasi masalah barcode generator SLiMS di Mesin FreeBSD 9.1 - Gogon</title>
+    <meta name="author" content="Gogon">
+    
+        <meta name="keywords" content="freebsd,linux,php,slims,senayan,perpustakaan,library">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":["https://github.com/go2n","https://twitter.com/go2n"],"image":"go2n.jpg"},"articleBody":"Halo…\nAda yang pernah mengalami barcode generator SLiMS yang nge-blank di mesin FreeBSD ndak? Begini permasalahannya, pustakawan Fakultas Teknik meminta saya untuk mengatur masalah barcode yang nge-blank di mesin server dhemit alias FreeBSD. Jadi beliau pada saat mau generate barcode melalui menu System &gt; Barcode Generator, SLiMS tidak menampilkan barcode sama sekali.\nPernah suatu waktu di tahun 2013 saya ubek-ubek forum SLiMS untuk mengatasi hal tersebut. Di thread ini katanya sih gara-gara masalah permissions. Namun, setelah saya chmod +x genbarcode ternyata malah muncul error seperti ini:\n12ELF binary type \"0\" not known../genbarcode: Exec format error. Binary file not executable.\nDalam benak saya waktu itu nggak mungkin bisa file biner Linux dijalankan di FreeBSD. Tanpa pikir panjang saya pun download kode sumber php-barcode kemudian ngompel dan berhasil jalan lewat command line:\n1234$ ./genbarcode 123456 1280211232112232131123331121132131233111211:9:1 16.5:9:2 22:9:3 27.5:9:4 33:9:5 38.5:9:6 code 128\nEh, tapi ternyata saat saya coba masuk halaman admin SLiMS dan mencoba membuat barcode ternyata hasilnya masih blank. Telo! Lha gimana nggak jengkel coba? Sudah mbulet pasang dependensi buat kompel kode di FreeBSD ternyata masih nge-blank. Saat itu kepikiran mau ganti OS dari FreeBSD ke Linux tapi kok ribet backup dan restore data yang sudah ada di server.\nBaru tadi pagi agak siangan dikit saya ngobrol sama mas Arif dan mas Harun mengenai rencana ganti OS. Namun, mas Harun bilang kalau di FreeBSD bisa menjalankan file biner Linux dengan mengatur Linux® Binary Compatibility.\nSetelah memasang hal yang diperlukan sekarang file biner lib/phpbarcode/bin/nix/genbarcode bisa dijalankan tanpa perlu kompel untuk FreeBSD. Sip deh! Masalahnya sudah beres, tinggal perlu mengubah file lib/phpbarcode/php-barcode.php biar barcode yang dibuat melalui menu System &gt; Barcode Generator di mesin FreeBSD muncul.\nBarcode Generator\nBegini Langkahnya\nLoad linux kernel# kldload linux\nCek apakah modul sudah ok1234root@library:/root # kldstat Id Refs Address            Size     Name 1    6 0xffffffff80200000 1323408  kernel 2    1 0xffffffff81612000 1f417    linux.ko\nPasang emulators/linux-base-f10 melalui port\n12345678910root@library:/root # cd /usr/ports/emulators/linux_base-f10root@library:/usr/ports/emulators/linux_base-f10 # make install distclean=&gt; basesystem-10.0-1.noarch.rpm doesn't seem to exist in /usr/ports/distfiles/rpm/i386/fedora/10.=&gt; Attempting to fetch http://critical.ch/distfiles/rpm/i386/fedora/10/basesystem-10.0-1.noarch.rpmbasesystem-10.0-1.noarch.rpm                  100% of 2915  B 7713 kBps=&gt; bash-3.2-30.fc10.i386.rpm doesn't seem to exist in /usr/ports/distfiles/rpm/i386/fedora/10.=&gt; Attempting to fetch http://critical.ch/distfiles/rpm/i386/fedora/10/bash-3.2-30.fc10.i386.rpm....--- TUNGGU SAMPAI SELESAI ---...\n\nTambahkan baris berikut pada /etc/rc.conf biar modul aktif tiap boot:linux_enable=&quot;YES&quot;\n\nEdit file lib/phpbarcode/php-barcode.php menjadi seperti berikut (baris 51):php-barcode.php12345678910111213141516// genbarcode binary locationif (stripos(PHP_OS, 'Darwin') !== false) &#123;    $genbarcode_loc = './bin/darwin/genbarcode';&#125; else if (stripos(PHP_OS, 'Linux') !== false) &#123;    if (PHP_INT_SIZE == 4) &#123;        $genbarcode_loc = './bin/nix/genbarcode';    &#125; elseif (PHP_INT_SIZE == 8) &#123;        $genbarcode_loc = './bin/nix/genbarcode64';    &#125; else &#123;        $genbarcode_loc = './bin/nix/genbarcode';    &#125;&#125; else if (stripos(PHP_OS, 'FreeBSD') !== false) &#123;\t\t$genbarcode_loc = './bin/nix/genbarcode';&#125; else &#123;    $genbarcode_loc = '.\\bin\\win\\genbarcode.exe';&#125;\n\n\nNah! Udah gitu aja…\n","dateCreated":"2014-09-10T00:00:00+07:00","dateModified":"2018-03-11T10:42:37+07:00","datePublished":"2014-09-10T00:00:00+07:00","description":"Halo…\nAda yang pernah mengalami barcode generator SLiMS yang nge-blank di mesin FreeBSD ndak? Begini permasalahannya, pustakawan Fakultas Teknik meminta saya untuk mengatur masalah barcode yang nge-blank di mesin server dhemit alias FreeBSD. Jadi beliau pada saat mau generate barcode melalui menu System &gt; Barcode Generator, SLiMS tidak menampilkan barcode sama sekali.","headline":"Mengatasi masalah barcode generator SLiMS di Mesin FreeBSD 9.1","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":["https://github.com/go2n","https://twitter.com/go2n"],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/","keywords":"freebsd, linux, php, slims, senayan, perpustakaan, library"}</script>
+    <meta name="description" content="Halo… Ada yang pernah mengalami barcode generator SLiMS yang nge-blank di mesin FreeBSD ndak? Begini permasalahannya, pustakawan Fakultas Teknik meminta saya untuk mengatur masalah barcode yang nge-bl">
+<meta name="keywords" content="freebsd,linux,php,slims,senayan,perpustakaan,library">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Mengatasi masalah barcode generator SLiMS di Mesin FreeBSD 9.1">
+<meta property="og:url" content="http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/index.html">
+<meta property="og:site_name" content="Gogon">
+<meta property="og:description" content="Halo… Ada yang pernah mengalami barcode generator SLiMS yang nge-blank di mesin FreeBSD ndak? Begini permasalahannya, pustakawan Fakultas Teknik meminta saya untuk mengatur masalah barcode yang nge-bl">
+<meta property="og:locale" content="id">
+<meta property="og:image" content="http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/barcode-generator-slims-di-freebsd.png">
+<meta property="og:updated_time" content="2018-03-11T03:42:37.189Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mengatasi masalah barcode generator SLiMS di Mesin FreeBSD 9.1">
+<meta name="twitter:description" content="Halo… Ada yang pernah mengalami barcode generator SLiMS yang nge-blank di mesin FreeBSD ndak? Begini permasalahannya, pustakawan Fakultas Teknik meminta saya untuk mengatur masalah barcode yang nge-bl">
+<meta name="twitter:image" content="http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/barcode-generator-slims-di-freebsd.png">
+<meta name="twitter:creator" content="@go2n">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://go2n.github.io/assets/images/go2n.jpg"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-1udptkpril81ozu8ifd8zpujn7ipu7lefxsiu5gxx0dpnzntdx6dusvki3ao.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-41394739-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="4">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">Gogon</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="4">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+                </a>
+                <h4 class="sidebar-profile-name">Gogon</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                            title="Beranda"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Beranda</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                            title="Kategori"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Kategori</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                            title="Tag"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tag</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                            title="Arsip"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Arsip</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                            title="Cari"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Cari</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/about"
+                            
+                            title="Tentang"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tentang</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/go2n" target="_blank" rel="noopener" title="GitHub">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/go2n" target="_blank" rel="noopener" title="Twitter">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                            title="RSS"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="4"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            Mengatasi masalah barcode generator SLiMS di Mesin FreeBSD 9.1
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2014-09-10T00:00:00+07:00">
+	
+		    10 September 2014
+    	
+    </time>
+    
+        <span> |  </span>
+        
+    <a class="category-link" href="/categories/freebsd/">freebsd</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>Halo…</p>
+<p>Ada yang pernah mengalami barcode generator <a href="http://slims.web.id/" target="_blank" rel="noopener">SLiMS</a> yang nge-blank di mesin FreeBSD ndak? Begini permasalahannya, pustakawan Fakultas Teknik meminta saya untuk mengatur masalah barcode yang nge-blank di mesin server dhemit alias FreeBSD. Jadi beliau pada saat mau generate barcode melalui menu <strong>System &gt; Barcode Generator</strong>, SLiMS tidak menampilkan barcode sama sekali.<br><a id="more"></a></p>
+<p>Pernah suatu waktu di tahun 2013 saya ubek-ubek forum SLiMS untuk mengatasi hal tersebut. Di <a href="http://slims.web.id/forum/viewtopic.php?f=38&amp;t=29" target="_blank" rel="noopener">thread ini</a> katanya sih gara-gara masalah permissions. Namun, setelah saya <code>chmod +x genbarcode</code> ternyata malah muncul error seperti ini:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ELF binary <span class="built_in">type</span> <span class="string">"0"</span> not known.</span><br><span class="line">./genbarcode: Exec format error. Binary file not executable.</span><br></pre></td></tr></table></figure>
+<p>Dalam benak saya waktu itu nggak mungkin bisa file biner Linux dijalankan di FreeBSD. Tanpa pikir panjang saya pun download kode sumber <a href="http://www.ashberg.de/php-barcode/" target="_blank" rel="noopener">php-barcode</a> kemudian ngompel dan berhasil jalan lewat command line:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ ./genbarcode 123456 128</span><br><span class="line">02112321122321311233311211321312331112</span><br><span class="line">11:9:1 16.5:9:2 22:9:3 27.5:9:4 33:9:5 38.5:9:6 </span><br><span class="line">code 128</span><br></pre></td></tr></table></figure>
+<p>Eh, tapi ternyata saat saya coba masuk halaman admin SLiMS dan mencoba membuat barcode ternyata hasilnya masih blank. Telo! Lha gimana nggak jengkel coba? Sudah mbulet pasang dependensi buat kompel kode di FreeBSD ternyata masih nge-blank. Saat itu kepikiran mau ganti OS dari FreeBSD ke Linux tapi kok ribet backup dan restore data yang sudah ada di server.</p>
+<p>Baru tadi pagi agak siangan dikit saya ngobrol sama mas <a href="http://twitter.com/arifalien" target="_blank" rel="noopener">Arif</a> dan mas <a href="http://twitter.com/runnov" target="_blank" rel="noopener">Harun</a> mengenai rencana ganti OS. Namun, mas Harun bilang kalau di FreeBSD bisa menjalankan file biner Linux dengan mengatur Linux® Binary Compatibility.</p>
+<p>Setelah memasang hal yang diperlukan sekarang file biner <code>lib/phpbarcode/bin/nix/genbarcode</code> bisa dijalankan tanpa perlu kompel untuk FreeBSD. Sip deh! Masalahnya sudah beres, tinggal perlu mengubah file <code>lib/phpbarcode/php-barcode.php</code> biar barcode yang dibuat melalui menu <strong>System &gt; Barcode Generator</strong> di mesin FreeBSD muncul.</p>
+<div class="figure center" style="width:;"><a class="fancybox" href="barcode-generator-slims-di-freebsd.png" title="Barcode Generator" data-caption="Barcode Generator" data-fancybox="default"><img class="fig-img" src="barcode-generator-slims-di-freebsd.png" alt="Barcode Generator"></a><span class="caption">Barcode Generator</span></div>
+<h3 id="Begini-Langkahnya"><a href="#Begini-Langkahnya" class="headerlink" title="Begini Langkahnya"></a>Begini Langkahnya</h3><ol>
+<li>Load linux kernel<br><code># kldload linux</code></li>
+<li>Cek apakah modul sudah ok<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">root@library:/root # kldstat </span><br><span class="line">Id Refs Address            Size     Name</span><br><span class="line"> 1    6 0xffffffff80200000 1323408  kernel</span><br><span class="line"> 2    1 0xffffffff81612000 1f417    linux.ko</span><br></pre></td></tr></table></figure></li>
+<li><p>Pasang emulators/linux-base-f10 melalui port</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">root@library:/root # cd /usr/ports/emulators/linux_base-f10</span><br><span class="line">root@library:/usr/ports/emulators/linux_base-f10 # make install distclean</span><br><span class="line">=&gt; basesystem-10.0-1.noarch.rpm doesn't seem to exist in /usr/ports/distfiles/rpm/i386/fedora/10.</span><br><span class="line">=&gt; Attempting to fetch http://critical.ch/distfiles/rpm/i386/fedora/10/basesystem-10.0-1.noarch.rpm</span><br><span class="line">basesystem-10.0-1.noarch.rpm                  100% of 2915  B 7713 kBps</span><br><span class="line">=&gt; bash-3.2-30.fc10.i386.rpm doesn't seem to exist in /usr/ports/distfiles/rpm/i386/fedora/10.</span><br><span class="line">=&gt; Attempting to fetch http://critical.ch/distfiles/rpm/i386/fedora/10/bash-3.2-30.fc10.i386.rpm</span><br><span class="line">....</span><br><span class="line">--- TUNGGU SAMPAI SELESAI ---</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Tambahkan baris berikut pada <code>/etc/rc.conf</code> biar modul aktif tiap boot:<br><code>linux_enable=&quot;YES&quot;</code></p>
+</li>
+<li>Edit file <code>lib/phpbarcode/php-barcode.php</code> menjadi seperti berikut (baris 51):<figure class="highlight php"><figcaption><span>php-barcode.php</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// genbarcode binary location</span></span><br><span class="line"><span class="keyword">if</span> (stripos(PHP_OS, <span class="string">'Darwin'</span>) !== <span class="keyword">false</span>) &#123;</span><br><span class="line">    $genbarcode_loc = <span class="string">'./bin/darwin/genbarcode'</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (stripos(PHP_OS, <span class="string">'Linux'</span>) !== <span class="keyword">false</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (PHP_INT_SIZE == <span class="number">4</span>) &#123;</span><br><span class="line">        $genbarcode_loc = <span class="string">'./bin/nix/genbarcode'</span>;</span><br><span class="line">    &#125; <span class="keyword">elseif</span> (PHP_INT_SIZE == <span class="number">8</span>) &#123;</span><br><span class="line">        $genbarcode_loc = <span class="string">'./bin/nix/genbarcode64'</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        $genbarcode_loc = <span class="string">'./bin/nix/genbarcode'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (stripos(PHP_OS, <span class="string">'FreeBSD'</span>) !== <span class="keyword">false</span>) &#123;</span><br><span class="line">		$genbarcode_loc = <span class="string">'./bin/nix/genbarcode'</span>;</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    $genbarcode_loc = <span class="string">'.\bin\win\genbarcode.exe'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>Nah! Udah gitu aja…</p>
+
+            
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">Tag</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/freebsd/">freebsd</a> <a class="tag tag--primary tag--small t-link" href="/tags/library/">library</a> <a class="tag tag--primary tag--small t-link" href="/tags/linux/">linux</a> <a class="tag tag--primary tag--small t-link" href="/tags/perpustakaan/">perpustakaan</a> <a class="tag tag--primary tag--small t-link" href="/tags/php/">php</a> <a class="tag tag--primary tag--small t-link" href="/tags/senayan/">senayan</a> <a class="tag tag--primary tag--small t-link" href="/tags/slims/">slims</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/10/27/owncloud-client-1-6-4/" data-tooltip="ownCloud client 1.6.4" aria-label="PREVIOUS: ownCloud client 1.6.4">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/09/10/owncloud-client-1-6-3/" data-tooltip="ownCloud client 1.6.3" aria-label="NEXT: ownCloud client 1.6.3">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Bagikan postingan ini">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/" title="Bagikan di Facebook">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/" title="Bagikan di Twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/" title="Bagikan di Google+">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                        <i class="fa fa-comment-o"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 Gogon. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/10/27/owncloud-client-1-6-4/" data-tooltip="ownCloud client 1.6.4" aria-label="PREVIOUS: ownCloud client 1.6.4">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2014/09/10/owncloud-client-1-6-3/" data-tooltip="ownCloud client 1.6.3" aria-label="NEXT: ownCloud client 1.6.3">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Bagikan postingan ini">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/" title="Bagikan di Facebook">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/" title="Bagikan di Twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/" title="Bagikan di Google+">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                        <i class="fa fa-comment-o"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i><span>Bagikan di Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/">
+                    <i class="fa fa-twitter" aria-hidden="true"></i><span>Bagikan di Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i><span>Bagikan di Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+        
+            <h4 id="about-card-name">Gogon</h4>
+        
+            <div id="about-card-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Janitor</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Indonesia
+            </div>
+        
+    </div>
+</div>
+
+        
+            <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-close"></i></span>
+            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="https://www.algolia.com/static_assets/images/press/downloads/algolia-light.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">0 post ditemukan</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://go2n.github.io/2014/03/18/nayanes-themes/">
+                            <h3 class="media-heading">NBoot3 Nayanes Themes</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    18 Mar 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Hae..</p>
+<p>Sejak kemarin saya berusaha membuat tema untuk Nayanes. Tema yang dibuat saya namakan NBoot3. Tema NBoot3 ini tidak saya ihik dari awal tetapi hasil ngedit example dari <a href="http://getbootstrap.com/examples/navbar-fixed-top/" target="_blank" rel="noopener">Twitter Bootstrap 3</a> di sana-sini. NBoot3 saya buat dengan bantuan senior saya, <strong>pak Aziz</strong>.<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://go2n.github.io/2014/03/19/perbaikan-nayanes/">
+                            <h3 class="media-heading">Perbaikan Nayanes</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    19 Mar 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Saya merasa ada yang aneh dengan hasil pencarian katalog dengan Nayanes pada pencarian di satu lokasi. Nayanes menampilkan semua hasil pencarian pada setiap lokasi (node) dengan mode pencarian semua lokasi (multiple node search).<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://go2n.github.io/2014/07/10/update-pkgbuild-owncloud/">
+                            <h3 class="media-heading">Update PKGBUILD ownCloud client 1.6.1</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    10 Jul 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Beberapa saat yang lalu saya meng-<em>update</em> PKGBUILD untuk owncloud client menjadi versi 1.6.1. Selain perubahan versi, saya juga menambahkan fungsi <a href="https://github.com/go2n/archlinux-pkgbuild/commit/f89123c889a9c614bc539318dc17a5d3869b6e7e" target="_blank" rel="noopener">prepare()</a> pada PKGBUILD sesuai dengan artikel di <a href="https://wiki.archlinux.org/index.php/Creating_packages#The_prepare.28.29_function" target="_blank" rel="noopener">halaman wiki archlinux</a>.<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://go2n.github.io/2014/08/08/pkgbuild-update-mouseserver/">
+                            <h3 class="media-heading">PKGBUILD Update: mouseserver</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    8 Agt 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Kemarin malam dapat notifikasi via email bahwa ada komentar untuk paket AUR mouse server yang saya submit dari <a href="https://aur.archlinux.org/account/ulukyn/" target="_blank" rel="noopener">Nuno Goncalves</a>. Dalam komentar tersebut dia menyebutkan bahwa ada kesalahan pada PKGBUILD saya karena source code mouse server baru dan dia menyertakan PKGBUILD yang benar.<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://go2n.github.io/2014/08/18/libfakekey-dependensi-baru-kdeconnect/">
+                            <h3 class="media-heading">Libfakekey, dependensi baru kdeconnect?</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    18 Agt 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Hae! Selamat hari raya senin! :)</p>
+<p>Siang ini tugas saya di unit Registrasi agak selo dan saya bersemangat untuk membuat paket kdeconnect versi git yang baru. Nggak pake lama saya nyetater konsole buat narik kode sumbernya dan mencoba membuat paket dengan PKGBUILD buatan <a href="https://aur.archlinux.org/packages/kdeconnect-git/" target="_blank" rel="noopener">Kuba Serafinowski</a>. Berhubung proses narik kode terbaru dan kompelnya agak lama akibat koneksi di kantor Registrasi yang agak-agak ho oh jadi bisa ditinggal udud. Hhe…<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://go2n.github.io/2014/09/01/libil/">
+                            <h3 class="media-heading">Libil</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    1 Sep 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Kemarin buka notifikasi twitter ada om <a href="https://twitter.com/lynxluna" target="_blank" rel="noopener">Didiet Noor</a> yang nyebut nama saya terkait libil. Padahal libil kan artinya ngising. Ha mosok libil dihubungkan sama saya? Pancen kok!<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/">
+                            <h3 class="media-heading">Mengatasi masalah barcode generator SLiMS di Mesin FreeBSD 9.1</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    10 Sep 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Halo…</p>
+<p>Ada yang pernah mengalami barcode generator <a href="http://slims.web.id/" target="_blank" rel="noopener">SLiMS</a> yang nge-blank di mesin FreeBSD ndak? Begini permasalahannya, pustakawan Fakultas Teknik meminta saya untuk mengatur masalah barcode yang nge-blank di mesin server dhemit alias FreeBSD. Jadi beliau pada saat mau generate barcode melalui menu <strong>System &gt; Barcode Generator</strong>, SLiMS tidak menampilkan barcode sama sekali.<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://go2n.github.io/2014/09/10/owncloud-client-1-6-3/">
+                            <h3 class="media-heading">ownCloud client 1.6.3</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    10 Sep 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Hae… Sudah pada upgrade owncloud client 1.6.3 belum? Berikut ini changelog ownCloud client 1.6.3:</div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://go2n.github.io/2014/10/27/owncloud-client-1-6-4/">
+                            <h3 class="media-heading">ownCloud client 1.6.4</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    27 Okt 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Hae… Tanggal 23 Oktober kemarin ownCloud client 1.6.4 dirilis loh, sudah update belum? Berikut ini changelog ownCloud client 1.6.4:</div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://go2n.github.io/2014/10/30/ndobel/">
+                            <h3 class="media-heading">Ndobel monitor di KF5 &amp; Plasma 5</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    30 Okt 2014
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="0 post ditemukan"
+                data-message-one="1 post ditemukan"
+                data-message-other="{n} post ditemukan">
+                18 post ditemukan
+            </p>
+        </div>
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-yhuo2grt8r7qkqumzgjoglkfbicl1thukjgmla6jopu56zpcowfedi5zjcor.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/';
+                 
+                    this.page.identifier = '2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'go2n';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.14.1/moment-with-locales.min.js"></script>
+    <script src="//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+    <script>
+        var algoliaClient = algoliasearch('SG2AJIOEZ6', '1da7720b55a5379813f5e1ed25f34a69');
+        var algoliaIndex = algoliaClient.initIndex('blog-go2n-github');
+    </script>
+
+
+    </body>
+</html>
