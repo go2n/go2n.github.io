@@ -275,32 +275,6 @@
   </entry>
   
   <entry>
-    <title>ownCloud client 1.6.3</title>
-    <link href="http://go2n.github.io/2014/09/10/owncloud-client-1-6-3/"/>
-    <id>http://go2n.github.io/2014/09/10/owncloud-client-1-6-3/</id>
-    <published>2014-09-09T17:00:00.000Z</published>
-    <updated>2018-03-11T03:40:40.093Z</updated>
-    
-    <content type="html"><![CDATA[<p>Hae… Sudah pada upgrade owncloud client 1.6.3 belum? Berikut ini changelog ownCloud client 1.6.3:<a id="more"></a></p><ul><li>Fixed updater on OS X</li><li>Fixed memory leak in SSL button that could lead to quick memory draining</li><li>Fixed upload problem with files &gt;4 GB</li><li>MacOSX, Linux: Bring Settings window to front properly</li><li>Branded clients: If no configuration is detected, try to import the data from a previously configured community edition.</li></ul><div class="alert danger"><p><em>PKGBUILD owncloud-client sudah dihapus dari <a href="https://github.com/go2n/archlinux-pkgbuild" target="_blank" rel="noopener">repo</a></em></p></div><p>Buat yang mau membangun paket owncloud client 1.6.3 dengan PKGBUILD saya monggo lho: <del><a href="https://github.com/go2n/archlinux-pkgbuild/tree/master/owncloud-client" target="_blank" rel="noopener">https://github.com/go2n/archlinux-pkgbuild/tree/master/owncloud-client</a></del></p><div class="figure center" style="width:;"><a class="fancybox" href="owncloud-client-1-6-3.png" title="ownCloud Client" data-caption="ownCloud Client" data-fancybox="default"><img class="fig-img" src="owncloud-client-1-6-3.png" alt="ownCloud Client"></a><span class="caption">ownCloud Client</span></div>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Hae… Sudah pada upgrade owncloud client 1.6.3 belum? Berikut ini changelog ownCloud client 1.6.3:
-    
-    </summary>
-    
-      <category term="linux" scheme="http://go2n.github.io/categories/linux/"/>
-    
-    
-      <category term="archlinux" scheme="http://go2n.github.io/tags/archlinux/"/>
-    
-      <category term="pkgbuild" scheme="http://go2n.github.io/tags/pkgbuild/"/>
-    
-      <category term="owncloud" scheme="http://go2n.github.io/tags/owncloud/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Mengatasi masalah barcode generator SLiMS di Mesin FreeBSD 9.1</title>
     <link href="http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/"/>
     <id>http://go2n.github.io/2014/09/10/mengatasi-barcode-generator-slims-di-freebsd/</id>
@@ -332,6 +306,32 @@
       <category term="perpustakaan" scheme="http://go2n.github.io/tags/perpustakaan/"/>
     
       <category term="library" scheme="http://go2n.github.io/tags/library/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ownCloud client 1.6.3</title>
+    <link href="http://go2n.github.io/2014/09/10/owncloud-client-1-6-3/"/>
+    <id>http://go2n.github.io/2014/09/10/owncloud-client-1-6-3/</id>
+    <published>2014-09-09T17:00:00.000Z</published>
+    <updated>2018-03-11T03:40:40.093Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hae… Sudah pada upgrade owncloud client 1.6.3 belum? Berikut ini changelog ownCloud client 1.6.3:<a id="more"></a></p><ul><li>Fixed updater on OS X</li><li>Fixed memory leak in SSL button that could lead to quick memory draining</li><li>Fixed upload problem with files &gt;4 GB</li><li>MacOSX, Linux: Bring Settings window to front properly</li><li>Branded clients: If no configuration is detected, try to import the data from a previously configured community edition.</li></ul><div class="alert danger"><p><em>PKGBUILD owncloud-client sudah dihapus dari <a href="https://github.com/go2n/archlinux-pkgbuild" target="_blank" rel="noopener">repo</a></em></p></div><p>Buat yang mau membangun paket owncloud client 1.6.3 dengan PKGBUILD saya monggo lho: <del><a href="https://github.com/go2n/archlinux-pkgbuild/tree/master/owncloud-client" target="_blank" rel="noopener">https://github.com/go2n/archlinux-pkgbuild/tree/master/owncloud-client</a></del></p><div class="figure center" style="width:;"><a class="fancybox" href="owncloud-client-1-6-3.png" title="ownCloud Client" data-caption="ownCloud Client" data-fancybox="default"><img class="fig-img" src="owncloud-client-1-6-3.png" alt="ownCloud Client"></a><span class="caption">ownCloud Client</span></div>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hae… Sudah pada upgrade owncloud client 1.6.3 belum? Berikut ini changelog ownCloud client 1.6.3:
+    
+    </summary>
+    
+      <category term="linux" scheme="http://go2n.github.io/categories/linux/"/>
+    
+    
+      <category term="archlinux" scheme="http://go2n.github.io/tags/archlinux/"/>
+    
+      <category term="pkgbuild" scheme="http://go2n.github.io/tags/pkgbuild/"/>
+    
+      <category term="owncloud" scheme="http://go2n.github.io/tags/owncloud/"/>
     
   </entry>
   
@@ -531,6 +531,35 @@
       <category term="chakra" scheme="http://go2n.github.io/tags/chakra/"/>
     
       <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SocialRok – Amarok Social Networks</title>
+    <link href="http://go2n.github.io/2013/01/12/socialrok-%E2%80%93-amarok-social-networks/"/>
+    <id>http://go2n.github.io/2013/01/12/socialrok-–-amarok-social-networks/</id>
+    <published>2013-01-11T22:07:00.000Z</published>
+    <updated>2018-03-26T04:57:16.710Z</updated>
+    
+    <content type="html"><![CDATA[<p>SocialRok merupakan Amarok 2 Script yang memungkinkan kamu untuk posting lagu yang sedang kamu dengarkan dengan Amarok pada jejaring sosial. SocialRok juga memungkinkan kamu untuk posting cover art dari lagu yang sedang diputar dan link pada Youtube untuk pencarian.</p><p><strong>Jejaring sosial yang tersedia:</strong></p><ul><li>Facebook</li><li>Flickr</li><li>Twitter</li><li>Google Plus (masih Coming Soon katanya sih, menunggu Google merilis API untuk write access)</li><li>Skype</li></ul><p>Untuk instalasi bisa langsung unduh melalui Get Hot New Stuff pada Amarok (Menu Settings &gt; Configure Amarok… &gt; Scripts &gt; Manage Scripts)</p><div class="figure center" style="width:;"><a class="fancybox" href="snapshot135.png" title="Amarok: Configure script" data-caption="Amarok: Configure script" data-fancybox="default"><img class="fig-img" src="snapshot135.png" alt="Amarok: Configure script"></a><span class="caption">Amarok: Configure script</span></div><div class="figure center" style="width:;"><a class="fancybox" href="snapshot136.png" title="Amarok: Add-on installer" data-caption="Amarok: Add-on installer" data-fancybox="default"><img class="fig-img" src="snapshot136.png" alt="Amarok: Add-on installer"></a><span class="caption">Amarok: Add-on installer</span></div><p>Restart Amarok lalu aktifkan SocialRok: Menu Settings &gt; Configure Amarok… &gt; Scripts (centang SocialRok). Untuk konfigurasi: Menu Settings &gt; Configure SocialRok… Pada jendela konfigurasi kamu bisa mengatur jejaring sosial.</p><div class="figure center" style="width:;"><a class="fancybox" href="snapshot137.png" title="SocialRok: Configure" data-caption="SocialRok: Configure" data-fancybox="default"><img class="fig-img" src="snapshot137.png" alt="SocialRok: Configure"></a><span class="caption">SocialRok: Configure</span></div><p>Sebagai contoh jejaring sosial yang saya gunakan Twitter. User ID bukan user jejaring sosial, melainkan UserID yang didapat setelah memberikan akses ke jejaring sosial. Untuk mendapatkan User ID pilih Menu Tools &gt; Grant Access for Twitter, selanjutnya kamu akan dibawa ke halaman web <a href="https://calm-river-6855.herokuapp.com/twitter.php" target="_blank" rel="noopener">https://calm-river-6855.herokuapp.com/twitter.php</a> untuk koneksi SocialRok dengan Twitter.</p><div class="figure center" style="width:;"><a class="fancybox" href="snapshot138.png" title="Rekonq: Twitter Auth" data-caption="Rekonq: Twitter Auth" data-fancybox="default"><img class="fig-img" src="snapshot138.png" alt="Rekonq: Twitter Auth"></a><span class="caption">Rekonq: Twitter Auth</span></div><div class="figure center" style="width:;"><a class="fancybox" href="snapshot139.png" title="Rekonq: Twitter Auth" data-caption="Rekonq: Twitter Auth" data-fancybox="default"><img class="fig-img" src="snapshot139.png" alt="Rekonq: Twitter Auth"></a><span class="caption">Rekonq: Twitter Auth</span></div><p>Isikan User ID yang didapat pada isian jendela konfigurasi.</p><div class="figure center" style="width:;"><a class="fancybox" href="snapshot140.png" title="SocialRok: Configure" data-caption="SocialRok: Configure" data-fancybox="default"><img class="fig-img" src="snapshot140.png" alt="SocialRok: Configure"></a><span class="caption">SocialRok: Configure</span></div><p>Setelah itu kamu bisa posting lagu yang kamu putar dengan Amarok pada jejaring sosial (Twitter). Pilih Menu Tools &gt; Twitt Current Track.</p><div class="figure center" style="width:;"><a class="fancybox" href="snapshot142.png" title="Twitter" data-caption="Twitter" data-fancybox="default"><img class="fig-img" src="snapshot142.png" alt="Twitter"></a><span class="caption">Twitter</span></div>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;SocialRok merupakan Amarok 2 Script yang memungkinkan kamu untuk posting lagu yang sedang kamu dengarkan dengan Amarok pada jejaring sosi
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://go2n.github.io/categories/linux/"/>
+    
+    
+      <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
+    
+      <category term="amarok" scheme="http://go2n.github.io/tags/amarok/"/>
+    
+      <category term="music" scheme="http://go2n.github.io/tags/music/"/>
     
   </entry>
   
