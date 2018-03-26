@@ -15,7 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":["https://github.com/go2n","https://twitter.com/go2n"],"image":"go2n.jpg"},"articleBody":"\nSekedar catatan saja saat lupa password root MySQL di mesin FreeBSD.\n\nUbah /etc/rc.conf, buka komentar pada mysql_args, restart MySQL dan login. Dengan asumsi isi dari mysql_args adalah &quot;--skip-grant-tables --skip-networking&quot;\n123[root@server] # perl -pi -e \"s/#mysql_args/mysql_args/g\" /etc/rc.conf[root@server] # /usr/local/etc/rc.d/mysql-server restart[root@server] # mysql -u root\nUbah Password\n1mysql&gt; UPDATE mysql.user SET Password=PASSWORD('PASSWORD BARU') WHERE user='root';\nEdit /etc/rc.conf, berikan komentar pada mysql_args dan restart MySQL\n12[root@server] # perl -pi -e \"s/mysql_args/#mysql_args/g\" /etc/rc.conf[root@server] # /usr/local/etc/rc.d/mysql-server restart\nUdah gitu aja, tinggal login MySQL dengan password root yang baru.\n","dateCreated":"2015-03-12T00:00:00+07:00","dateModified":"2018-03-11T10:43:23+07:00","datePublished":"2015-03-12T00:00:00+07:00","description":"\nSekedar catatan saja saat lupa password root MySQL di mesin FreeBSD.\n\nUbah /etc/rc.conf, buka komentar pada mysql_args, restart MySQL dan login. Dengan asumsi isi dari mysql_args adalah &quot;--skip-grant-tables --skip-networking&quot;","headline":"Lupa Password Root MySQL di FreeBSD","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":["https://github.com/go2n","https://twitter.com/go2n"],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/","keywords":"freebsd, mysql, database, notes"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":["https://github.com/go2n","https://twitter.com/go2n"],"image":"go2n.jpg"},"articleBody":"\nSekedar catatan saja saat lupa password root MySQL di mesin FreeBSD.\n\nUbah /etc/rc.conf, buka komentar pada mysql_args, restart MySQL dan login. Dengan asumsi isi dari mysql_args adalah &quot;--skip-grant-tables --skip-networking&quot;\n123[root@server] # perl -pi -e \"s/#mysql_args/mysql_args/g\" /etc/rc.conf[root@server] # /usr/local/etc/rc.d/mysql-server restart[root@server] # mysql -u root\nUbah Password\n1mysql&gt; UPDATE mysql.user SET Password=PASSWORD('PASSWORD BARU') WHERE user='root';\nEdit /etc/rc.conf, berikan komentar pada mysql_args dan restart MySQL\n12[root@server] # perl -pi -e \"s/mysql_args/#mysql_args/g\" /etc/rc.conf[root@server] # /usr/local/etc/rc.d/mysql-server restart\nUdah gitu aja, tinggal login MySQL dengan password root yang baru.\n","dateCreated":"2015-03-12T00:00:00+07:00","dateModified":"2018-03-26T17:27:21+07:00","datePublished":"2015-03-12T00:00:00+07:00","description":"\nSekedar catatan saja saat lupa password root MySQL di mesin FreeBSD.\n\nUbah /etc/rc.conf, buka komentar pada mysql_args, restart MySQL dan login. Dengan asumsi isi dari mysql_args adalah &quot;--skip-grant-tables --skip-networking&quot;","headline":"Lupa Password Root MySQL di FreeBSD","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":["https://github.com/go2n","https://twitter.com/go2n"],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/","keywords":"freebsd, mysql, database"}</script>
     <meta name="description" content="Sekedar catatan saja saat lupa password root MySQL di mesin FreeBSD">
 <meta name="keywords" content="freebsd,mysql,database">
 <meta property="og:type" content="blog">
@@ -24,7 +24,7 @@
 <meta property="og:site_name" content="Gogon">
 <meta property="og:description" content="Sekedar catatan saja saat lupa password root MySQL di mesin FreeBSD">
 <meta property="og:locale" content="id">
-<meta property="og:updated_time" content="2018-03-11T03:43:23.834Z">
+<meta property="og:updated_time" content="2018-03-26T10:27:21.365Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Lupa Password Root MySQL di FreeBSD">
 <meta name="twitter:description" content="Sekedar catatan saja saat lupa password root MySQL di mesin FreeBSD">
@@ -243,7 +243,7 @@
     
         <span> |  </span>
         
-    <a class="category-link" href="/categories/freebsd/">freebsd</a>
+    <a class="category-link" href="/categories/notes/">notes</a>, <a class="category-link" href="/categories/notes/freebsd/">freebsd</a>
 
 
     
@@ -275,7 +275,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">Tag</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/database/">database</a> <a class="tag tag--primary tag--small t-link" href="/tags/freebsd/">freebsd</a> <a class="tag tag--primary tag--small t-link" href="/tags/mysql/">mysql</a> <a class="tag tag--primary tag--small t-link" href="/tags/notes/">notes</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/database/">database</a> <a class="tag tag--primary tag--small t-link" href="/tags/freebsd/">freebsd</a> <a class="tag tag--primary tag--small t-link" href="/tags/mysql/">mysql</a>
 
             </div>
         
