@@ -32,6 +32,6 @@ Duh, selama ini saya tidak memperhatikan. Untung saja ada yang mengoreksi 😓
 
 Perubahan yang saya lakukan adalah menambahkan fungsi `prepare()` untuk persiapan membangun paket dan mengubah INSTALL PREFIX serta mengganti parameter `CMAKE_INSTALL_PREFIX` dari `/usr` menjadi `/usr/bin` pada fungsi `build()`.
 
-Monggo kalau mau lihat perubahannya di [sini](https://github.com/go2n/archlinux-pkgbuild/commit/a69d2382e365d5442aaa6a1fb6d286b21a45250a?diff=split). Untuk paket AUR-nya saya submit di [sini](https://aur.archlinux.org/packages/mouseserver/). 😊
+Monggo kalau mau lihat perubahannya di [sini](https://github.com/go2n/archlinux-pkgbuild/commit/a69d2382e365d5442aaa6a1fb6d286b21a45250a?diff=split#diff-fdf85429fb82f55d422abdce53acee2f). Untuk paket AUR-nya saya submit di [sini](https://aur.archlinux.org/packages/mouseserver/). 😊
 
 {% image fancybox center mouse-server.png "Mouse Server for Linux" %}
