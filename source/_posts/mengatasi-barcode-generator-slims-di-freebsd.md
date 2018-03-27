@@ -29,14 +29,14 @@ Ada yang pernah mengalami barcode generator [SLiMS](http://slims.web.id/) yang n
 
 Pernah suatu waktu di tahun 2013 saya ubek-ubek forum SLiMS untuk mengatasi hal tersebut. Di [thread ini](http://slims.web.id/forum/viewtopic.php?f=38&t=29) katanya sih gara-gara masalah permissions. Namun, setelah saya `chmod +x genbarcode` ternyata malah muncul error seperti ini:
 
-{% codeblock lang:bash %}
+{% codeblock %}
 ELF binary type "0" not known.
 ./genbarcode: Exec format error. Binary file not executable.
 {% endcodeblock %}
 
 Dalam benak saya waktu itu nggak mungkin bisa file biner Linux dijalankan di FreeBSD. Tanpa pikir panjang saya pun download kode sumber [php-barcode](http://www.ashberg.de/php-barcode/) kemudian ngompel dan berhasil jalan lewat command line:
 
-{% codeblock lang:bash %}
+{% codeblock %}
 $ ./genbarcode 123456 128
 02112321122321311233311211321312331112
 11:9:1 16.5:9:2 22:9:3 27.5:9:4 33:9:5 38.5:9:6 
@@ -54,16 +54,18 @@ Setelah memasang hal yang diperlukan sekarang file biner `lib/phpbarcode/bin/nix
 ### Begini Langkahnya
 
 1. Load linux kernel
-`# kldload linux`
+{% codeblock %}
+# kldload linux
+{% endcodeblock %}
 2. Cek apakah modul sudah ok
-{% codeblock lang:shell %}
+{% codeblock %}
 root@library:/root # kldstat 
 Id Refs Address            Size     Name
  1    6 0xffffffff80200000 1323408  kernel
  2    1 0xffffffff81612000 1f417    linux.ko
 {% endcodeblock %}
 3. Pasang emulators/linux-base-f10 melalui port
-{% codeblock lang:shell %}
+{% codeblock %}
 root@library:/root # cd /usr/ports/emulators/linux_base-f10
 root@library:/usr/ports/emulators/linux_base-f10 # make install distclean
 => basesystem-10.0-1.noarch.rpm doesn't seem to exist in /usr/ports/distfiles/rpm/i386/fedora/10.
@@ -77,9 +79,12 @@ basesystem-10.0-1.noarch.rpm                  100% of 2915  B 7713 kBps
 {% endcodeblock %}
 
 4. Tambahkan baris berikut pada `/etc/rc.conf` biar modul aktif tiap boot:
-`linux_enable="YES"`
+{% codeblock %}
+linux_enable="YES"
+{% endcodeblock %}
 5. Edit file `lib/phpbarcode/php-barcode.php` menjadi seperti berikut (baris 51):
-{% codeblock php-barcode.php lang:php %}
+{% codeblock lang:php line_number:false %}
+...
 // genbarcode binary location
 if (stripos(PHP_OS, 'Darwin') !== false) {
     $genbarcode_loc = './bin/darwin/genbarcode';
@@ -96,6 +101,7 @@ if (stripos(PHP_OS, 'Darwin') !== false) {
 } else {
     $genbarcode_loc = '.\bin\win\genbarcode.exe';
 }
+...
 {% endcodeblock %}
 
 Nah! Udah gitu aja...
