@@ -1,0 +1,545 @@
+
+<!DOCTYPE html>
+<html lang="id">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Gogon">
+    <title>Ganti Nama Branch di Git - Gogon</title>
+    <meta name="author" content="Gogon">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":["https://github.com/go2n","https://twitter.com/go2n"],"image":"go2n.jpg"},"articleBody":"Ada 2 perintah yang bisa digunakan untuk untuk mengganti nama branch:12git branch -m blog-posts # « jika sedang berada di branch yang akan diganti namagit branch -m blog-source blog-posts # « jika sedang berada di branch lain\nHapus remote branch-lama:123$ git push origin -d sourceTo github.com:go2n/go2n.github.io.git - [deleted]         blog-source\nPush remote branch-baru:123456789$ git push origin blog-posts Counting objects: 127, done.Delta compression using up to 4 threads.Compressing objects: 100% (110/110), done.Writing objects: 100% (127/127), 3.67 MiB | 732.00 KiB/s, done.Total 127 (delta 26), reused 32 (delta 0)remote: Resolving deltas: 100% (26/26), done.To github.com:go2n/go2n.github.io.git * [new branch]      blog-posts -&gt; blog-posts\nAtur upstream untuk branch baru: git push origin -u branch-baru123$ git push -u origin blog-posts Branch &apos;blog-posts&apos; set up to track remote branch &apos;blog-posts&apos; from &apos;origin&apos;.Everything up-to-date\nRujukan: manpage git-branch\n","dateCreated":"2018-03-27T11:00:10+07:00","dateModified":"2018-03-27T11:30:37+07:00","datePublished":"2018-03-27T11:00:10+07:00","description":"Ada 2 perintah yang bisa digunakan untuk untuk mengganti nama branch:12git branch -m blog-posts # « jika sedang berada di branch yang akan diganti namagit branch -m blog-source blog-posts # « jika sedang berada di branch lain","headline":"Ganti Nama Branch di Git","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":["https://github.com/go2n","https://twitter.com/go2n"],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/","keywords":"git"}</script>
+    <meta name="description" content="Ada 2 perintah yang bisa digunakan untuk untuk mengganti nama branch:12git branch -m blog-posts # « jika sedang berada di branch yang akan diganti namagit branch -m blog-source blog-posts # « jika sed">
+<meta name="keywords" content="git">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Ganti Nama Branch di Git">
+<meta property="og:url" content="http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/index.html">
+<meta property="og:site_name" content="Gogon">
+<meta property="og:description" content="Ada 2 perintah yang bisa digunakan untuk untuk mengganti nama branch:12git branch -m blog-posts # « jika sedang berada di branch yang akan diganti namagit branch -m blog-source blog-posts # « jika sed">
+<meta property="og:locale" content="id">
+<meta property="og:updated_time" content="2018-03-27T04:30:37.310Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ganti Nama Branch di Git">
+<meta name="twitter:description" content="Ada 2 perintah yang bisa digunakan untuk untuk mengganti nama branch:12git branch -m blog-posts # « jika sedang berada di branch yang akan diganti namagit branch -m blog-source blog-posts # « jika sed">
+<meta name="twitter:creator" content="@go2n">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://go2n.github.io/assets/images/go2n.jpg"/>
+    
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-1udptkpril81ozu8ifd8zpujn7ipu7lefxsiu5gxx0dpnzntdx6dusvki3ao.min.css">
+    <!--STYLES END-->
+    
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-41394739-3', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="2">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a class="header-title-link" href="/ ">Gogon</a>
+    </div>
+    
+        
+            <a  class="header-right-picture "
+                href="#about">
+        
+        
+            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="2">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a href="/#about">
+                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+                </a>
+                <h4 class="sidebar-profile-name">Gogon</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                            title="Beranda"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Beranda</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                            title="Kategori"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Kategori</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                            title="Tag"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tag</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                            title="Arsip"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Arsip</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/about"
+                            
+                            title="Tentang"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tentang</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://github.com/go2n" target="_blank" rel="noopener" title="GitHub">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-github" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">GitHub</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link " href="https://twitter.com/go2n" target="_blank" rel="noopener" title="Twitter">
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-twitter" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Twitter</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                            title="RSS"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="2"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            Ganti Nama Branch di Git
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2018-03-27T11:00:10+07:00">
+	
+		    27 Maret 2018
+    	
+    </time>
+    
+        <span> |  </span>
+        
+    <a class="category-link" href="/categories/notes/">notes</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <p>Ada 2 perintah yang bisa digunakan untuk untuk mengganti nama branch:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git branch -m blog-posts <span class="comment"># « jika sedang berada di branch yang akan diganti nama</span></span><br><span class="line">git branch -m blog-source blog-posts <span class="comment"># « jika sedang berada di branch lain</span></span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>Hapus remote branch-lama:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin -d source</span><br><span class="line">To github.com:go2n/go2n.github.io.git</span><br><span class="line"> - [deleted]         blog-source</span><br></pre></td></tr></table></figure>
+<p>Push remote branch-baru:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ git push origin blog-posts </span><br><span class="line">Counting objects: 127, done.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">Compressing objects: 100% (110/110), done.</span><br><span class="line">Writing objects: 100% (127/127), 3.67 MiB | 732.00 KiB/s, done.</span><br><span class="line">Total 127 (delta 26), reused 32 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (26/26), done.</span><br><span class="line">To github.com:go2n/go2n.github.io.git</span><br><span class="line"> * [new branch]      blog-posts -&gt; blog-posts</span><br></pre></td></tr></table></figure></p>
+<p>Atur upstream untuk branch baru: <code>git push origin -u branch-baru</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git push -u origin blog-posts </span><br><span class="line">Branch &apos;blog-posts&apos; set up to track remote branch &apos;blog-posts&apos; from &apos;origin&apos;.</span><br><span class="line">Everything up-to-date</span><br></pre></td></tr></table></figure></p>
+<p>Rujukan: <a href="https://mirrors.edge.kernel.org/pub/software/scm/git/docs/git-branch.html" target="_blank" rel="noopener">manpage git-branch</a></p>
+
+            
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">Tag</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/git/">git</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/11/ngeblog-pakai-hexo/" data-tooltip="Ngeblog pakai Hexo" aria-label="NEXT: Ngeblog pakai Hexo">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Bagikan postingan ini">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/" title="Bagikan di Facebook">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/" title="Bagikan di Twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/" title="Bagikan di Google+">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                        <i class="fa fa-comment-o"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2018 Gogon. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left" aria-hidden="true"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/11/ngeblog-pakai-hexo/" data-tooltip="Ngeblog pakai Hexo" aria-label="NEXT: Ngeblog pakai Hexo">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <i class="fa fa-angle-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Bagikan postingan ini">
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/" title="Bagikan di Facebook">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/" title="Bagikan di Twitter">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/" title="Bagikan di Google+">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
+                        <i class="fa fa-comment-o"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i><span>Bagikan di Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/">
+                    <i class="fa fa-twitter" aria-hidden="true"></i><span>Bagikan di Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i><span>Bagikan di Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-remove"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+        
+            <h4 id="about-card-name">Gogon</h4>
+        
+            <div id="about-card-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Janitor</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker"></i>
+                <br/>
+                Indonesia
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-yhuo2grt8r7qkqumzgjoglkfbicl1thukjgmla6jopu56zpcowfedi5zjcor.min.js"></script>
+<!--SCRIPTS END-->
+
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'http://go2n.github.io/2018/03/27/ganti-nama-branch-di-git/';
+                 
+                    this.page.identifier = '2018/03/27/ganti-nama-branch-di-git/';
+                 
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'go2n';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
+
+
+
+    </body>
+</html>
