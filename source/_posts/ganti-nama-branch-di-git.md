@@ -31,7 +31,7 @@ To github.com:go2n/go2n.github.io.git
  * [new branch]      blog-posts -> blog-posts
 {% endcodeblock %}
 
-Atur upstream untuk branch baru: `git push origin -u branch-baru`
+Atur upstream untuk branch baru:
 {% codeblock %}
 $ git push -u origin blog-posts 
 Branch 'blog-posts' set up to track remote branch 'blog-posts' from 'origin'.
