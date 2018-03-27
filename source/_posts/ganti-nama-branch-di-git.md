@@ -13,7 +13,7 @@ git branch -m blog-source blog-posts # « jika sedang berada di branch lain
 
 <!-- more -->Hapus remote branch-lama:
 {% codeblock %}
-$ git push origin -d source
+$ git push origin -d blog-source
 To github.com:go2n/go2n.github.io.git
  - [deleted]         blog-source
 {% endcodeblock %}
