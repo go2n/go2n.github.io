@@ -1,7 +1,7 @@
 ---
 title: NBoot3 Nayanes Themes
 date: 2014-03-18
-category: iseng
+categories: iseng
 tags :
     - php
     - html

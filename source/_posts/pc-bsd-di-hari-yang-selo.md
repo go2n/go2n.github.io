@@ -2,7 +2,7 @@
 layout: post
 title: "PC-BSD di hari yang selo"
 date: 2015-02-27
-category: freebsd
+categories: freebsd
 tags:
     - freebsd
     - pcbsd

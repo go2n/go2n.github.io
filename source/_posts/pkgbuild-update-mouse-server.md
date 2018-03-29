@@ -2,7 +2,7 @@
 layout: post
 title: "PKGBUILD Update: mouseserver 1.0.1-3"
 date: 2015-01-28
-category: linux
+categories: linux
 tags:
     - archlinux
     - pkgbuild

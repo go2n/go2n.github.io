@@ -1,7 +1,7 @@
 ---
 title: Ganti Nama Branch di Git
 date: 2018-03-27 11:00:10
-category: notes
+categories: notes
 tags: git
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: SocialRok – Amarok Social Networks
 date: 2013-01-12 05:07:00
-category: linux
+categories: linux
 tags:
     - amarok
     - KDE

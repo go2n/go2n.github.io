@@ -1,7 +1,7 @@
 ---
 title: Plasma 2 Technology Preview
 date: 2013-12-21 14:52:21
-category: linux
+categories: linux
 tags:
     - KDE
     - Plasma

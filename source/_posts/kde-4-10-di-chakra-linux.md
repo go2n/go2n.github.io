@@ -1,7 +1,7 @@
 ---
 title: KDE 4.10 di Chakra Linux
 date: 2013-02-11 12:59:00
-category: linux
+categories: linux
 tags:
     - chakra
     - KDE

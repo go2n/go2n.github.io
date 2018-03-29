@@ -2,7 +2,7 @@
 layout: post
 title: "ownCloud client 1.7.1"
 date: 2014-12-30
-category: linux
+categories: linux
 tags:
     - archlinux
     - pkgbuild

@@ -2,7 +2,7 @@
 layout: post
 title: "Mengatasi masalah barcode generator SLiMS di Mesin FreeBSD 9.1"
 date: 2014-09-10
-category: freebsd
+categories: freebsd
 tags:
     - freebsd
     - linux

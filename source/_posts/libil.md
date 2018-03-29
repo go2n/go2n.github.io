@@ -2,7 +2,7 @@
 layout: post
 title: "Libil"
 date: 2014-09-01
-category: linux
+categories: linux
 tags:
     - archlinux
     - pkgbuild

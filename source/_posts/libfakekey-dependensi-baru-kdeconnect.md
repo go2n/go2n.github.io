@@ -2,7 +2,7 @@
 layout: post
 title: "Libfakekey, dependensi baru kdeconnect?"
 date: 2014-08-18
-category: linux
+categories: linux
 tags: 
     - archlinux
     - pkgbuild

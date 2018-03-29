@@ -2,7 +2,7 @@
 layout: post
 title: "Ndobel monitor di KF5 & Plasma 5"
 date: 2014-10-30
-category: linux
+categories: linux
 tags:
     - archlinux
     - KDE

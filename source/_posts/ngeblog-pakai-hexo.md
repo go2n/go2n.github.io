@@ -1,7 +1,7 @@
 ---
 title: Ngeblog pakai Hexo
 date: 2018-03-11 19:29:50
-category: blog
+categories: blog
 tags:
     - hexo
     - jekyll

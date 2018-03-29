@@ -3,7 +3,7 @@ layout: post
 title: "ownCloud client 1.7.0"
 description: "Update PKGBUILD ownCloud client 1.7.0"
 date: 2014-11-17
-category: linux
+categories: linux
 tags:
     - archlinux
     - pkgbuild

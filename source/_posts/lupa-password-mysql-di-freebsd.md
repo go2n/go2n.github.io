@@ -3,7 +3,7 @@ layout: post
 title: "Lupa Password Root MySQL di FreeBSD"
 description: "Sekedar catatan saja saat lupa password root MySQL di mesin FreeBSD"
 date: 2015-03-12
-category:
+categories:
     - notes
     - freebsd
 tags:

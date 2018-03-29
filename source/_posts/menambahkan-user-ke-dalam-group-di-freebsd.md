@@ -3,7 +3,7 @@ layout: post
 title: "Menambahkan user ke dalam group di FreeBSD"
 description: "Sebuah catatan biar nggak lupa perintah menambahkan user ke dalam group di mesin FreeBSD"
 date: 2016-01-05
-category:
+categories:
     - notes
     - freebsd
 tags:

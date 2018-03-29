@@ -2,7 +2,7 @@
 layout: post
 title: "Perbaikan Nayanes"
 date: 2014-03-19
-category: iseng
+categories: iseng
 tags:
     - php
     - html

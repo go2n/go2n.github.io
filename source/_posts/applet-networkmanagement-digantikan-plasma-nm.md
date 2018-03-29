@@ -1,7 +1,7 @@
 ---
 title: Applet NetworkManagement digantikan Plasma-nm
 date: 2013-12-22 15:31:18
-category: linux
+categories: linux
 tags:
     - linux
     - KDE

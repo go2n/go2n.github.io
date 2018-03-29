@@ -2,7 +2,7 @@
 layout: post
 title: "Official Repo: ownCloud Client"
 date: 2015-01-12
-category: linux
+categories: linux
 tags:
     - archlinux
     - pkgbuild
