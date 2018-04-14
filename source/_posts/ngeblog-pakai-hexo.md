@@ -76,7 +76,7 @@ Isi dari direktori `blog`:
 └── themes
 {% endcodeblock%}
 
-Konfigurasi blog ada edit berkas `_config.yml`. Info lebih lanjut: https://hexo.io/docs/configuration.html.
+Konfigurasi blog ada di berkas `_config.yml`. Info lebih lanjut: https://hexo.io/docs/configuration.html.
 
 #### Membuat tulisan baru
 
