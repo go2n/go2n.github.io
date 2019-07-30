@@ -5,6 +5,8 @@ categories: notes
 tags: git
 ---
 
+> Sebuah catatan biar nggak lupa perintah git
+
 Ada 2 perintah yang bisa digunakan untuk untuk mengganti nama branch:
 {% codeblock lang:bash %}
 git branch -m blog-posts # « jika sedang berada di branch yang akan diganti nama
