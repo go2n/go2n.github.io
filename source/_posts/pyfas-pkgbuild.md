@@ -13,7 +13,8 @@ keywords:
   - linux
 date: 2018-05-05 22:15:00
 ---
-Pyfas merupakan tool python untuk _flow assurance engineers_ alias tukang insinyur di bidang industri minyak dan gas. <!-- more -->
+Pyfas merupakan tool python untuk _flow assurance engineers_ alias tukang insinyur di bidang industri minyak dan gas. 
+<!-- more -->
 
 Berawal dari permintaan paman Ecah untuk mengekstrak data dari hasil Olga (Tpl) yang beliau kirim, akhirnya pkgbuild ini dibuat untuk mesin Arch Linux saya.
 
