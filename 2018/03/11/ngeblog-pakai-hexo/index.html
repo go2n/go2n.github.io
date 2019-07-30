@@ -15,7 +15,7 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":["https://github.com/go2n","https://twitter.com/go2n"],"image":"go2n.jpg"},"articleBody":"Sudah dua tahun lebih saya tidak ngeblog, cukup lama juga blog ini nggak kopèn. Setelah sekian lama, akhirnya kelakon juga saya menulis di sini lagi. Kali ini saya akan menulis tentang framework untuk membuat blog ini. Sebelumnya blog ini dibuat menggunakan Jekyll dan dihosting di GitHub Pages.\nJekyll, kalau boleh saya bilang framework ini lumayan ribet dan rumit. Biasanya sebelum posting ke blog, saya melakukan pratinjau di mesin Linux saya dengan perintah:\n1$ jekyll serve\nTapi, entah kenapa setelah melakukan ritual update di mesin Arch Linux saya waktu itu Jekyll tidak bisa dijalankan seperti biasanya. Sekalinya sudah bisa dijalankan tampilan blog tidak sesuai dengan yang saya atur sebelumnya. Itulah yang menjadi salah satu alasan kenapa blog ini tidak update selama ini. 😅\nSekitar pertengahan tahun 2017 yang lalu saya mendengar tentang Hexo. Setelah membaca artikel tentang Hexo saya punya rencana untuk mulai membuat blog dengan Hexo dan memindahkan tulisan-tulisan saya. Berhubung waktu itu saya tidak selo dan lupa (halah), maka baru hari ini saya memulainya. Kemungkinan tulisan-tulisan saya di blog yang lain juga akan dipindahkan ke blog ini. 😁\nApa itu Hexo?Hexo adalah framework blog yang cepat, sederhana dan powerfull yang didukung oleh Node.js. Hexo ini konon katanya super cepat, hanya membutuhkan waktu beberapa detik untuk membangun sebuah website lengkap. Dokumentasi lengkapnya ada di https://hexo.io/docs/.\nFitur\nBlazing fast generating\nMendukung Markdownnya GitHub dan plugin-plugin Octopress\nOne-command deploy ke GitHub Pages, Heroku, dll\nSistem plugin yang powerfull\n\nInstalasiUntuk instalasi cukup gampang, yang penting nodejs dan git sudah diinstall di mesin:\n1$ npm install hexo-cli -g\nInstalasi Hexo di Arch Linux melalui AUR menggunakan yaourt, packer atau program yang sejenisnya:\n1$ yaourt -S nodejs-hexo-cli\nNgeblogPerintah yang digunakan untuk mulai membuat blog dengan Hexo:\n123$ hexo init &lt;blog&gt;$ cd &lt;blog&gt;$ npm install\nIsi dari direktori blog:\n12345678.├── _config.yml├── package.json├── scaffolds├── source|   ├── _drafts|   └── _posts└── themes\nKonfigurasi blog ada di berkas _config.yml. Info lebih lanjut: https://hexo.io/docs/configuration.html.\nMembuat tulisan baruUntuk membuat tulisan baru cukup gampang:\n12$ hexo new post &quot;Judul&quot;INFO  Created: ~/dev/github/blog/source/_posts/Judul.md\nInfo lebih lanjut: https://hexo.io/docs/writing.html\nJalankan serverUntuk melihat pratinjau blog yang baru saja dibuat:\n123$ hexo serverINFO  Start processingINFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.\nInfo lebih lanjut: https://hexo.io/docs/server.html\nGenerate berkas statisMembuat berkas statis dengan Hexo cukup gampang dan cepat:\n123456789101112131415161718192021222324252627282930313233$ hexo generateINFO  Start processingINFO  Files loaded in 213 msINFO  Generated: index.htmlINFO  Generated: archives/index.htmlINFO  Generated: fancybox/blank.gifINFO  Generated: fancybox/jquery.fancybox.cssINFO  Generated: fancybox/jquery.fancybox.pack.jsINFO  Generated: fancybox/jquery.fancybox.jsINFO  Generated: fancybox/fancybox_loading.gifINFO  Generated: fancybox/fancybox_loading@2x.gifINFO  Generated: fancybox/fancybox_overlay.pngINFO  Generated: fancybox/fancybox_sprite.pngINFO  Generated: fancybox/fancybox_sprite@2x.pngINFO  Generated: archives/2018/03/index.htmlINFO  Generated: archives/2018/index.htmlINFO  Generated: css/fonts/FontAwesome.otfINFO  Generated: js/script.jsINFO  Generated: fancybox/helpers/jquery.fancybox-buttons.cssINFO  Generated: fancybox/helpers/jquery.fancybox-buttons.jsINFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.cssINFO  Generated: fancybox/helpers/jquery.fancybox-media.jsINFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.jsINFO  Generated: css/fonts/fontawesome-webfont.eotINFO  Generated: css/fonts/fontawesome-webfont.woffINFO  Generated: css/style.cssINFO  Generated: fancybox/helpers/fancybox_buttons.pngINFO  Generated: css/images/banner.jpgINFO  Generated: css/fonts/fontawesome-webfont.svgINFO  Generated: css/fonts/fontawesome-webfont.ttfINFO  Generated: 2018/03/11/hello-world/index.htmlINFO  Generated: 2018/03/11/Judul/index.htmlINFO  29 files generated in 710 ms\nInfo lebih lanjut: https://hexo.io/docs/generating.html\nDeploySebelum deploy ke GitHub, pasang dulu plugin hexo-deployer-git:1$ npm install hexo-deployer-git --save # &lt;~ dijalankan di dalam direktori blog\nEdit berkas _config.yml lalu atur bagian deployment:\n12345deploy:  type: git  repo: &lt;repo github&gt;  branch: master  message: &lt;message&gt;\nInfo lebih lanjut: https://hexo.io/docs/deployment.html\nUntuk deploy blog bisa menggunakan salah satu perintah di bawah ini:\n12345$ hexo deploy       # &lt;~ deploy blogatau$ hexo deploy -g    # &lt;~ generate blog lalu deployatau$ hexo generate -d  # &lt;~ generate blog lalu deploy\nYeaah! Sekarang go2n.github.io sudah pakai Hexo! 🤘🏼 😎\n","dateCreated":"2018-03-11T19:29:50+07:00","dateModified":"2018-04-14T19:14:27+07:00","datePublished":"2018-03-11T19:29:50+07:00","description":"Sudah dua tahun lebih saya tidak ngeblog, cukup lama juga blog ini nggak kopèn. Setelah sekian lama, akhirnya kelakon juga saya menulis di sini lagi. Kali ini saya akan menulis tentang framework untuk membuat blog ini. Sebelumnya blog ini dibuat menggunakan Jekyll dan dihosting di GitHub Pages.","headline":"Ngeblog pakai Hexo","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":["https://github.com/go2n","https://twitter.com/go2n"],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/","keywords":"archlinux, hexo, jekyll"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":["https://github.com/go2n"],"image":"go2n.jpg"},"articleBody":"Sudah dua tahun lebih saya tidak ngeblog, cukup lama juga blog ini nggak kopèn. Setelah sekian lama, akhirnya kelakon juga saya menulis di sini lagi. Kali ini saya akan menulis tentang framework untuk membuat blog ini. Sebelumnya blog ini dibuat menggunakan Jekyll dan dihosting di GitHub Pages.\nJekyll, kalau boleh saya bilang framework ini lumayan ribet dan rumit. Biasanya sebelum posting ke blog, saya melakukan pratinjau di mesin Linux saya dengan perintah:\n1$ jekyll serve\nTapi, entah kenapa setelah melakukan ritual update di mesin Arch Linux saya waktu itu Jekyll tidak bisa dijalankan seperti biasanya. Sekalinya sudah bisa dijalankan tampilan blog tidak sesuai dengan yang saya atur sebelumnya. Itulah yang menjadi salah satu alasan kenapa blog ini tidak update selama ini. 😅\nSekitar pertengahan tahun 2017 yang lalu saya mendengar tentang Hexo. Setelah membaca artikel tentang Hexo saya punya rencana untuk mulai membuat blog dengan Hexo dan memindahkan tulisan-tulisan saya. Berhubung waktu itu saya tidak selo dan lupa (halah), maka baru hari ini saya memulainya. Kemungkinan tulisan-tulisan saya di blog yang lain juga akan dipindahkan ke blog ini. 😁\nApa itu Hexo?Hexo adalah framework blog yang cepat, sederhana dan powerfull yang didukung oleh Node.js. Hexo ini konon katanya super cepat, hanya membutuhkan waktu beberapa detik untuk membangun sebuah website lengkap. Dokumentasi lengkapnya ada di https://hexo.io/docs/.\nFitur\nBlazing fast generating\nMendukung Markdownnya GitHub dan plugin-plugin Octopress\nOne-command deploy ke GitHub Pages, Heroku, dll\nSistem plugin yang powerfull\n\nInstalasiUntuk instalasi cukup gampang, yang penting nodejs dan git sudah diinstall di mesin:\n1$ npm install hexo-cli -g\nInstalasi Hexo di Arch Linux melalui AUR menggunakan yaourt, packer atau program yang sejenisnya:\n1$ yaourt -S nodejs-hexo-cli\nNgeblogPerintah yang digunakan untuk mulai membuat blog dengan Hexo:\n123$ hexo init &lt;blog&gt;$ cd &lt;blog&gt;$ npm install\nIsi dari direktori blog:\n12345678.├── _config.yml├── package.json├── scaffolds├── source|   ├── _drafts|   └── _posts└── themes\nKonfigurasi blog ada di berkas _config.yml. Info lebih lanjut: https://hexo.io/docs/configuration.html.\nMembuat tulisan baruUntuk membuat tulisan baru cukup gampang:\n12$ hexo new post &quot;Judul&quot;INFO  Created: ~/dev/github/blog/source/_posts/Judul.md\nInfo lebih lanjut: https://hexo.io/docs/writing.html\nJalankan serverUntuk melihat pratinjau blog yang baru saja dibuat:\n123$ hexo serverINFO  Start processingINFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.\nInfo lebih lanjut: https://hexo.io/docs/server.html\nGenerate berkas statisMembuat berkas statis dengan Hexo cukup gampang dan cepat:\n123456789101112131415161718192021222324252627282930313233$ hexo generateINFO  Start processingINFO  Files loaded in 213 msINFO  Generated: index.htmlINFO  Generated: archives/index.htmlINFO  Generated: fancybox/blank.gifINFO  Generated: fancybox/jquery.fancybox.cssINFO  Generated: fancybox/jquery.fancybox.pack.jsINFO  Generated: fancybox/jquery.fancybox.jsINFO  Generated: fancybox/fancybox_loading.gifINFO  Generated: fancybox/fancybox_loading@2x.gifINFO  Generated: fancybox/fancybox_overlay.pngINFO  Generated: fancybox/fancybox_sprite.pngINFO  Generated: fancybox/fancybox_sprite@2x.pngINFO  Generated: archives/2018/03/index.htmlINFO  Generated: archives/2018/index.htmlINFO  Generated: css/fonts/FontAwesome.otfINFO  Generated: js/script.jsINFO  Generated: fancybox/helpers/jquery.fancybox-buttons.cssINFO  Generated: fancybox/helpers/jquery.fancybox-buttons.jsINFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.cssINFO  Generated: fancybox/helpers/jquery.fancybox-media.jsINFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.jsINFO  Generated: css/fonts/fontawesome-webfont.eotINFO  Generated: css/fonts/fontawesome-webfont.woffINFO  Generated: css/style.cssINFO  Generated: fancybox/helpers/fancybox_buttons.pngINFO  Generated: css/images/banner.jpgINFO  Generated: css/fonts/fontawesome-webfont.svgINFO  Generated: css/fonts/fontawesome-webfont.ttfINFO  Generated: 2018/03/11/hello-world/index.htmlINFO  Generated: 2018/03/11/Judul/index.htmlINFO  29 files generated in 710 ms\nInfo lebih lanjut: https://hexo.io/docs/generating.html\nDeploySebelum deploy ke GitHub, pasang dulu plugin hexo-deployer-git:1$ npm install hexo-deployer-git --save # &lt;~ dijalankan di dalam direktori blog\nEdit berkas _config.yml lalu atur bagian deployment:\n12345deploy:  type: git  repo: &lt;repo github&gt;  branch: master  message: &lt;message&gt;\nInfo lebih lanjut: https://hexo.io/docs/deployment.html\nUntuk deploy blog bisa menggunakan salah satu perintah di bawah ini:\n12345$ hexo deploy       # &lt;~ deploy blogatau$ hexo deploy -g    # &lt;~ generate blog lalu deployatau$ hexo generate -d  # &lt;~ generate blog lalu deploy\nYeaah! Sekarang go2n.github.io sudah pakai Hexo! 🤘🏼 😎\n","dateCreated":"2018-03-11T19:29:50+07:00","dateModified":"2018-04-14T19:14:27+07:00","datePublished":"2018-03-11T19:29:50+07:00","description":"Sudah dua tahun lebih saya tidak ngeblog, cukup lama juga blog ini nggak kopèn. Setelah sekian lama, akhirnya kelakon juga saya menulis di sini lagi. Kali ini saya akan menulis tentang framework untuk membuat blog ini. Sebelumnya blog ini dibuat menggunakan Jekyll dan dihosting di GitHub Pages.","headline":"Ngeblog pakai Hexo","image":[],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":["https://github.com/go2n"],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/","keywords":"archlinux, hexo, jekyll"}</script>
     <meta name="description" content="Sudah dua tahun lebih saya tidak ngeblog, cukup lama juga blog ini nggak kopèn. Setelah sekian lama, akhirnya kelakon juga saya menulis di sini lagi. Kali ini saya akan menulis tentang framework untuk">
 <meta name="keywords" content="blog,github,jekyll,hexo,archlinux,linux">
 <meta property="og:type" content="blog">
@@ -28,7 +28,6 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ngeblog pakai Hexo">
 <meta name="twitter:description" content="Sudah dua tahun lebih saya tidak ngeblog, cukup lama juga blog ini nggak kopèn. Setelah sekian lama, akhirnya kelakon juga saya menulis di sini lagi. Kali ini saya akan menulis tentang framework untuk">
-<meta name="twitter:creator" content="@go2n">
     
     
         
@@ -40,20 +39,23 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-1udptkpril81ozu8ifd8zpujn7ipu7lefxsiu5gxx0dpnzntdx6dusvki3ao.min.css">
+    <link rel="stylesheet" href="/assets/css/style-aymlq7k6z0vzcopadshw1z2dtc5rmjtvzebh06dh9me5zeewsmiljj87tpwl.min.css">
     <!--STYLES END-->
     
-    <script type="text/javascript">
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41394739-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-        ga('create', 'UA-41394739-3', 'auto');
-        ga('send', 'pageview');
+        gtag('config', 'UA-41394739-3');
     </script>
 
 
+    
+
+    
+        
     
 </head>
 
@@ -71,12 +73,21 @@
 <header id="header" data-behavior="2">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
-        <a class="header-title-link" href="/ ">Gogon</a>
+        <a
+            class="header-title-link"
+            href="/ "
+            aria-label=""
+        >
+            Gogon
+        </a>
     </div>
     
         
-            <a  class="header-right-picture "
-                href="#about">
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Öffne den Link: /#about"
+            >
         
         
             <img class="header-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
@@ -96,7 +107,10 @@
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
-                <a href="/#about">
+                <a
+                    href="/#about"
+                    aria-label="Lesen Sie mehr über den Autor"
+                >
                     <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
                 </a>
                 <h4 class="sidebar-profile-name">Gogon</h4>
@@ -117,7 +131,7 @@
                             title="Beranda"
                         >
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-home" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Beranda</span>
                     </a>
             </li>
@@ -130,7 +144,7 @@
                             title="Kategori"
                         >
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-bookmark" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Kategori</span>
                     </a>
             </li>
@@ -143,7 +157,7 @@
                             title="Tag"
                         >
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-tags" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Tag</span>
                     </a>
             </li>
@@ -156,20 +170,33 @@
                             title="Arsip"
                         >
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-archive" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Arsip</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                            title="Cari"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Cari</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
                         <a  class="sidebar-button-link "
-                             href="/about"
+                             href="#about"
                             
                             title="Tentang"
                         >
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-question" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">Tentang</span>
                     </a>
             </li>
@@ -182,17 +209,8 @@
                     
                         <a  class="sidebar-button-link " href="https://github.com/go2n" target="_blank" rel="noopener" title="GitHub">
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-github" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fab fa-github" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">GitHub</span>
-                    </a>
-            </li>
-            
-                <li class="sidebar-button">
-                    
-                        <a  class="sidebar-button-link " href="https://twitter.com/go2n" target="_blank" rel="noopener" title="Twitter">
-                    
-                        <i class="sidebar-button-icon fa fa-lg fa-twitter" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Twitter</span>
                     </a>
             </li>
             
@@ -208,7 +226,7 @@
                             title="RSS"
                         >
                     
-                        <i class="sidebar-button-icon fa fa-lg fa-rss" aria-hidden="true"></i>
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">RSS</span>
                     </a>
             </li>
@@ -295,6 +313,7 @@
 
             
 
+
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
@@ -313,26 +332,40 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/27/ganti-nama-branch-di-git/" data-tooltip="Ganti Nama Branch di Git" aria-label="PREVIOUS: Ganti Nama Branch di Git">
-                
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2018/03/27/ganti-nama-branch-di-git/"
+                    data-tooltip="Ganti Nama Branch di Git"
+                    aria-label="PREVIOUS: Ganti Nama Branch di Git"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
             </li>
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/05/menambahkan-user-ke-dalam-group-di-freebsd/" data-tooltip="Menambahkan user ke dalam group di FreeBSD" aria-label="NEXT: Menambahkan user ke dalam group di FreeBSD">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </a>
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2016/01/05/menambahkan-user-ke-dalam-group-di-freebsd/"
+                    data-tooltip="Menambahkan user ke dalam group di FreeBSD"
+                    aria-label="NEXT: Menambahkan user ke dalam group di FreeBSD"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
             </li>
         </ul>
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Bagikan postingan ini">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Bagikan postingan ini"
+            >
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -340,32 +373,51 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/" title="Bagikan di Facebook">
-                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"
+                    title="Bagikan di Facebook"
+                    aria-label="Bagikan di Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
         
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/" title="Bagikan di Twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"
+                    title="Bagikan di Twitter"
+                    aria-label="Bagikan di Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
         
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/" title="Bagikan di Google+">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"
+                    title="Bagikan di Google+"
+                    aria-label="Bagikan di Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
         
         
             
                 <li class="post-action">
-                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
-                        <i class="fa fa-comment-o"></i>
+                    <a
+                        class="post-action-btn btn btn--default"
+                        href="#disqus_thread"
+                        aria-label="Tinggalkan komentar"
+                    >
+                        <i class="fa fa-comment"></i>
                     </a>
                 </li>
             
@@ -409,26 +461,40 @@
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2018/03/27/ganti-nama-branch-di-git/" data-tooltip="Ganti Nama Branch di Git" aria-label="PREVIOUS: Ganti Nama Branch di Git">
-                
-                    <i class="fa fa-angle-left" aria-hidden="true"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
-                </a>
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2018/03/27/ganti-nama-branch-di-git/"
+                    data-tooltip="Ganti Nama Branch di Git"
+                    aria-label="PREVIOUS: Ganti Nama Branch di Git"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
             </li>
             <li class="post-action">
                 
                     
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/01/05/menambahkan-user-ke-dalam-group-di-freebsd/" data-tooltip="Menambahkan user ke dalam group di FreeBSD" aria-label="NEXT: Menambahkan user ke dalam group di FreeBSD">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
-                    <i class="fa fa-angle-right" aria-hidden="true"></i>
-                </a>
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2016/01/05/menambahkan-user-ke-dalam-group-di-freebsd/"
+                    data-tooltip="Menambahkan user ke dalam group di FreeBSD"
+                    aria-label="NEXT: Menambahkan user ke dalam group di FreeBSD"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
             </li>
         </ul>
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions" aria-label="Bagikan postingan ini">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Bagikan postingan ini"
+            >
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
         </li>
@@ -436,32 +502,51 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/" title="Bagikan di Facebook">
-                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"
+                    title="Bagikan di Facebook"
+                    aria-label="Bagikan di Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
             </li>
         
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/" title="Bagikan di Twitter">
-                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"
+                    title="Bagikan di Twitter"
+                    aria-label="Bagikan di Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
             </li>
         
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/" title="Bagikan di Google+">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"
+                    title="Bagikan di Google+"
+                    aria-label="Bagikan di Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
             </li>
         
         
             
                 <li class="post-action">
-                    <a class="post-action-btn btn btn--default" href="#disqus_thread">
-                        <i class="fa fa-comment-o"></i>
+                    <a
+                        class="post-action-btn btn btn--default"
+                        href="#disqus_thread"
+                        aria-label="Tinggalkan komentar"
+                    >
+                        <i class="fa fa-comment"></i>
                     </a>
                 </li>
             
@@ -478,36 +563,53 @@
 
 
                 </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="2">
-    <i id="btn-close-shareoptions" class="fa fa-close"></i>
-    <ul class="share-options">
-        
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="2">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
             
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"
+                        aria-label="Bagikan di Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Bagikan di Facebook</span>
+                    </a>
+                </li>
             
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/">
-                    <i class="fa fa-facebook-official" aria-hidden="true"></i><span>Bagikan di Facebook</span>
-                </a>
-            </li>
-        
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"
+                        aria-label="Bagikan di Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Bagikan di Twitter</span>
+                    </a>
+                </li>
             
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/"
+                        aria-label="Bagikan di Google+"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Bagikan di Google+</span>
+                    </a>
+                </li>
             
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/">
-                    <i class="fa fa-twitter" aria-hidden="true"></i><span>Bagikan di Twitter</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/">
-                    <i class="fa fa-google-plus" aria-hidden="true"></i><span>Bagikan di Google+</span>
-                </a>
-            </li>
-        
-    </ul>
-</div>
+        </ul>
+    </div>
+
 
             
         </div>
@@ -521,7 +623,7 @@
 <div id="about">
     <div id="about-card">
         <div id="about-btn-close">
-            <i class="fa fa-remove"></i>
+            <i class="fa fa-times"></i>
         </div>
         
             <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
@@ -541,7 +643,7 @@
         
         
             <div id="about-card-location">
-                <i class="fa fa-map-marker"></i>
+                <i class="fa fa-map-marker-alt"></i>
                 <br/>
                 Indonesia
             </div>
@@ -553,27 +655,29 @@
         
 <div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
         <!--SCRIPTS-->
-<script src="/assets/js/script-yhuo2grt8r7qkqumzgjoglkfbicl1thukjgmla6jopu56zpcowfedi5zjcor.min.js"></script>
+<script src="/assets/js/script-qjiz6drztq53i3twl96t9xmdxg1x9aaoq2r4lka0ftop0awkj6nyzv0zwx6j.min.js"></script>
 <!--SCRIPTS END-->
+
 
     
         <script>
-             var disqus_config = function () {
-                 this.page.url = 'http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/';
-                 
-                    this.page.identifier = '2018/03/11/ngeblog-pakai-hexo/';
-                 
-             };
-            (function() {
-                var d = document, s = d.createElement('script');
-                var disqus_shortname = 'go2n';
-                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          var disqus_config = function() {
+            this.page.url = 'http://go2n.github.io/2018/03/11/ngeblog-pakai-hexo/';
+              
+            this.page.identifier = '2018/03/11/ngeblog-pakai-hexo/';
+              
+          };
+          (function() {
+            var d = document, s = d.createElement('script');
+            var disqus_shortname = 'go2n';
+            s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 
-                s.setAttribute('data-timestamp', +new Date());
-                (d.head || d.body).appendChild(s);
-            })();
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
         </script>
     
+
 
 
 
