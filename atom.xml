@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://go2n.github.io/"/>
-  <updated>2019-07-30T02:03:36.219Z</updated>
+  <updated>2019-07-30T13:00:40.996Z</updated>
   <id>http://go2n.github.io/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://go2n.github.io/2018/05/05/pyfas-pkgbuild/"/>
     <id>http://go2n.github.io/2018/05/05/pyfas-pkgbuild/</id>
     <published>2018-05-05T15:15:00.000Z</published>
-    <updated>2019-07-30T02:03:36.219Z</updated>
+    <updated>2019-07-30T13:00:40.996Z</updated>
     
-    <content type="html"><![CDATA[<p>Pyfas merupakan tool python untuk <em>flow assurance engineers</em> alias tukang insinyur di bidang industri minyak dan gas. <a id="more"></a></p><p>Berawal dari permintaan paman Ecah untuk mengekstrak data dari hasil Olga (Tpl) yang beliau kirim, akhirnya pkgbuild ini dibuat untuk mesin Arch Linux saya.</p><h4 id="Apa-itu-Olga"><a href="#Apa-itu-Olga" class="headerlink" title="Apa itu Olga?"></a>Apa itu Olga?</h4><blockquote><p>Olga is the standard de facto for the dynamic simulations of multiphase systems (single pipelines or complex network) in the oil and gas industry.</p><footer><strong>Introduction to Pyfas</strong><cite><a href="http://pyfas.readthedocs.io/en/latest/notebooks/Introduction.html" target="_blank" rel="noopener">pyfas.readthedocs.io/en/latest/notebooks/Introduction.html</a></cite></footer></blockquote><p>Dengan modul python ini data Olga bisa di-<strong><em>ihik</em></strong> untuk disajikan dan dibuat grafik (menggunakan matplotlib).</p><p>Pyfas PKGBUILD:</p><ul><li><a href="https://github.com/go2n/archlinux-pkgbuild/tree/master/python-pyfas" target="_blank" rel="noopener">Versi 0.3.1</a></li><li><a href="https://github.com/go2n/archlinux-pkgbuild/tree/master/python-pyfas-git" target="_blank" rel="noopener">Versi Git</a></li></ul>]]></content>
+    <content type="html"><![CDATA[<p>Pyfas merupakan tool python untuk <em>flow assurance engineers</em> alias tukang insinyur di bidang industri minyak dan gas.<br><a id="more"></a></p><p>Berawal dari permintaan paman Ecah untuk mengekstrak data dari hasil Olga (Tpl) yang beliau kirim, akhirnya pkgbuild ini dibuat untuk mesin Arch Linux saya.</p><h4 id="Apa-itu-Olga"><a href="#Apa-itu-Olga" class="headerlink" title="Apa itu Olga?"></a>Apa itu Olga?</h4><blockquote><p>Olga is the standard de facto for the dynamic simulations of multiphase systems (single pipelines or complex network) in the oil and gas industry.</p><footer><strong>Introduction to Pyfas</strong><cite><a href="http://pyfas.readthedocs.io/en/latest/notebooks/Introduction.html" target="_blank" rel="noopener">pyfas.readthedocs.io/en/latest/notebooks/Introduction.html</a></cite></footer></blockquote><p>Dengan modul python ini data Olga bisa di-<strong><em>ihik</em></strong> untuk disajikan dan dibuat grafik (menggunakan matplotlib).</p><p>Pyfas PKGBUILD:</p><ul><li><a href="https://github.com/go2n/archlinux-pkgbuild/tree/master/python-pyfas" target="_blank" rel="noopener">Versi 0.3.1</a></li><li><a href="https://github.com/go2n/archlinux-pkgbuild/tree/master/python-pyfas-git" target="_blank" rel="noopener">Versi Git</a></li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;Pyfas merupakan tool python untuk &lt;em&gt;flow assurance engineers&lt;/em&gt; alias tukang insinyur di bidang industri minyak dan gas.
+      &lt;p&gt;Pyfas merupakan tool python untuk &lt;em&gt;flow assurance engineers&lt;/em&gt; alias tukang insinyur di bidang industri minyak dan gas.&lt;br&gt;
     
     </summary>
     
