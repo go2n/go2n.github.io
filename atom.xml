@@ -198,34 +198,6 @@
   </entry>
   
   <entry>
-    <title>Menampilkan notifikasi ponsel Android pada desktop Linux dengan LinConnect</title>
-    <link href="http://go2n.github.io/2015/01/25/menampilkan-notifikasi-ponsel-android-pada-desktop-linux-dengan-linconnect/"/>
-    <id>http://go2n.github.io/2015/01/25/menampilkan-notifikasi-ponsel-android-pada-desktop-linux-dengan-linconnect/</id>
-    <published>2015-01-25T07:31:00.000Z</published>
-    <updated>2019-08-08T05:19:32.368Z</updated>
-    
-    <content type="html"><![CDATA[<p>LinConnect, merupakan aplikasi untuk menampilkan notifikasi ponsel Android pada desktop Linux menggunakan libnotify. Saya mendapatkan informasi mengenai LinConnect ini dari blog dan tweetnya pak <a href="https://twitter.com/milisdad" target="_blank" rel="noopener">@milisdad</a>.<a id="more"></a> Hampir semua aplikasi yang terpasang di ponsel dapat ditampilkan notifikasinya di desktop Linux oleh LinConnect ini. Tidak seperti KDE Connect yang sejauh ini hanya bisa menampilkan notifikasi SMS dan panggilan telepon.</p><div class="figure center" style="width:;"><a class="fancybox" href="snapshot213.png" title data-caption data-fancybox="default"><img class="fig-img" src="snapshot213.png" alt></a></div><p>Bagi pengguna Arch Linux sudah tersedia paket AUR <a href="https://aur.archlinux.org/packages/linconnect-server-git" target="_blank" rel="noopener">linconnect-server</a>. Bagi pengguna Linux Mint silakan ikuti langkah-langkah yang telah ditulis pak <a href="https://twitter.com/milisdad" target="_blank" rel="noopener">@milisdad</a> di laman <a href="http://milisdad.blogspot.com/2014/01/notifikasi-android-di-linux-mint.html" target="_blank" rel="noopener">http://milisdad.blogspot.com/2014/01/notifikasi-android-di-linux-mint.html</a>. Sedangkan aplikasi klien di Android silakan unduh di <a href="https://play.google.com/store/apps/details?id=com.willhauck.linconnectclient" target="_blank" rel="noopener">Google Play Store</a>.</p><p>LinConnect ini masih dalam tahap pengembangan, belum mendukung <a href="http://albertvaka.wordpress.com/2013/09/19/how-kde-connect-encryption-works/" target="_blank" rel="noopener">enkripsi seperti KDE Connect</a>. Meski hanya menampilkan notifikasi saja, saya cukup puas dengan aplikasi ini. Namun, sebagai pengguna KDE saya sih berharap KDE Connect bisa menampilkan semua notifikasi aplikasi yang terpasang di ponsel seperti LinConnect. Biar KDE Connect tambah sangaaar! Hehehehe 😁</p><p>=-=-=-=-=<br><em>Powered by <strong><a href="http://blogilo.gnufolks.org/" target="_blank" rel="noopener">Blogilo</a></strong></em></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;LinConnect, merupakan aplikasi untuk menampilkan notifikasi ponsel Android pada desktop Linux menggunakan libnotify. Saya mendapatkan informasi mengenai LinConnect ini dari blog dan tweetnya pak &lt;a href=&quot;https://twitter.com/milisdad&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;@milisdad&lt;/a&gt;.
-    
-    </summary>
-    
-      <category term="linux" scheme="http://go2n.github.io/categories/linux/"/>
-    
-      <category term="android" scheme="http://go2n.github.io/categories/linux/android/"/>
-    
-    
-      <category term="archlinux" scheme="http://go2n.github.io/tags/archlinux/"/>
-    
-      <category term="pkgbuild" scheme="http://go2n.github.io/tags/pkgbuild/"/>
-    
-      <category term="google" scheme="http://go2n.github.io/tags/google/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Official Repo: ownCloud Client</title>
     <link href="http://go2n.github.io/2015/01/12/official-repo-owncloud-client/"/>
     <id>http://go2n.github.io/2015/01/12/official-repo-owncloud-client/</id>
@@ -533,6 +505,39 @@
     <summary type="html">
     
       &lt;p&gt;Saya merasa ada yang aneh dengan hasil pencarian katalog dengan Nayanes pada pencarian di satu lokasi. Nayanes menampilkan semua hasil pencarian pada setiap lokasi (node) dengan mode pencarian semua lokasi (multiple node search).&lt;br&gt;
+    
+    </summary>
+    
+      <category term="iseng" scheme="http://go2n.github.io/categories/iseng/"/>
+    
+    
+      <category term="php" scheme="http://go2n.github.io/tags/php/"/>
+    
+      <category term="slims" scheme="http://go2n.github.io/tags/slims/"/>
+    
+      <category term="senayan" scheme="http://go2n.github.io/tags/senayan/"/>
+    
+      <category term="perpustakaan" scheme="http://go2n.github.io/tags/perpustakaan/"/>
+    
+      <category term="library" scheme="http://go2n.github.io/tags/library/"/>
+    
+      <category term="html" scheme="http://go2n.github.io/tags/html/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NBoot3 Nayanes Themes</title>
+    <link href="http://go2n.github.io/2014/03/18/nayanes-themes/"/>
+    <id>http://go2n.github.io/2014/03/18/nayanes-themes/</id>
+    <published>2014-03-17T17:00:00.000Z</published>
+    <updated>2018-03-29T23:51:30.326Z</updated>
+    
+    <content type="html"><![CDATA[<p>Hae..</p><p>Sejak kemarin saya berusaha membuat tema untuk Nayanes. Tema yang dibuat saya namakan NBoot3. Tema NBoot3 ini tidak saya ihik dari awal tetapi hasil ngedit example dari <a href="http://getbootstrap.com/examples/navbar-fixed-top/" target="_blank" rel="noopener">Twitter Bootstrap 3</a> di sana-sini. NBoot3 saya buat dengan bantuan senior saya, <strong>pak Aziz</strong>.<br><a id="more"></a> </p><h4 id="Apa-itu-Nayanes"><a href="#Apa-itu-Nayanes" class="headerlink" title="Apa itu Nayanes?"></a>Apa itu Nayanes?</h4><p>Nayanes: The SLiMS Search Proxy, merupakan mesin pencarian untuk SLiMS. Nayanes mengambil catatan bibliografi dari web service SLiMS MOD XML tanpa koneksi database. Nayanes dibangun dengan PHP dan PHP-XML.</p><h4 id="Tampilan-NBoot3"><a href="#Tampilan-NBoot3" class="headerlink" title="Tampilan NBoot3"></a>Tampilan NBoot3</h4><ul><li><strong>Simple Search</strong></li></ul><div class="figure " style="width:;"><a class="fancybox" href="nayanes-themes-nboot3-simple.png" title="NBoot3 Simple Search" data-caption="NBoot3 Simple Search" data-fancybox="default"><img class="fig-img" src="nayanes-themes-nboot3-simple.png" alt="NBoot3 Simple Search"></a><span class="caption">NBoot3 Simple Search</span></div><ul><li><strong>Advanced Search</strong></li></ul><div class="figure " style="width:;"><a class="fancybox" href="nayanes-themes-nboot3-advanced.png" title="NBoot3 Advanded Search" data-caption="NBoot3 Advanded Search" data-fancybox="default"><img class="fig-img" src="nayanes-themes-nboot3-advanced.png" alt="NBoot3 Advanded Search"></a><span class="caption">NBoot3 Advanded Search</span></div><p><strong><em>Github</em></strong>: <a href="https://github.com/go2n/nayanes-themes" target="_blank" rel="noopener">Nayanes Themes</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Hae..&lt;/p&gt;
+&lt;p&gt;Sejak kemarin saya berusaha membuat tema untuk Nayanes. Tema yang dibuat saya namakan NBoot3. Tema NBoot3 ini tidak saya ihik dari awal tetapi hasil ngedit example dari &lt;a href=&quot;http://getbootstrap.com/examples/navbar-fixed-top/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Twitter Bootstrap 3&lt;/a&gt; di sana-sini. NBoot3 saya buat dengan bantuan senior saya, &lt;strong&gt;pak Aziz&lt;/strong&gt;.&lt;br&gt;
     
     </summary>
     
