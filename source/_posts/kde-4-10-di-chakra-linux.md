@@ -12,6 +12,5 @@ keywords:
 comments: True
 ---
 
-{% image fancybox center snapshot10.png "" %}
+{% image fancybox center snapshot10.png "Woohooo…! Chakra Linux ane sudah pakai KDE 4.10 🤘🏼" %}
 
-<center>Woohooo…! Chakra Linux ane sudah pakai KDE 4.10 🤘🏼</center>

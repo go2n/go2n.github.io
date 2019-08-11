@@ -13,7 +13,7 @@ keywords:
 
 Ternyata update filesystem (manjaro-system) pada distribusi Manjaro tidak memerlukan intervensi seperti pada distribusi Arch Linux. Semuanya ditangani secara otomatis, cukup `pacman -Syu` beres. <!-- more -->
 
-![pacman](snapshot17.png)
+{% image center ./snapshot17.png %}
 
 Oh iya saya dapat update ini setelah saya pindah mirror ke http://ftp.belnet.be/manjaro/stable/, soalnya http://kambing.ui.ac.id/manjaro out-of-date 😐
 
