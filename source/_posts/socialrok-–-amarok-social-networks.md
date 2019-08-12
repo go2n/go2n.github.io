@@ -27,8 +27,8 @@ SocialRok merupakan Amarok 2 Script yang memungkinkan kamu untuk posting lagu ya
 
 Untuk instalasi bisa langsung unduh melalui Get Hot New Stuff pada Amarok (Menu Settings > Configure Amarok… > Scripts > Manage Scripts)
 
-{% image fancybox center snapshot135.png "Amarok: Configure script" %}
-{% image fancybox center snapshot136.png "Amarok: Add-on installer" %}
+{% image fancybox fig-50 nocaption snapshot135.png "Amarok: Configure script" %}
+{% image fancybox fig-50 nocaption snapshot136.png "Amarok: Add-on installer" %}
 
 Restart Amarok lalu aktifkan SocialRok: Menu Settings > Configure Amarok… > Scripts (centang SocialRok). Untuk konfigurasi: Menu Settings > Configure SocialRok… Pada jendela konfigurasi kamu bisa mengatur jejaring sosial.
 
@@ -36,8 +36,8 @@ Restart Amarok lalu aktifkan SocialRok: Menu Settings > Configure Amarok… > Sc
 
 Sebagai contoh jejaring sosial yang saya gunakan Twitter. User ID bukan user jejaring sosial, melainkan UserID yang didapat setelah memberikan akses ke jejaring sosial. Untuk mendapatkan User ID pilih Menu Tools > Grant Access for Twitter, selanjutnya kamu akan dibawa ke halaman web https://calm-river-6855.herokuapp.com/twitter.php untuk koneksi SocialRok dengan Twitter.
 
-{% image fancybox center snapshot138.png "Rekonq: Twitter Auth" %}
-{% image fancybox center snapshot139.png "Rekonq: Twitter Auth" %}
+{% image fancybox fig-50 nocaption snapshot138.png "Rekonq: Twitter Auth" %}
+{% image fancybox fig-50 nocaption snapshot139.png "Rekonq: Twitter Auth" %}
 
 Isikan User ID yang didapat pada isian jendela konfigurasi.
 
