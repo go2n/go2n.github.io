@@ -293,9 +293,9 @@
       <category term="linux" scheme="http://go2n.github.io/categories/linux/"/>
     
     
-      <category term="archlinux" scheme="http://go2n.github.io/tags/archlinux/"/>
-    
       <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
+    
+      <category term="archlinux" scheme="http://go2n.github.io/tags/archlinux/"/>
     
   </entry>
   
@@ -433,9 +433,9 @@
       <category term="linux" scheme="http://go2n.github.io/categories/linux/"/>
     
     
-      <category term="archlinux" scheme="http://go2n.github.io/tags/archlinux/"/>
-    
       <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
+    
+      <category term="archlinux" scheme="http://go2n.github.io/tags/archlinux/"/>
     
       <category term="pkgbuild" scheme="http://go2n.github.io/tags/pkgbuild/"/>
     
@@ -513,8 +513,6 @@
     
       <category term="php" scheme="http://go2n.github.io/tags/php/"/>
     
-      <category term="html" scheme="http://go2n.github.io/tags/html/"/>
-    
       <category term="slims" scheme="http://go2n.github.io/tags/slims/"/>
     
       <category term="senayan" scheme="http://go2n.github.io/tags/senayan/"/>
@@ -522,6 +520,8 @@
       <category term="perpustakaan" scheme="http://go2n.github.io/tags/perpustakaan/"/>
     
       <category term="library" scheme="http://go2n.github.io/tags/library/"/>
+    
+      <category term="html" scheme="http://go2n.github.io/tags/html/"/>
     
   </entry>
   
@@ -546,8 +546,6 @@
     
       <category term="php" scheme="http://go2n.github.io/tags/php/"/>
     
-      <category term="html" scheme="http://go2n.github.io/tags/html/"/>
-    
       <category term="slims" scheme="http://go2n.github.io/tags/slims/"/>
     
       <category term="senayan" scheme="http://go2n.github.io/tags/senayan/"/>
@@ -555,6 +553,8 @@
       <category term="perpustakaan" scheme="http://go2n.github.io/tags/perpustakaan/"/>
     
       <category term="library" scheme="http://go2n.github.io/tags/library/"/>
+    
+      <category term="html" scheme="http://go2n.github.io/tags/html/"/>
     
   </entry>
   

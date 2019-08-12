@@ -1,0 +1,663 @@
+
+<!DOCTYPE html>
+<html lang="id">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="Gogon">
+    <title>Integrasi KDE dengan Android menggunakan KDE Connect - Gogon</title>
+    <meta name="author" content="Gogon">
+    
+        <meta name="keywords" content="linux,kde,android">
+    
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Instalasi\nArch Linux: kdeconnect atau kdeconnect-git (AUR)\nopenSUSE 12.3: kdeconnect-kde (1 Click Install)\nAndroid: KDE Connect\n\n\nInstalasi dari kode sumber\nClone: git clone git://anongit.kde.org/kdeconnect-kde\nInstall dependensi: kdelibs, qjson\nKompilasi:\ncmake -DCMAKE_INSTALL_PREFIX=kde4-config –prefix`\nmake\nsudo make install atau su -c &quot;make install&quot;\n\n\n\nPenampakan:\n\n\n\n\n\n\n\nDiuji coba dengan KDE 4.11.1 di openSUSE 12.3 dan ponsel Android Samsung Galaxy Fit\nRujukan\n","dateCreated":"2013-09-20T21:18:00+07:00","dateModified":"2019-08-12T10:56:59+07:00","datePublished":"2013-09-20T21:18:00+07:00","description":"Instalasi\nArch Linux: kdeconnect atau kdeconnect-git (AUR)\nopenSUSE 12.3: kdeconnect-kde (1 Click Install)\nAndroid: KDE Connect","headline":"Integrasi KDE dengan Android menggunakan KDE Connect","image":["./snapshot44.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/","keywords":"kde, android","thumbnailUrl":"./snapshot44.png"}</script>
+    <meta name="description" content="Instalasi Arch Linux: kdeconnect atau kdeconnect-git (AUR) openSUSE 12.3: kdeconnect-kde (1 Click Install) Android: KDE Connect">
+<meta name="keywords" content="linux,kde,android">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Integrasi KDE dengan Android menggunakan KDE Connect">
+<meta property="og:url" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/index.html">
+<meta property="og:site_name" content="Gogon">
+<meta property="og:description" content="Instalasi Arch Linux: kdeconnect atau kdeconnect-git (AUR) openSUSE 12.3: kdeconnect-kde (1 Click Install) Android: KDE Connect">
+<meta property="og:locale" content="id">
+<meta property="og:image" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/snapshot44.png">
+<meta property="og:image" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/snapshot46.png">
+<meta property="og:image" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/snapshot45.png">
+<meta property="og:image" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/screenshot-20130920-210928.png">
+<meta property="og:image" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/screenshot-20130920-210937.png">
+<meta property="og:image" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/screenshot-20130920-210954.png">
+<meta property="og:image" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/screenshot-20130920-211003.png">
+<meta property="og:updated_time" content="2019-08-12T03:56:59.700Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Integrasi KDE dengan Android menggunakan KDE Connect">
+<meta name="twitter:description" content="Instalasi Arch Linux: kdeconnect atau kdeconnect-git (AUR) openSUSE 12.3: kdeconnect-kde (1 Click Install) Android: KDE Connect">
+<meta name="twitter:image" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/snapshot44.png">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://go2n.github.io/assets/images/go2n.jpg"/>
+    
+    
+        <meta property="og:image" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/./snapshot44.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/./snapshot44.png"/>
+    
+    
+    
+    <!--STYLES-->
+    <link rel="stylesheet" href="/assets/css/style-aymlq7k6z0vzcopadshw1z2dtc5rmjtvzebh06dh9me5zeewsmiljj87tpwl.min.css">
+    <!--STYLES END-->
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41394739-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41394739-3');
+    </script>
+
+
+    
+
+    
+        
+    
+</head>
+
+    <body>
+        <div id="blog">
+            <!-- Define author's picture -->
+
+
+    
+        
+            
+        
+    
+
+<header id="header" data-behavior="1">
+    <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+    <div class="header-title">
+        <a
+            class="header-title-link"
+            href="/ "
+            aria-label=""
+        >
+            Gogon
+        </a>
+    </div>
+    
+        
+            <a
+                class="header-right-picture "
+                href="#about"
+                aria-label="Öffne den Link: /#about"
+            >
+        
+        
+            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+        
+        </a>
+    
+</header>
+
+            <!-- Define author's picture -->
+
+
+
+        
+    
+
+<nav id="sidebar" data-behavior="1">
+    <div class="sidebar-container">
+        
+            <div class="sidebar-profile">
+                <a
+                    href="/#about"
+                    aria-label="Lesen Sie mehr über den Autor"
+                >
+                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+                </a>
+                <h4 class="sidebar-profile-name">Gogon</h4>
+                
+                    <h5 class="sidebar-profile-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+</h5>
+                
+            </div>
+        
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/ "
+                            
+                            title="Beranda"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Beranda</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-categories"
+                            
+                            title="Kategori"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Kategori</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-tags"
+                            
+                            title="Tag"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tag</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/all-archives"
+                            
+                            title="Arsip"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Arsip</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/about"
+                            
+                            title="Tentang"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Tentang</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+        </ul>
+        
+            <ul class="sidebar-buttons">
+            
+                <li class="sidebar-button">
+                    
+                        <a  class="sidebar-button-link "
+                             href="/atom.xml"
+                            
+                            title="RSS"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">RSS</span>
+                    </a>
+            </li>
+            
+        </ul>
+        
+    </div>
+</nav>
+
+            
+            <div id="main" data-behavior="1"
+                 class="
+                        hasCoverMetaIn
+                        ">
+                
+<article class="post">
+    
+    
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title">
+            Integrasi KDE dengan Android menggunakan KDE Connect
+        </h1>
+    
+    
+        <div class="post-meta">
+    <time datetime="2013-09-20T21:18:00+07:00">
+	
+		    20 September 2013
+    	
+    </time>
+    
+        <span> |  </span>
+        
+    <a class="category-link" href="/categories/linux/">linux</a>
+
+
+    
+</div>
+
+    
+</div>
+
+    
+    <div class="post-content markdown">
+        <div class="main-content-wrap">
+            <h2 id="Instalasi"><a href="#Instalasi" class="headerlink" title="Instalasi"></a>Instalasi</h2><ul>
+<li>Arch Linux: <a href="https://aur.archlinux.org/packages/kdeconnect/" target="_blank" rel="noopener">kdeconnect</a> atau <a href="https://aur.archlinux.org/packages/kdeconnect-git/" target="_blank" rel="noopener">kdeconnect-git</a> (AUR)</li>
+<li>openSUSE 12.3: <a href="http://software.opensuse.org/ymp/KDE:Extra/openSUSE_12.3/kdeconnect-kde.ymp?base=openSUSE%3A12.3&amp;query=kdeconnect-kde" target="_blank" rel="noopener">kdeconnect-kde</a> (1 Click Install)</li>
+<li>Android: <a href="https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp" target="_blank" rel="noopener">KDE Connect</a><a id="more"></a>
+</li>
+</ul>
+<h2 id="Instalasi-dari-kode-sumber"><a href="#Instalasi-dari-kode-sumber" class="headerlink" title="Instalasi dari kode sumber"></a>Instalasi dari kode sumber</h2><ul>
+<li>Clone: <code>git clone git://anongit.kde.org/kdeconnect-kde</code></li>
+<li>Install dependensi: <code>kdelibs, qjson</code></li>
+<li>Kompilasi:<ul>
+<li><code>cmake -DCMAKE_INSTALL_PREFIX=</code>kde4-config –prefix`</li>
+<li><code>make</code></li>
+<li><code>sudo make install atau su -c &quot;make install&quot;</code></li>
+</ul>
+</li>
+</ul>
+<p>Penampakan:</p>
+<div class="figure nocaption fig-50" style="width:;"><a class="fancybox" href="./snapshot44.png" title="KDE Connect Plasmoid Notifications" data-caption="KDE Connect Plasmoid Notifications" data-fancybox="default"><img class="fig-img" src="./snapshot44.png" alt="KDE Connect Plasmoid Notifications"></a></div>
+<div class="figure nocaption fig-50" style="width:;"><a class="fancybox" href="./snapshot46.png" title="KDE Connect Plasmoid" data-caption="KDE Connect Plasmoid" data-fancybox="default"><img class="fig-img" src="./snapshot46.png" alt="KDE Connect Plasmoid"></a></div>
+<div class="figure nocaption fig-100" style="width:;"><a class="fancybox" href="./snapshot45.png" title="KDE Control Module" data-caption="KDE Control Module" data-fancybox="default"><img class="fig-img" src="./snapshot45.png" alt="KDE Control Module"></a></div>
+<div class="figure nocaption fig-25" style="width:;"><a class="fancybox" href="./screenshot-20130920-210928.png" title="KDE Connect Android" data-caption="KDE Connect Android" data-fancybox="default"><img class="fig-img" src="./screenshot-20130920-210928.png" alt="KDE Connect Android"></a></div>
+<div class="figure nocaption fig-25" style="width:;"><a class="fancybox" href="./screenshot-20130920-210937.png" title="KDE Connect Android Device" data-caption="KDE Connect Android Device" data-fancybox="default"><img class="fig-img" src="./screenshot-20130920-210937.png" alt="KDE Connect Android Device"></a></div>
+<div class="figure nocaption fig-25" style="width:;"><a class="fancybox" href="./screenshot-20130920-210954.png" title="KDE Connect Android Settings" data-caption="KDE Connect Android Settings" data-fancybox="default"><img class="fig-img" src="./screenshot-20130920-210954.png" alt="KDE Connect Android Settings"></a></div>
+<div class="figure nocaption fig-25" style="width:;"><a class="fancybox" href="./screenshot-20130920-211003.png" title="KDE Connect Android Multimedia control" data-caption="KDE Connect Android Multimedia control" data-fancybox="default"><img class="fig-img" src="./screenshot-20130920-211003.png" alt="KDE Connect Android Multimedia control"></a></div>
+<p>Diuji coba dengan KDE 4.11.1 di openSUSE 12.3 dan ponsel Android Samsung Galaxy Fit</p>
+<p><a href="http://albertvaka.wordpress.com/2013/09/08/releasing-kde-connect-technology-preview/" target="_blank" rel="noopener">Rujukan</a></p>
+
+            
+
+
+        </div>
+    </div>
+    <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">Tag</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/android/">android</a> <a class="tag tag--primary tag--small t-link" href="/tags/kde/">kde</a>
+
+            </div>
+        
+        
+            <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2013/12/21/plasma-2-technology-preview/"
+                    data-tooltip="Plasma 2 Technology Preview"
+                    aria-label="PREVIOUS: Plasma 2 Technology Preview"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2013/06/12/binaries-move-di-manjaro/"
+                    data-tooltip="Binaries Move di Manjaro"
+                    aria-label="NEXT: Binaries Move di Manjaro"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Bagikan postingan ini"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/"
+                    title="Bagikan di Facebook"
+                    aria-label="Bagikan di Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/"
+                    title="Bagikan di Twitter"
+                    aria-label="Bagikan di Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/"
+                    title="Bagikan di Google+"
+                    aria-label="Bagikan di Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a
+                        class="post-action-btn btn btn--default"
+                        href="#disqus_thread"
+                        aria-label="Tinggalkan komentar"
+                    >
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+        
+        
+            
+                <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+            
+        
+    </div>
+</article>
+
+
+
+                <footer id="footer" class="main-content-wrap">
+    <span class="copyrights">
+        Copyrights &copy; 2019 Gogon. All Rights Reserved.
+    </span>
+</footer>
+
+            </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2013/12/21/plasma-2-technology-preview/"
+                    data-tooltip="Plasma 2 Technology Preview"
+                    aria-label="PREVIOUS: Plasma 2 Technology Preview"
+                >
+                    
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    </a>
+            </li>
+            <li class="post-action">
+                
+                    
+                <a
+                    class="post-action-btn btn btn--default tooltip--top"
+                    href="/2013/06/12/binaries-move-di-manjaro/"
+                    data-tooltip="Binaries Move di Manjaro"
+                    aria-label="NEXT: Binaries Move di Manjaro"
+                >
+                    
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                    </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a
+                class="post-action-btn btn btn--default btn-open-shareoptions"
+                href="#btn-open-shareoptions"
+                aria-label="Bagikan postingan ini"
+            >
+                <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/"
+                    title="Bagikan di Facebook"
+                    aria-label="Bagikan di Facebook"
+                >
+                    <i class="fab fa-facebook" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/"
+                    title="Bagikan di Twitter"
+                    aria-label="Bagikan di Twitter"
+                >
+                    <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a
+                    class="post-action-btn btn btn--default"
+                    target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/"
+                    title="Bagikan di Google+"
+                    aria-label="Bagikan di Google+"
+                >
+                    <i class="fab fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </li>
+        
+        
+            
+                <li class="post-action">
+                    <a
+                        class="post-action-btn btn btn--default"
+                        href="#disqus_thread"
+                        aria-label="Tinggalkan komentar"
+                    >
+                        <i class="fa fa-comment"></i>
+                    </a>
+                </li>
+            
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+            
+                <i class="fa fa-list" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                
+    <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+        <i id="btn-close-shareoptions" class="fa fa-times"></i>
+        <ul class="share-options">
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/"
+                        aria-label="Bagikan di Facebook"
+                    >
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Bagikan di Facebook</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/"
+                        aria-label="Bagikan di Twitter"
+                    >
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Bagikan di Twitter</span>
+                    </a>
+                </li>
+            
+                
+                
+                <li class="share-option">
+                    <a
+                        class="share-option-btn"
+                        target="new"
+                        href="https://plus.google.com/share?url=http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/"
+                        aria-label="Bagikan di Google+"
+                    >
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Bagikan di Google+</span>
+                    </a>
+                </li>
+            
+        </ul>
+    </div>
+
+
+            
+        </div>
+        
+
+
+    
+        
+    
+
+<div id="about">
+    <div id="about-card">
+        <div id="about-btn-close">
+            <i class="fa fa-times"></i>
+        </div>
+        
+            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+        
+            <h4 id="about-card-name">Gogon</h4>
+        
+            <div id="about-card-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+</div>
+        
+        
+            <div id="about-card-job">
+                <i class="fa fa-briefcase"></i>
+                <br/>
+                <p>Janitor</p>
+
+            </div>
+        
+        
+            <div id="about-card-location">
+                <i class="fa fa-map-marker-alt"></i>
+                <br/>
+                Indonesia
+            </div>
+        
+    </div>
+</div>
+
+        
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+        <!--SCRIPTS-->
+<script src="/assets/js/script-qjiz6drztq53i3twl96t9xmdxg1x9aaoq2r4lka0ftop0awkj6nyzv0zwx6j.min.js"></script>
+<!--SCRIPTS END-->
+
+
+    
+        <script>
+          var disqus_config = function() {
+            this.page.url = 'http://go2n.github.io/2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/';
+              
+            this.page.identifier = '2013/09/20/integrasi-kde-dengan-android-menggunakan-kde-connect/';
+              
+          };
+          (function() {
+            var d = document, s = d.createElement('script');
+            var disqus_shortname = 'go2n';
+            s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+          })();
+        </script>
+    
+
+
+
+
+    </body>
+</html>
