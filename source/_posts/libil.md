@@ -15,6 +15,8 @@ keywords:
     - ruby
     - linux
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: http://localhost:4000/2014/09/01/libil/libil-jogja.png
 ---
 
 Kemarin buka notifikasi twitter ada om [Didiet Noor](https://twitter.com/lynxluna) yang nyebut nama saya terkait libil. Padahal libil kan artinya ngising. Ha mosok libil dihubungkan sama saya? Pancen kok!

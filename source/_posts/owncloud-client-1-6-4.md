@@ -13,6 +13,8 @@ keywords:
     - owncloud
     - linux
 comments: True
+thumbnailImage: https://go2n.github.io/2014/10/27/owncloud-client-1-6-4/owncloud-client-1-6-4.png 
+thumbnailImagePosition: right
 ---
 
 Hae... Tanggal 23 Oktober kemarin ownCloud client 1.6.4 dirilis loh, sudah update belum? Berikut ini changelog ownCloud client 1.6.4:<!--more-->

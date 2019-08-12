@@ -13,6 +13,8 @@ keywords:
     - mouse server
     - linux
 comments: True
+thumbnailImage: https://go2n.github.io/2014/08/08/pkgbuild-update-mouseserver/mouse-server.png
+thumbnailImagePosition: right
 ---
 
 Kemarin malam dapat notifikasi via email bahwa ada komentar untuk paket AUR mouse server yang saya submit dari [Nuno Goncalves](https://aur.archlinux.org/account/ulukyn/). Dalam komentar tersebut dia menyebutkan bahwa ada kesalahan pada PKGBUILD saya karena source code mouse server baru dan dia menyertakan PKGBUILD yang benar.

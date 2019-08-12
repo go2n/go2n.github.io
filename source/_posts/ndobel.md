@@ -11,6 +11,8 @@ keywords:
     - KDE
     - linux
 comments: True
+thumbnailImage: https://go2n.github.io/2014/10/30/ndobel/ssnd-snapshot141.png
+thumbnailImagePosition: 
 ---
 
 Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.

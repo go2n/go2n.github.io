@@ -14,6 +14,8 @@ keywords:
     - owncloud
     - linux
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://go2n.github.io/2014/11/17/owncloud-client-1-7-0/owncloud-client-1-7-0.png
 ---
 
 Hae... Tanggal 7 November 2014 kemarin ownCloud client 1.7.0 ternyata sudah dirilis, dan saya baru sempat kompel hari ini. Berikut ini changelog ownCloud client 1.7.0:<!--more-->

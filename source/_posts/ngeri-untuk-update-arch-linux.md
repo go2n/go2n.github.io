@@ -6,11 +6,13 @@ tags:
   - archlinux
   - update
   - twitter
+thumbnailImagePosition: right
+thumbnailImage: ./archlinux.png
 ---
 
 Malam tadi saya sempat membaca baca tweet dari @archlinux mengenai update yang memerlukan intervensi.
 
-{% alert info %}
+{% alert info no-icon %}
 Binaries move to /usr/bin requiring update intervention: Allan McRae wrote: During your next update, you will ... [bit.ly/17RfrkD](https://bit.ly/17RfrkD)
 — [**@archlinux**](https://twitter.com/archlinux/statuses/341518609518034944)
 {% endalert %}
@@ -18,7 +20,7 @@ Binaries move to /usr/bin requiring update intervention: Allan McRae wrote: Duri
 
 Pagi ini pak dosen @dwijonarko menyebut saya dalam tweetnya yang berisi tautan mengenai update Arch Linux tersebut.
 
-{% alert info %}
+{% alert info no-icon %}
 [archlinux.org/news/binaries-…](https://www.archlinux.org/news/binaries-move-to-usrbin-requiring-update-intervention/) hhmmmmm cc @go2n 
 — [**@dwijonarko**](https://twitter.com/dwijonarko/status/341705049266868224)
 {% endalert %}

@@ -9,6 +9,8 @@ keywords:
     - KDE
     - Plasma
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://dot.kde.org/sites/dot.kde.org/files/plasma2tp-networkmanagement.png
 ---
 
 Konon katanya Plasma 2 ini dibangun dengan Qt5, QtQuick2 dan OpenGL dan KDE Framework 5. Preview dari KDE Framework 5 katanya akan keluar awal tahun 2014, sedangkan rilis pertama direncanakan pada akhir tahun. Waa… jadi masih setahun lagi bisa nyicip KF5 yang stable.

@@ -14,6 +14,8 @@ keywords:
     - pkgbuild
     - google 
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: snapshot213.png
 ---
 
 LinConnect, merupakan aplikasi untuk menampilkan notifikasi ponsel Android pada desktop Linux menggunakan libnotify. Saya mendapatkan informasi mengenai LinConnect ini dari blog dan tweetnya pak [@milisdad](https://twitter.com/milisdad).<!-- more --> Hampir semua aplikasi yang terpasang di ponsel dapat ditampilkan notifikasinya di desktop Linux oleh LinConnect ini. Tidak seperti KDE Connect yang sejauh ini hanya bisa menampilkan notifikasi SMS dan panggilan telepon.

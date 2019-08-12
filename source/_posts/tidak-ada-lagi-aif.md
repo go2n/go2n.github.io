@@ -10,6 +10,8 @@ keywords:
   - archlinux
   - framework
   - aif
+thumbnailImagePosition: right
+thumbnailImage: https://i.imgur.com/xGdmDKR.jpg
 ---
 
 Pagi ini saya iseng untuk coba memasang Arch Linux dengan installer terbaru (2012.10.06) di PC tempat saya mburuh. Saya agak terkejut dengan tidak disertakannya AIF - Arch Installation Framework di media instalasi tersebut.<!-- more -->

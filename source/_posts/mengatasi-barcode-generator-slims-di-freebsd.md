@@ -20,6 +20,8 @@ keywords:
     - perpustakaan
     - library
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/dhemit.png
 ---
 
 Halo...

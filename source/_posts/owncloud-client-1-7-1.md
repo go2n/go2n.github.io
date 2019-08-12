@@ -13,6 +13,8 @@ keywords:
     - owncloud
     - linux
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://go2n.github.io/2014/12/30/owncloud-client-1-7-1/owncloud-client-1-7-1.png
 ---
 
 OwnCloud client 1.7.1 sudah dirilis tanggal 18 Desember kemarin, dan saya baru sempat kompel serta memperbarui PKGBUILD hari ini. Berikut ini changelog ownCloud client 1.7.1: <!--more-->

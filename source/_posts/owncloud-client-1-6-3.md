@@ -13,6 +13,8 @@ keywords:
     - owncloud
     - linux
 comments: True
+thumbnailImage: https://go2n.github.io/2014/09/10/owncloud-client-1-6-3/owncloud-client-1-6-3.png
+thumbnailImagePosition: right
 ---
 
 Hae... Sudah pada upgrade owncloud client 1.6.3 belum? Berikut ini changelog ownCloud client 1.6.3:<!--more-->

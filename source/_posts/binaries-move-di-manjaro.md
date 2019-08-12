@@ -9,13 +9,15 @@ keywords:
   - linux
   - manjaro
   - archlinux
+thumbnailImagePosition: right
+thumbnailImage: ./manjaro.png
 ---
 
 Ternyata update filesystem (manjaro-system) pada distribusi Manjaro tidak memerlukan intervensi seperti pada distribusi Arch Linux. Semuanya ditangani secara otomatis, cukup `pacman -Syu` beres. <!-- more -->
 
 {% image center ./snapshot17.png %}
 
-Oh iya saya dapat update ini setelah saya pindah mirror ke http://ftp.belnet.be/manjaro/stable/, soalnya http://kambing.ui.ac.id/manjaro out-of-date 😐
+Oh iya saya dapat update ini setelah saya pindah mirror ke [ftp.belnet.be](http://ftp.belnet.be/manjaro/stable/), soalnya [kambing](http://kambing.ui.ac.id/manjaro) out-of-date 😐
 
 Rujukan:
 - http://forum.manjaro.org/index.php?topic=1646.msg43979#msg43979

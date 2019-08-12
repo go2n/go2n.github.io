@@ -17,6 +17,8 @@ keywords:
     - perpustakaan
     - library
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://go2n.github.io/2014/03/18/nayanes-themes/nayanes-themes-nboot3-advanced.png
 ---
 
 Hae..

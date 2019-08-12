@@ -18,6 +18,8 @@ keywords:
     - perpustakaan
     - library
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://go2n.github.io/2014/03/19/perbaikan-nayanes/2014-03-19-perbaikan-nayanes-single.png
 ---
 
 Saya merasa ada yang aneh dengan hasil pencarian katalog dengan Nayanes pada pencarian di satu lokasi. Nayanes menampilkan semua hasil pencarian pada setiap lokasi (node) dengan mode pencarian semua lokasi (multiple node search).

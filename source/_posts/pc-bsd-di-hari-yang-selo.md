@@ -12,6 +12,8 @@ keywords:
     - pcbsd
     - KDE
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://go2n.github.io/2015/02/27/pc-bsd-di-hari-yang-selo/pc-bsd-di-hari-yang-selo.png
 ---
 
 Wahihihi... Sebenarnya sudah lama punya wacana buat pasang PC-BSD, tapi baru hari rabu kemarin saya selo buat memasang PC-BSD di komputer kantor. Sempat gagal update gara-gara paket `gnupg` yang konflik, tapi sekarang sudah beres. Hhe 😁

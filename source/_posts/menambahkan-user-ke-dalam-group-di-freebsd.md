@@ -11,6 +11,8 @@ tags:
 keywords:
     - freebsd
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/dhemit.png
 ---
 
 > _Sebuah catatan biar nggak lupa perintah menambahkan user ke dalam group di mesin FreeBSD._

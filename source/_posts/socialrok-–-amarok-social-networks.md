@@ -11,6 +11,8 @@ keywords:
     - KDE
     - linux
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://go2n.github.io/2013/01/12/socialrok-%E2%80%93-amarok-social-networks/snapshot142.png
 ---
 
 SocialRok merupakan Amarok 2 Script yang memungkinkan kamu untuk posting lagu yang sedang kamu dengarkan dengan Amarok pada jejaring sosial. SocialRok juga memungkinkan kamu untuk posting cover art dari lagu yang sedang diputar dan link pada Youtube untuk pencarian.

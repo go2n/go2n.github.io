@@ -15,6 +15,8 @@ keywords:
     - mysql
     - database
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: dhemit.png
 ---
 > _Sekedar catatan saja saat lupa password root MySQL di mesin FreeBSD._
 

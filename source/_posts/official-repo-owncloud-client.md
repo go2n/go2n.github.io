@@ -13,6 +13,8 @@ keywords:
     - owncloud
     - linux
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://go2n.github.io/2015/01/12/official-repo-owncloud-client/official-repo-owncloud-client-1.png
 ---
 
 Pagi ini saat menjalankan ritual `pacman -Syu` seperti biasa saya baru tahu kalau paket ownCloud client sudah masuk official repo.

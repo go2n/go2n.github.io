@@ -13,6 +13,8 @@ keywords:
     - mouse server
     - linux
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: https://go2n.github.io/2015/01/28/pkgbuild-update-mouse-server/mouse-server.png
 ---
 
 Kemarin malam dapat notifikasi via email bahwa ada komentar untuk paket [AUR mouse server](https://aur.archlinux.org/packages/mouseserver/) yang saya submit dari [Tobse Topic](https://aur.archlinux.org/account/generalt/). Dalam komentar tersebut dia menyebutkan bahwa ada masalah pada CMakeLists.txt mouseserver. Katanya:

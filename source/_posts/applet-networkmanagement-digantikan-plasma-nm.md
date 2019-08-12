@@ -11,6 +11,8 @@ keywords:
     - KDE
     - Plasma
 comments: True
+thumbnailImagePosition: right
+thumbnailImage: plasma-nm.png
 ---
 
 Saya baru sadar kalau ternyata `kdeplasma-applets-networkmanagement` sekarang masuk AUR. Sempat bingung juga kok bisa di-drop ke [AUR](https://aur.archlinux.org/packages/kdeplasma-applets-networkmanagement/). Apakah ada antarmuka grafis baru untuk NetworkManager?
