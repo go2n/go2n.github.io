@@ -293,9 +293,9 @@
       <category term="linux" scheme="http://go2n.github.io/categories/linux/"/>
     
     
-      <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
-    
       <category term="archlinux" scheme="http://go2n.github.io/tags/archlinux/"/>
+    
+      <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
     
   </entry>
   
@@ -344,9 +344,9 @@
       <category term="freebsd" scheme="http://go2n.github.io/categories/freebsd/"/>
     
     
-      <category term="linux" scheme="http://go2n.github.io/tags/linux/"/>
-    
       <category term="freebsd" scheme="http://go2n.github.io/tags/freebsd/"/>
+    
+      <category term="linux" scheme="http://go2n.github.io/tags/linux/"/>
     
       <category term="php" scheme="http://go2n.github.io/tags/php/"/>
     
@@ -433,9 +433,9 @@
       <category term="linux" scheme="http://go2n.github.io/categories/linux/"/>
     
     
-      <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
-    
       <category term="archlinux" scheme="http://go2n.github.io/tags/archlinux/"/>
+    
+      <category term="KDE" scheme="http://go2n.github.io/tags/KDE/"/>
     
       <category term="pkgbuild" scheme="http://go2n.github.io/tags/pkgbuild/"/>
     
