@@ -6,31 +6,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Gogon">
-    <title>Ternyata namanya CoverGloobus - Gogon</title>
+    <title>The battle of compression tools (Sebuah perbandingan) - Gogon</title>
     <meta name="author" content="Gogon">
     
-        <meta name="keywords" content="linux,desktop,archlinux,media,music,python,gtk,art">
+        <meta name="keywords" content="linux,tools,utilities,compression,gunzip,bunzip2,gzip,bz2,xz">
     
     
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Saat saya jalan-jalan di deviantart ada screenshot desktop GNU/Linux milik salah satu pengguna di sana yang menarik perhatian saya. Hal yang membuat saya tertarik adalah applet penampil cover art musik yang sedang diputar. Setelah mencari tahu dengan bantuan Google ternyata nama applet tersebut adalah CoverGloobus.Menurut situsnya, CoverGloobus adalah adalah sebuah desktop (penampil) cover art dan pengontrol media yang juga dapat menampilkan lirik lagu yang sedang dimainkan. CoverGloobus dibangun menggunakan bahasa Python dan GTK+ (PyGTK).\nDukunganCoverGloobus mendukung banyak pemutar media/musik, antara lain:\n\nAmarok2\nAudacious\nBanshee\nClementine\nExaile 0.2.x\nExaile 0.3.x\ngmusicbrowser\nGuayadeque\nListen\nMOC\nMPD (requires python-mpd)\nQuodLibet\nRythmbox\nSongbird (requires MPRIS plugin for Songbird)\nSpotify\nTotem\nVLC ( &gt; 0.9.0)\n\nLyrics Engine:\n\nabsolutelyrics.com\nlyrics.com\nlyrics.wikia.com\nlyricsfly.com\nlyricsplugin.com\n\nTablatures Engine:\n\nUltimate guitar\n\nBerikut ini tampilan CoverGloobus dan lirik lagu pada desktop KDE saya:\nCoverGloobus\nLirik\nInstalasiInstalasi CoverGloobus pada Arch Linux melalui AUR:\n1yaourt -S covergloobus\nuntuk versi bzr:1yaourt -S covergloobus-bzr\nSedangkan untuk distro GNU/Linux yang lain silahkan googling 😁. Untuk tema CoverGloobus silakan kunjungi http://covergloobus.deviantart.com/\n","dateCreated":"2012-11-13T20:40:00+07:00","dateModified":"2019-08-12T14:13:36+07:00","datePublished":"2012-11-13T20:40:00+07:00","description":"Saat saya jalan-jalan di deviantart ada screenshot desktop GNU/Linux milik salah satu pengguna di sana yang menarik perhatian saya. Hal yang membuat saya tertarik adalah applet penampil cover art musik yang sedang diputar. Setelah mencari tahu dengan bantuan Google ternyata nama applet tersebut adalah CoverGloobus.","headline":"Ternyata namanya CoverGloobus","image":["https://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/snapshot102.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/","keywords":"linux, archlinux, python, music, desktop, media, gtk, art","thumbnailUrl":"https://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/snapshot102.png"}</script>
-    <meta name="description" content="Saat saya jalan-jalan di deviantart ada screenshot desktop GNU/Linux milik salah satu pengguna di sana yang menarik perhatian saya. Hal yang membuat saya tertarik adalah applet penampil cover art musi">
-<meta name="keywords" content="linux,desktop,archlinux,media,music,python,gtk,art">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Beberapa hari yang lalu saya iseng-iseng membandingkan 3 format kompresi berkas. Ketiga format yang saya coba bandingkan tersebut adalah gunzip, bunzip2 dan xz utils. Untuk pengujian kompresi ketiga format tersebut saya menggunakan berkas sql dengan ukuran kurang lebih 475 MB\n\ngunzipTool kompresi pada pengujian pertama adalah gunzip. Opsi yang saya gunakan untuk proses kompresi adalah -9 atau –best untuk compress better. Hasil proses kompresi berkas sql adalah 75 MB dari berkas asal sebesar 475 MB dengan membutuhkan waktu kurang lebih 0m53.258s.\n\nSedangkan penggunaan CPU 25% dan penggunaan memori 192 K.\n\nWaktu yang dibutuhkan untuk dekompresi 0m5.398s.\n\nbunzip2Tool kompresi pada pengujian kedua adalah bunzip2. Seperti halnya pada pengujian pertama, opsi yang saya gunakan untuk proses kompresi adalah -9 atau –best dan -k atau –keep (agar berkas yang mau dikompresi tidak hilang). Hasil proses kompresi berkas sql adalah 57 MB dari berkas asal sebesar 475 MB dengan membutuhkan waktu kurang lebih 1m41.310s.\n\nSedangkan penggunaan CPU 25% dan penggunaan memori 6.380 K.\n\nWaktu yang dibutuhkan untuk dekompresi 0m28.764s.\n\nXZ utilsTool kompresi terakhir yang saya uji adalah XZ utils. Opsi yang saya gunakan untuk kompresi sama seperti kedua tool kompresi diatas yaitu -9. Opsi -k digunakan agar berkas asli tidak hilang. Hasil proses kompresi berkas sql adalah 41 MB dari berkas asal sebesar 475 MB dengan membutuhkan waktu kurang lebih 7m38.308s.\n\nSedangkan penggunaan CPU 25% dan penggunaan memori 689.228 K.\n\nWaktu yang dibutuhkan untuk dekompresi 0m7.908s.\n\nKesimpulanUntuk ukuran hasil kompresi dari yang terkecil adalah xz utils, bunzip2 dan yang terakhir adalah gunzip. Untuk lamanya proses kompresi dari yang tercepat adalah gunzip, bunzip2 dan yang terakhir adalah xz utils, sedangkan lamanya proses dekompresi dari yang tercepat adalah gunzip, xz utils dan terakhir bunzip2. Peggunaan memori dari yang paling kecil adalah gunzip, bunzip2 dan yang terakhir xz utils.\n\n\n\nTool\nSize\nCompression Time\nDecompression Time\nMemory Usage\n\n\n\n\ngunzip\n75 MB\n0m53.258s\n0m5.398s\n192 K\n\n\nbunzip2\n57 MB\n1m41.310s\n0m28.764s\n6.380 K\n\n\nxz utils\n41 MB\n7m38.308s\n0m7.908s\n689.228 K\n\n\n\n","dateCreated":"2012-12-17T09:58:00+07:00","dateModified":"2019-08-13T11:42:57+07:00","datePublished":"2012-12-17T09:58:00+07:00","description":"Beberapa hari yang lalu saya iseng-iseng membandingkan 3 format kompresi berkas. Ketiga format yang saya coba bandingkan tersebut adalah gunzip, bunzip2 dan xz utils. Untuk pengujian kompresi ketiga format tersebut saya menggunakan berkas sql dengan ukuran kurang lebih 475 MB","headline":"The battle of compression tools (Sebuah perbandingan)","image":["./1.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/","keywords":"tools, utilities, compression","thumbnailUrl":"./1.png"}</script>
+    <meta name="description" content="Beberapa hari yang lalu saya iseng-iseng membandingkan 3 format kompresi berkas. Ketiga format yang saya coba bandingkan tersebut adalah gunzip, bunzip2 dan xz utils. Untuk pengujian kompresi ketiga f">
+<meta name="keywords" content="linux,tools,utilities,compression,gunzip,bunzip2,gzip,bz2,xz">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Ternyata namanya CoverGloobus">
-<meta property="og:url" content="http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/index.html">
+<meta property="og:title" content="The battle of compression tools (Sebuah perbandingan)">
+<meta property="og:url" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/index.html">
 <meta property="og:site_name" content="Gogon">
-<meta property="og:description" content="Saat saya jalan-jalan di deviantart ada screenshot desktop GNU/Linux milik salah satu pengguna di sana yang menarik perhatian saya. Hal yang membuat saya tertarik adalah applet penampil cover art musi">
+<meta property="og:description" content="Beberapa hari yang lalu saya iseng-iseng membandingkan 3 format kompresi berkas. Ketiga format yang saya coba bandingkan tersebut adalah gunzip, bunzip2 dan xz utils. Untuk pengujian kompresi ketiga f">
 <meta property="og:locale" content="id">
-<meta property="og:image" content="http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/snapshot102.png">
-<meta property="og:image" content="http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/snapshot103.png">
-<meta property="og:updated_time" content="2019-08-12T07:13:36.810Z">
+<meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/1.png">
+<meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/gunzip1.png">
+<meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/gunzip2.png">
+<meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/gunzip3.png">
+<meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/bunzip1.png">
+<meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/bunzip2.png">
+<meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/bunzip3.png">
+<meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/xz1.png">
+<meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/xz2.png">
+<meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/xz3.png">
+<meta property="og:updated_time" content="2019-08-13T04:42:57.517Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ternyata namanya CoverGloobus">
-<meta name="twitter:description" content="Saat saya jalan-jalan di deviantart ada screenshot desktop GNU/Linux milik salah satu pengguna di sana yang menarik perhatian saya. Hal yang membuat saya tertarik adalah applet penampil cover art musi">
-<meta name="twitter:image" content="http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/snapshot102.png">
+<meta name="twitter:title" content="The battle of compression tools (Sebuah perbandingan)">
+<meta name="twitter:description" content="Beberapa hari yang lalu saya iseng-iseng membandingkan 3 format kompresi berkas. Ketiga format yang saya coba bandingkan tersebut adalah gunzip, bunzip2 dan xz utils. Untuk pengujian kompresi ketiga f">
+<meta name="twitter:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/1.png">
     
     
         
@@ -39,8 +47,8 @@
         <meta property="og:image" content="http://go2n.github.io/assets/images/go2n.jpg"/>
     
     
-        <meta property="og:image" content="https://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/snapshot102.png"/>
-        <meta class="swiftype" name="image" data-type="enum" content="https://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/snapshot102.png"/>
+        <meta property="og:image" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/./1.png"/>
+        <meta class="swiftype" name="image" data-type="enum" content="http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/./1.png"/>
     
     
     
@@ -232,14 +240,14 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title">
-            Ternyata namanya CoverGloobus
+            The battle of compression tools (Sebuah perbandingan)
         </h1>
     
     
         <div class="post-meta">
-    <time datetime="2012-11-13T20:40:00+07:00">
+    <time datetime="2012-12-17T09:58:00+07:00">
 	
-		    13 November 2012
+		    17 Desember 2012
     	
     </time>
     
@@ -257,46 +265,61 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <p>Saat saya jalan-jalan di deviantart ada screenshot desktop GNU/Linux milik salah satu pengguna di sana yang menarik perhatian saya. Hal yang membuat saya tertarik adalah applet penampil cover art musik yang sedang diputar. Setelah mencari tahu dengan bantuan Google ternyata nama applet tersebut adalah CoverGloobus.<br><a id="more"></a><br>Menurut situsnya, CoverGloobus adalah adalah sebuah desktop (penampil) cover art dan pengontrol media yang juga dapat menampilkan lirik lagu yang sedang dimainkan. CoverGloobus dibangun menggunakan bahasa Python dan GTK+ (PyGTK).</p>
-<h2 id="Dukungan"><a href="#Dukungan" class="headerlink" title="Dukungan"></a>Dukungan</h2><p>CoverGloobus mendukung banyak pemutar media/musik, antara lain:</p>
-<ul>
-<li>Amarok2</li>
-<li>Audacious</li>
-<li>Banshee</li>
-<li>Clementine</li>
-<li>Exaile 0.2.x</li>
-<li>Exaile 0.3.x</li>
-<li>gmusicbrowser</li>
-<li>Guayadeque</li>
-<li>Listen</li>
-<li>MOC</li>
-<li>MPD (requires python-mpd)</li>
-<li>QuodLibet</li>
-<li>Rythmbox</li>
-<li>Songbird (requires MPRIS plugin for Songbird)</li>
-<li>Spotify</li>
-<li>Totem</li>
-<li>VLC ( &gt; 0.9.0)</li>
-</ul>
-<p>Lyrics Engine:</p>
-<ul>
-<li>absolutelyrics.com</li>
-<li>lyrics.com</li>
-<li>lyrics.wikia.com</li>
-<li>lyricsfly.com</li>
-<li>lyricsplugin.com</li>
-</ul>
-<p>Tablatures Engine:</p>
-<ul>
-<li>Ultimate guitar</li>
-</ul>
-<p>Berikut ini tampilan CoverGloobus dan lirik lagu pada desktop KDE saya:</p>
-<div class="figure center" style="width:;"><a class="fancybox" href="./snapshot102.png" title="CoverGloobus" data-caption="CoverGloobus" data-fancybox="default"><img class="fig-img" src="./snapshot102.png" alt="CoverGloobus"></a><span class="caption">CoverGloobus</span></div>
-<div class="figure center" style="width:;"><a class="fancybox" href="./snapshot103.png" title="Lirik" data-caption="Lirik" data-fancybox="default"><img class="fig-img" src="./snapshot103.png" alt="Lirik"></a><span class="caption">Lirik</span></div>
-<h2 id="Instalasi"><a href="#Instalasi" class="headerlink" title="Instalasi"></a>Instalasi</h2><p>Instalasi CoverGloobus pada Arch Linux melalui AUR:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yaourt -S covergloobus</span><br></pre></td></tr></table></figure>
-<p>untuk versi bzr:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yaourt -S covergloobus-bzr</span><br></pre></td></tr></table></figure></p>
-<p>Sedangkan untuk distro GNU/Linux yang lain silahkan googling 😁. Untuk tema CoverGloobus silakan kunjungi <a href="http://covergloobus.deviantart.com/" target="_blank" rel="noopener">http://covergloobus.deviantart.com/</a></p>
+            <p>Beberapa hari yang lalu saya iseng-iseng membandingkan 3 format kompresi berkas. Ketiga format yang saya coba bandingkan tersebut adalah <strong>gunzip</strong>, <strong>bunzip2</strong> dan <strong>xz utils</strong>. Untuk pengujian kompresi ketiga format tersebut saya menggunakan berkas sql dengan ukuran kurang lebih 475 MB<br><a id="more"></a></p>
+<div class="figure center" style="width:;"><a class="fancybox" href="./1.png" title data-caption data-fancybox="default"><img class="fig-img" src="./1.png" alt></a></div><div style="clear:both;"></div>
+<h2 id="gunzip"><a href="#gunzip" class="headerlink" title="gunzip"></a>gunzip</h2><p>Tool kompresi pada pengujian pertama adalah gunzip. Opsi yang saya gunakan untuk proses kompresi adalah -9 atau –best untuk <em>compress better</em>. Hasil proses kompresi berkas sql adalah <strong>75 MB</strong> dari berkas asal sebesar <strong>475 MB</strong> dengan membutuhkan waktu kurang lebih <strong>0m53.258s</strong>.</p>
+<div class="figure center" style="width:;"><a class="fancybox" href="./gunzip1.png" title data-caption data-fancybox="default"><img class="fig-img" src="./gunzip1.png" alt></a></div><div style="clear:both;"></div>
+<p>Sedangkan penggunaan CPU <strong>25%</strong> dan penggunaan memori <strong>192 K</strong>.</p>
+<div class="figure center" style="width:;"><a class="fancybox" href="./gunzip2.png" title data-caption data-fancybox="default"><img class="fig-img" src="./gunzip2.png" alt></a></div><div style="clear:both;"></div>
+<p>Waktu yang dibutuhkan untuk dekompresi <strong>0m5.398s</strong>.</p>
+<div class="figure center" style="width:;"><a class="fancybox" href="./gunzip3.png" title data-caption data-fancybox="default"><img class="fig-img" src="./gunzip3.png" alt></a></div><div style="clear:both;"></div>
+<h2 id="bunzip2"><a href="#bunzip2" class="headerlink" title="bunzip2"></a>bunzip2</h2><p>Tool kompresi pada pengujian kedua adalah bunzip2. Seperti halnya pada pengujian pertama, opsi yang saya gunakan untuk proses kompresi adalah -9 atau –best dan -k atau –keep (agar berkas yang mau dikompresi tidak hilang). Hasil proses kompresi berkas sql adalah <strong>57 MB</strong> dari berkas asal sebesar <strong>475 MB</strong> dengan membutuhkan waktu kurang lebih <strong>1m41.310s</strong>.</p>
+<div class="figure center" style="width:;"><a class="fancybox" href="./bunzip1.png" title data-caption data-fancybox="default"><img class="fig-img" src="./bunzip1.png" alt></a></div><div style="clear:both;"></div>
+<p>Sedangkan penggunaan CPU <strong>25%</strong> dan penggunaan memori <strong>6.380 K</strong>.</p>
+<div class="figure center" style="width:;"><a class="fancybox" href="./bunzip2.png" title data-caption data-fancybox="default"><img class="fig-img" src="./bunzip2.png" alt></a></div><div style="clear:both;"></div>
+<p>Waktu yang dibutuhkan untuk dekompresi <strong>0m28.764s</strong>.</p>
+<div class="figure center" style="width:;"><a class="fancybox" href="./bunzip3.png" title data-caption data-fancybox="default"><img class="fig-img" src="./bunzip3.png" alt></a></div><div style="clear:both;"></div>
+<h2 id="XZ-utils"><a href="#XZ-utils" class="headerlink" title="XZ utils"></a>XZ utils</h2><p>Tool kompresi terakhir yang saya uji adalah XZ utils. Opsi yang saya gunakan untuk kompresi sama seperti kedua tool kompresi diatas yaitu -9. Opsi -k digunakan agar berkas asli tidak hilang. Hasil proses kompresi berkas sql adalah <strong>41 M</strong>B dari berkas asal sebesar <strong>475 MB</strong> dengan membutuhkan waktu kurang lebih <strong>7m38.308s</strong>.</p>
+<div class="figure center" style="width:;"><a class="fancybox" href="./xz1.png" title data-caption data-fancybox="default"><img class="fig-img" src="./xz1.png" alt></a></div><div style="clear:both;"></div>
+<p>Sedangkan penggunaan CPU <strong>25%</strong> dan penggunaan memori <strong>689.228 K</strong>.</p>
+<div class="figure center" style="width:;"><a class="fancybox" href="./xz2.png" title data-caption data-fancybox="default"><img class="fig-img" src="./xz2.png" alt></a></div><div style="clear:both;"></div>
+<p>Waktu yang dibutuhkan untuk dekompresi <strong>0m7.908s</strong>.</p>
+<div class="figure center" style="width:;"><a class="fancybox" href="./xz3.png" title data-caption data-fancybox="default"><img class="fig-img" src="./xz3.png" alt></a></div><div style="clear:both;"></div>
+<h2 id="Kesimpulan"><a href="#Kesimpulan" class="headerlink" title="Kesimpulan"></a>Kesimpulan</h2><p>Untuk ukuran hasil kompresi dari yang terkecil adalah <strong>xz utils</strong>, <strong>bunzip2</strong> dan yang terakhir adalah <strong>gunzip</strong>. Untuk lamanya proses kompresi dari yang tercepat adalah <strong>gunzip</strong>, <strong>bunzip2</strong> dan yang terakhir adalah <strong>xz utils</strong>, sedangkan lamanya proses dekompresi dari yang tercepat adalah <strong>gunzip</strong>, <strong>xz utils</strong> dan terakhir <strong>bunzip2</strong>. Peggunaan memori dari yang paling kecil adalah <strong>gunzip</strong>, <strong>bunzip2</strong> dan yang terakhir <strong>xz utils</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tool</th>
+<th style="text-align:left">Size</th>
+<th style="text-align:left">Compression Time</th>
+<th style="text-align:left">Decompression Time</th>
+<th style="text-align:right">Memory Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>gunzip</strong></td>
+<td style="text-align:left">75 MB</td>
+<td style="text-align:left">0m53.258s</td>
+<td style="text-align:left">0m5.398s</td>
+<td style="text-align:right">192 K</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>bunzip2</strong></td>
+<td style="text-align:left">57 MB</td>
+<td style="text-align:left">1m41.310s</td>
+<td style="text-align:left">0m28.764s</td>
+<td style="text-align:right">6.380 K</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>xz</strong> <strong>utils</strong></td>
+<td style="text-align:left">41 MB</td>
+<td style="text-align:left">7m38.308s</td>
+<td style="text-align:left">0m7.908s</td>
+<td style="text-align:right">689.228 K</td>
+</tr>
+</tbody>
+</table>
 
             
 
@@ -308,7 +331,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">Tag</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/archlinux/">archlinux</a> <a class="tag tag--primary tag--small t-link" href="/tags/art/">art</a> <a class="tag tag--primary tag--small t-link" href="/tags/desktop/">desktop</a> <a class="tag tag--primary tag--small t-link" href="/tags/gtk/">gtk</a> <a class="tag tag--primary tag--small t-link" href="/tags/linux/">linux</a> <a class="tag tag--primary tag--small t-link" href="/tags/media/">media</a> <a class="tag tag--primary tag--small t-link" href="/tags/music/">music</a> <a class="tag tag--primary tag--small t-link" href="/tags/python/">python</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/compression/">compression</a> <a class="tag tag--primary tag--small t-link" href="/tags/tools/">tools</a> <a class="tag tag--primary tag--small t-link" href="/tags/utilities/">utilities</a>
 
             </div>
         
@@ -321,9 +344,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2012/12/17/the-battle-of-compression-tool/"
-                    data-tooltip="The battle of compression tools (Sebuah perbandingan)"
-                    aria-label="PREVIOUS: The battle of compression tools (Sebuah perbandingan)"
+                    href="/2013/01/12/socialrok-–-amarok-social-networks/"
+                    data-tooltip="SocialRok – Amarok Social Networks"
+                    aria-label="PREVIOUS: SocialRok – Amarok Social Networks"
                 >
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -335,9 +358,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2012/10/10/tidak-ada-lagi-aif/"
-                    data-tooltip="Tidak ada lagi AIF 😭"
-                    aria-label="NEXT: Tidak ada lagi AIF 😭"
+                    href="/2012/11/13/ternyata-namanya-covergloobus/"
+                    data-tooltip="Ternyata namanya CoverGloobus"
+                    aria-label="NEXT: Ternyata namanya CoverGloobus"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -362,7 +385,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/"
                     title="Bagikan di Facebook"
                     aria-label="Bagikan di Facebook"
                 >
@@ -375,7 +398,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/"
                     title="Bagikan di Twitter"
                     aria-label="Bagikan di Twitter"
                 >
@@ -388,7 +411,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                    target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/"
                     title="Bagikan di Google+"
                     aria-label="Bagikan di Google+"
                 >
@@ -450,9 +473,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2012/12/17/the-battle-of-compression-tool/"
-                    data-tooltip="The battle of compression tools (Sebuah perbandingan)"
-                    aria-label="PREVIOUS: The battle of compression tools (Sebuah perbandingan)"
+                    href="/2013/01/12/socialrok-–-amarok-social-networks/"
+                    data-tooltip="SocialRok – Amarok Social Networks"
+                    aria-label="PREVIOUS: SocialRok – Amarok Social Networks"
                 >
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -464,9 +487,9 @@
                     
                 <a
                     class="post-action-btn btn btn--default tooltip--top"
-                    href="/2012/10/10/tidak-ada-lagi-aif/"
-                    data-tooltip="Tidak ada lagi AIF 😭"
-                    aria-label="NEXT: Tidak ada lagi AIF 😭"
+                    href="/2012/11/13/ternyata-namanya-covergloobus/"
+                    data-tooltip="Ternyata namanya CoverGloobus"
+                    aria-label="NEXT: Ternyata namanya CoverGloobus"
                 >
                     
                         <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
@@ -491,7 +514,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                    target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/"
                     title="Bagikan di Facebook"
                     aria-label="Bagikan di Facebook"
                 >
@@ -504,7 +527,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                    target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/"
                     title="Bagikan di Twitter"
                     aria-label="Bagikan di Twitter"
                 >
@@ -517,7 +540,7 @@
             <li class="post-action hide-xs">
                 <a
                     class="post-action-btn btn btn--default"
-                    target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                    target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/"
                     title="Bagikan di Google+"
                     aria-label="Bagikan di Google+"
                 >
@@ -561,7 +584,7 @@
                     <a
                         class="share-option-btn"
                         target="new"
-                        href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                        href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/"
                         aria-label="Bagikan di Facebook"
                     >
                         <i class="fab fa-facebook" aria-hidden="true"></i><span>Bagikan di Facebook</span>
@@ -574,7 +597,7 @@
                     <a
                         class="share-option-btn"
                         target="new"
-                        href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                        href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/"
                         aria-label="Bagikan di Twitter"
                     >
                         <i class="fab fa-twitter" aria-hidden="true"></i><span>Bagikan di Twitter</span>
@@ -587,7 +610,7 @@
                     <a
                         class="share-option-btn"
                         target="new"
-                        href="https://plus.google.com/share?url=http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                        href="https://plus.google.com/share?url=http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/"
                         aria-label="Bagikan di Google+"
                     >
                         <i class="fab fa-google-plus" aria-hidden="true"></i><span>Bagikan di Google+</span>
@@ -649,9 +672,9 @@
     
         <script>
           var disqus_config = function() {
-            this.page.url = 'http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/';
+            this.page.url = 'http://go2n.github.io/2012/12/17/the-battle-of-compression-tool/';
               
-            this.page.identifier = '2012/11/13/ternyata-namanya-covergloobus/';
+            this.page.identifier = '2012/12/17/the-battle-of-compression-tool/';
               
           };
           (function() {
