@@ -13,6 +13,8 @@ keywords:
     - KDE
     - linux
 comments: True
+thumbnailImage: ../../../../assets/images/konqi.png
+thumbnailImagePosition: right
 ---
 
 Hae! Selamat hari raya senin! :)

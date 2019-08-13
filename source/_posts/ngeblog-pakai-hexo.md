@@ -14,6 +14,8 @@ keywords:
     - archlinux
     - linux
 comments: true
+thumbnailImage: https://raw.githubusercontent.com/hexojs/logo/master/hexo-logo-avatar-transparent-background.png
+thumbnailImagePosition: right
 ---
 
 Sudah dua tahun lebih saya tidak ngeblog, cukup lama juga blog ini nggak kopèn. Setelah sekian lama, akhirnya kelakon juga saya menulis di sini lagi. Kali ini saya akan menulis tentang framework untuk membuat blog ini. Sebelumnya blog ini dibuat menggunakan [Jekyll](https://jekyllrb.com/) dan dihosting di [GitHub Pages](https://pages.github.com/).

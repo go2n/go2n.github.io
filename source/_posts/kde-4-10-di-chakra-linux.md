@@ -12,5 +12,5 @@ keywords:
 comments: True
 ---
 
-{% image fancybox center snapshot10.png "Woohooo…! Chakra Linux ane sudah pakai KDE 4.10 🤘🏼" %}
+{% image fancybox center https://go2n.github.io/2013/02/11/kde-4-10-di-chakra-linux/snapshot10.png "Woohooo…! Chakra Linux ane sudah pakai KDE 4.10 🤘🏼" %}
 

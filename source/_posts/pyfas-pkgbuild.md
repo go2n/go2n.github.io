@@ -12,6 +12,8 @@ keywords:
   - python
   - linux
 date: 2018-05-05 22:15:00
+thumbnailImage: https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/240px-Python-logo-notext.svg.png
+thumbnailImagePosition: right
 ---
 Pyfas merupakan tool python untuk _flow assurance engineers_ alias tukang insinyur di bidang industri minyak dan gas. 
 <!-- more -->

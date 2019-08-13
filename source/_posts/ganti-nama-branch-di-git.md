@@ -3,6 +3,8 @@ title: Ganti Nama Branch di Git
 date: 2018-03-27 11:00:10
 categories: notes
 tags: git
+thumbnailImage: https://git-scm.com/images/logos/logomark-black@2x.png
+thumbnailImagePosition: right
 ---
 
 > Sebuah catatan biar nggak lupa perintah git
