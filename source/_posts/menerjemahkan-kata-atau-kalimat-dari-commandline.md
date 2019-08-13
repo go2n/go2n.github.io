@@ -3,18 +3,18 @@ title: Menerjemahkan kata atau kalimat dari commandline
 date: 2012-07-07 18:12
 categories: linux
 tags:
-  - google
-  - translate
-  - kamus
+    - google
+    - translate
+    - kamus
     - bash
-  - shell 
+    - shell 
     - cli
 keywords:
-  - google
-  - translate
-  - kamus
+    - google
+    - translate
+    - kamus
     - bash
-  - shell 
+    - shell 
     - cli
 thumbnailImage: https://www.akashtrehan.com/assets/images/emoji/terminal.png
 thumbnailImagePosition: right
