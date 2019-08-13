@@ -9,7 +9,7 @@ tags:
   - plasma
   - plasmoid
   - applet
-  - QML
+  - qml
   - dagadu
 keywords:
   - linux
@@ -17,7 +17,7 @@ keywords:
   - plasma
   - plasmoid
   - applet
-  - QML
+  - qml
   - dagadu
 thumbnailImagePosition: right
 thumbnailImage: ./snapshot19.png

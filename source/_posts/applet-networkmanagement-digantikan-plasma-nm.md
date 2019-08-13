@@ -5,11 +5,11 @@ categories: linux
 tags:
     - linux
     - KDE
-    - Plasma
+    - plasma
 keywords:
     - linux
     - KDE
-    - Plasma
+    - plasma
 comments: True
 thumbnailImagePosition: right
 thumbnailImage: plasma-nm.png

@@ -4,10 +4,10 @@ date: 2013-12-21 14:52:21
 categories: linux
 tags:
     - KDE
-    - Plasma
+    - plasma
 keywords:
     - KDE
-    - Plasma
+    - plasma
 comments: True
 thumbnailImagePosition: right
 thumbnailImage: https://dot.kde.org/sites/dot.kde.org/files/plasma2tp-networkmanagement.png
