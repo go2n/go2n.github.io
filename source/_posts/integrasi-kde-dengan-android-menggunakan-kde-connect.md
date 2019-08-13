@@ -1,9 +1,11 @@
 ---
 title: Integrasi KDE dengan Android menggunakan KDE Connect
 date: 2013-09-20 21:18
-categories: linux
+categories:
+    - linux
+    - KDE
 tags:
-  - kde
+  - KDE
   - android
 keywords:
   - linux
