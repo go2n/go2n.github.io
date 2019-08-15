@@ -171,6 +171,19 @@
             
                 <li class="sidebar-button">
                     
+                        <a  class="sidebar-button-link open-algolia-search"
+                             href="#search"
+                            
+                            title="Cari"
+                        >
+                    
+                        <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
+                        <span class="sidebar-button-desc">Cari</span>
+                    </a>
+            </li>
+            
+                <li class="sidebar-button">
+                    
                         <a  class="sidebar-button-link "
                              href="/about"
                             
@@ -337,6 +350,359 @@
 </div>
 
         
+            <div id="algolia-search-modal" class="modal-container">
+    <div class="modal">
+        <div class="modal-header">
+            <span class="close-button"><i class="fa fa-times"></i></span>
+            <a href="https://algolia.com" target="_blank" rel="noopener" class="searchby-algolia text-color-light link-unstyled">
+                <span class="searchby-algolia-text text-color-light text-small">by</span>
+                <img class="searchby-algolia-logo" src="/assets/images/logo-algolia-nebula-blue-full.svg">
+            </a>
+            <i class="search-icon fa fa-search"></i>
+            <form id="algolia-search-form">
+                <input type="text" id="algolia-search-input" name="search"
+                    class="form-control input--large search-input" placeholder="Search "
+                    />
+            </form>
+        </div>
+        <div class="modal-body">
+            <div class="no-result text-color-light text-center">0 post ditemukan</div>
+            <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2011/12/11/wicd-kde-plasmoid/"
+                            aria-label=": Wicd KDE Plasmoid!"
+                        >
+                            <img class="media-image" src="http://go2n.github.io/2011/12/11/wicd-kde-plasmoid/./snapshot11.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2011/12/11/wicd-kde-plasmoid/"
+                            aria-label=": Wicd KDE Plasmoid!"
+                        >
+                            <h3 class="media-heading">Wicd KDE Plasmoid!</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    11 Des 2011
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a href="https://kde-apps.org" target="_blank" rel="noopener">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/01/07/oxygen-font-kde-desktop-font/"
+                            aria-label=": Oxygen Font: KDE Desktop Font"
+                        >
+                            <img class="media-image" src="http://go2n.github.io/2012/01/07/oxygen-font-kde-desktop-font/oxygen1.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/01/07/oxygen-font-kde-desktop-font/"
+                            aria-label=": Oxygen Font: KDE Desktop Font"
+                        >
+                            <h3 class="media-heading">Oxygen Font: KDE Desktop Font</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    7 Jan 2012
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Pagi ini membuka akregator dan membaca feeds yang ada. Ada 2 feed yang judulnya menarik perhatian saya:<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/04/06/upgrade-kde-dengan-delta-update-di-arch-linux/"
+                            aria-label=": Upgrade KDE dengan Delta Update di Arch Linux"
+                        >
+                            <img class="media-image" src="http://go2n.github.io/2012/04/06/upgrade-kde-dengan-delta-update-di-arch-linux/snapshot29.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/04/06/upgrade-kde-dengan-delta-update-di-arch-linux/"
+                            aria-label=": Upgrade KDE dengan Delta Update di Arch Linux"
+                        >
+                            <h3 class="media-heading">Upgrade KDE dengan Delta Update di Arch Linux</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    6 Apr 2012
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a href="http://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a> dengan <a href="https://wiki.archlinux.org/index.php/Deltup" target="_blank" rel="noopener">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a href="http://delta.archlinux.fr/" target="_blank" rel="noopener">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
+                            aria-label=": Mencoba KDE 4.9 Beta2 (4.8.90)"
+                        >
+                            <img class="media-image" src="http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/./snapshot50.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
+                            aria-label=": Mencoba KDE 4.9 Beta2 (4.8.90)"
+                        >
+                            <h3 class="media-heading">Mencoba KDE 4.9 Beta2 (4.8.90)</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    18 Jun 2012
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a href="https://www.facebook.com/walesa/posts/4007252307182" target="_blank" rel="noopener">status</a> Facebooknya om Walesa jadi kepengin menjajal <a href="http://www.kde.org/announcements/announce-4.9-beta2.php" target="_blank" rel="noopener">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/06/29/kde-4-9-rc1-4-8-95/"
+                            aria-label=": KDE 4.9 RC1 (4.8.95)"
+                        >
+                            <img class="media-image" src="http://go2n.github.io/2012/06/29/kde-4-9-rc1-4-8-95/snapshot56.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/06/29/kde-4-9-rc1-4-8-95/"
+                            aria-label=": KDE 4.9 RC1 (4.8.95)"
+                        >
+                            <h3 class="media-heading">KDE 4.9 RC1 (4.8.95)</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    29 Jun 2012
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a href="http://www.kde.org/announcements/announce-4.9-rc1.php" target="_blank" rel="noopener">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
+                            aria-label=": Menerjemahkan kata atau kalimat dari commandline"
+                        >
+                            <img class="media-image" src="https://www.akashtrehan.com/assets/images/emoji/terminal.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
+                            aria-label=": Menerjemahkan kata atau kalimat dari commandline"
+                        >
+                            <h3 class="media-heading">Menerjemahkan kata atau kalimat dari commandline</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    7 Jul 2012
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Mungkin tidak kita menerjemahkan kata atau kalimat menggunakan dari commandline?</div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/10/09/arch-linux-with-kde-4-9-2/"
+                            aria-label=": Arch Linux ❤ KDE 4.9.2"
+                        >
+                            <h3 class="media-heading">Arch Linux ❤ KDE 4.9.2</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    9 Okt 2012
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/10/10/tidak-ada-lagi-aif/"
+                            aria-label=": Tidak ada lagi AIF 😭"
+                        >
+                            <img class="media-image" src="https://i.imgur.com/xGdmDKR.jpg" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/10/10/tidak-ada-lagi-aif/"
+                            aria-label=": Tidak ada lagi AIF 😭"
+                        >
+                            <h3 class="media-heading">Tidak ada lagi AIF 😭</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    10 Okt 2012
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Pagi ini saya iseng untuk coba memasang Arch Linux dengan installer terbaru (2012.10.06) di PC tempat saya mburuh. Saya agak terkejut dengan tidak disertakannya AIF - Arch Installation Framework di media instalasi tersebut.</div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/10/11/akhirnya/"
+                            aria-label=": Akhirnya…"
+                        >
+                            <img class="media-image" src="http://go2n.github.io/2012/10/11/akhirnya/xfce.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/10/11/akhirnya/"
+                            aria-label=": Akhirnya…"
+                        >
+                            <h3 class="media-heading">Akhirnya…</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    11 Okt 2012
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Di tulisan yang <a href="https://go2n.github.io/2012/10/10/tidak-ada-lagi-aif/">sebelumnya</a> saya sempat mengeluh mengenai ribetnya instalasi Arch Linux tanpa AIF (Arch Installation Framework). Saya akui, memang tidak mengenakkan alias tidak manusiawi memasang Arch Linux tanpa AIF tersebut, ditambah dengan tidak adanya jaringan internet untuk PC saya. 😐<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-left">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                            aria-label=": Ternyata namanya CoverGloobus"
+                        >
+                            <img class="media-image" src="https://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/snapshot102.png" width="90" height="90"/>
+                        </a>
+                    </div>
+                    
+                    <div class="media-body">
+                        <a
+                            class="link-unstyled"
+                            href="http://go2n.github.io/2012/11/13/ternyata-namanya-covergloobus/"
+                            aria-label=": Ternyata namanya CoverGloobus"
+                        >
+                            <h3 class="media-heading">Ternyata namanya CoverGloobus</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    13 Nov 2012
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"><p>Saat saya jalan-jalan di deviantart ada screenshot desktop GNU/Linux milik salah satu pengguna di sana yang menarik perhatian saya. Hal yang membuat saya tertarik adalah applet penampil cover art musik yang sedang diputar. Setelah mencari tahu dengan bantuan Google ternyata nama applet tersebut adalah CoverGloobus.<br></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <p class="results-count text-medium"
+                data-message-zero="0 post ditemukan"
+                data-message-one="1 post ditemukan"
+                data-message-other="{n} post ditemukan">
+                43 post ditemukan
+            </p>
+        </div>
+    </div>
+</div>
+
+        
         
 <div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
         <!--SCRIPTS-->
@@ -345,6 +711,13 @@
 
 
 
+
+    <script src="/assets/js/moment-with-locales.js"></script>
+    <script src="/assets/js/algoliasearch.js"></script>
+    <script>
+      var algoliaClient = algoliasearch('5IJHR9MI50', '3fb6d5567abc2c3f45cc5bce5f29d33b');
+      var algoliaIndex = algoliaClient.initIndex('Goblog');
+    </script>
 
 
     </body>
