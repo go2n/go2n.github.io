@@ -15,19 +15,19 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"\nSebuah catatan biar nggak lupa perintah menambahkan user ke dalam group di mesin FreeBSD.\n\nSaat selesai setup server FreeBSD saya sering lupa menambahkan user ke dalam group wheel. Masalah datang pas ngremot server dan mau pindah sebagai user root nggak bisa. Telo!\nAda dua cara buat menambahkan user ke dalam group, antara lain:\n1. Menggunakan perintah pw:1[root@server] # pw group mod &lt;nama group&gt; -m &lt;nama user&gt;\nContoh:\nMenambahkan user go2n ke dalam group wheel\n1[root@server] # pw group mod wheel -m go2n\n2. Edit /etc/group sebagai root dan tambahkan user123...wheel:*:0:root,go2n...\nGitu aja sih, tinggal pilih pakai cara yang mana. Sekian.\nRujukan: https://forums.freebsd.org/threads/add-yourself-to-the-wheel-and-operators-group.9796/\n","dateCreated":"2016-01-05T00:00:00+07:00","dateModified":"2019-08-12T12:58:23+07:00","datePublished":"2016-01-05T00:00:00+07:00","description":"\nSebuah catatan biar nggak lupa perintah menambahkan user ke dalam group di mesin FreeBSD.\n\nSaat selesai setup server FreeBSD saya sering lupa menambahkan user ke dalam group wheel. Masalah datang pas ngremot server dan mau pindah sebagai user root nggak bisa. Telo!","headline":"Menambahkan user ke dalam group di FreeBSD","image":["https://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/dhemit.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2016/01/05/menambahkan-user-ke-dalam-group-di-freebsd/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2016/01/05/menambahkan-user-ke-dalam-group-di-freebsd/","keywords":"freebsd","thumbnailUrl":"https://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/dhemit.png"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"\nSebuah catatan biar nggak lupa perintah menambahkan user ke dalam group di mesin FreeBSD.\n\nSaat selesai setup server FreeBSD saya sering lupa menambahkan user ke dalam group wheel. Masalah datang pas ngremot server dan mau pindah sebagai user root nggak bisa. Telo!\n\n\nAda dua cara buat menambahkan user ke dalam group, antara lain:\n1. Menggunakan perintah pw:###1[root@server] # pw group mod &lt;nama group&gt; -m &lt;nama user&gt;\n\nContoh:\nMenambahkan user go2n ke dalam group wheel\n1[root@server] # pw group mod wheel -m go2n\n\n\n2. Edit /etc/group sebagai root dan tambahkan user123...wheel:*:0:root,go2n...\n\nGitu aja sih, tinggal pilih pakai cara yang mana. Sekian.\nRujukan: https://forums.freebsd.org/threads/add-yourself-to-the-wheel-and-operators-group.9796/\n","dateCreated":"2016-01-05T00:00:00+07:00","dateModified":"2019-08-12T12:58:23+07:00","datePublished":"2016-01-05T00:00:00+07:00","description":"\nSebuah catatan biar nggak lupa perintah menambahkan user ke dalam group di mesin FreeBSD.\n\nSaat selesai setup server FreeBSD saya sering lupa menambahkan user ke dalam group wheel. Masalah datang pas ngremot server dan mau pindah sebagai user root nggak bisa. Telo!","headline":"Menambahkan user ke dalam group di FreeBSD","image":["https://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/dhemit.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2016/01/05/menambahkan-user-ke-dalam-group-di-freebsd/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2016/01/05/menambahkan-user-ke-dalam-group-di-freebsd/","keywords":"freebsd","thumbnailUrl":"https://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/dhemit.png"}</script>
     <meta name="description" content="Sebuah catatan biar nggak lupa perintah menambahkan user ke dalam group di mesin FreeBSD">
-<meta name="keywords" content="freebsd">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Menambahkan user ke dalam group di FreeBSD">
 <meta property="og:url" content="http://go2n.github.io/2016/01/05/menambahkan-user-ke-dalam-group-di-freebsd/index.html">
 <meta property="og:site_name" content="Gogon">
 <meta property="og:description" content="Sebuah catatan biar nggak lupa perintah menambahkan user ke dalam group di mesin FreeBSD">
-<meta property="og:locale" content="id">
-<meta property="og:updated_time" content="2019-08-12T05:58:23.327Z">
+<meta property="og:locale" content="id_ID">
+<meta property="article:published_time" content="2016-01-04T17:00:00.000Z">
+<meta property="article:modified_time" content="2019-08-12T05:58:23.000Z">
+<meta property="article:author" content="Gogon">
+<meta property="article:tag" content="freebsd">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Menambahkan user ke dalam group di FreeBSD">
-<meta name="twitter:description" content="Sebuah catatan biar nggak lupa perintah menambahkan user ke dalam group di mesin FreeBSD">
     
     
         
@@ -42,7 +42,9 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-aymlq7k6z0vzcopadshw1z2dtc5rmjtvzebh06dh9me5zeewsmiljj87tpwl.min.css">
+    
+<link rel="stylesheet" href="/assets/css/style-flux9hdc78rveoy7stm2ieeksxdvljhk9blep1eficabq4pvzflk4r80g1jw.min.css">
+
     <!--STYLES END-->
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41394739-3"></script>
@@ -73,12 +75,12 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="5">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a
             class="header-title-link"
-            href="/ "
+            href="/%20"
             aria-label=""
         >
             Gogon
@@ -106,7 +108,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="5">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -129,7 +131,7 @@
                 <li class="sidebar-button">
                     
                         <a  class="sidebar-button-link "
-                             href="/ "
+                             href="/%20"
                             
                             title="Beranda"
                         >
@@ -231,7 +233,7 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="5"
                  class="
                         hasCoverMetaIn
                         ">
@@ -270,13 +272,19 @@
             <blockquote>
 <p><em>Sebuah catatan biar nggak lupa perintah menambahkan user ke dalam group di mesin FreeBSD.</em></p>
 </blockquote>
-<p>Saat selesai setup server FreeBSD saya sering lupa menambahkan user ke dalam group wheel. Masalah datang pas ngremot server dan mau pindah sebagai user root nggak bisa. Telo!<br><a id="more"></a></p>
+<p>Saat selesai setup server FreeBSD saya sering lupa menambahkan user ke dalam group wheel. Masalah datang pas ngremot server dan mau pindah sebagai user root nggak bisa. Telo!</p>
+<a id="more"></a>
+
 <p>Ada dua cara buat menambahkan user ke dalam group, antara lain:</p>
-<h3 id="1-Menggunakan-perintah-pw"><a href="#1-Menggunakan-perintah-pw" class="headerlink" title="1. Menggunakan perintah pw:"></a>1. Menggunakan perintah <code>pw</code>:</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@server] # pw group mod &lt;nama group&gt; -m &lt;nama user&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="1-Menggunakan-perintah-pw"><a href="#1-Menggunakan-perintah-pw" class="headerlink" title="1. Menggunakan perintah pw:###"></a>1. Menggunakan perintah <code>pw</code>:###</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@server] # pw group mod &lt;nama group&gt; -m &lt;nama user&gt;</span><br></pre></td></tr></table></figure>
+
 <p>Contoh:</p>
 <p>Menambahkan user go2n ke dalam group wheel</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@server] # pw group mod wheel -m go2n</span><br></pre></td></tr></table></figure>
+
+
 <h3 id="2-Edit-etc-group-sebagai-root-dan-tambahkan-user"><a href="#2-Edit-etc-group-sebagai-root-dan-tambahkan-user" class="headerlink" title="2. Edit /etc/group sebagai root dan tambahkan user"></a>2. Edit <code>/etc/group</code> sebagai root dan tambahkan user</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">wheel:*:0:root,go2n</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
 <p>Gitu aja sih, tinggal pilih pakai cara yang mana. Sekian.</p>
 <p>Rujukan: <a href="https://forums.freebsd.org/threads/add-yourself-to-the-wheel-and-operators-group.9796/" target="_blank" rel="noopener">https://forums.freebsd.org/threads/add-yourself-to-the-wheel-and-operators-group.9796/</a></p>
 
@@ -290,7 +298,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">Tag</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/freebsd/">freebsd</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/freebsd/" rel="tag">freebsd</a>
 
             </div>
         
@@ -406,7 +414,7 @@
         
             
                 <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
 </div>
             
         
@@ -417,13 +425,13 @@
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2019 Gogon. All Rights Reserved.
+        Copyrights &copy; 2020 Gogon. All Rights Reserved.
     </span>
 </footer>
 
             </div>
             
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
                     <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
@@ -533,7 +541,7 @@
 
                 </div>
                 
-    <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+    <div id="share-options-bar" class="share-options-bar" data-behavior="5">
         <i id="btn-close-shareoptions" class="fa fa-times"></i>
         <ul class="share-options">
             
@@ -667,7 +675,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Membuat kamus sendiri? Mungkin nggak ya…? Jawabannya adalah mungkin. Dengan memanfaatkan bahasa C, kompiler GCC dan SQLite 3 beserta pustakanya, kita bisa membuat kamus sendiri. Tak perlu interface yang canggih dan keren, yang penting kamus yang dibuat berguna. Pada contoh ini kamus yang dibuat berjalan pada modus command line. Source code pada contoh ini berdasarkan pada dokumentasi <a href="http://www.sqlite.org/" target="_blank" rel="noopener">SQLite</a>.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Membuat kamus sendiri? Mungkin nggak ya…? Jawabannya adalah mungkin. Dengan memanfaatkan bahasa C, kompiler GCC dan SQLite 3 beserta pustakanya, kita bisa membuat kamus sendiri. Tak perlu interface yang canggih dan keren, yang penting kamus yang dibuat berguna. Pada contoh ini kamus yang dibuat berjalan pada modus command line. Source code pada contoh ini berdasarkan pada dokumentasi <a href="http://www.sqlite.org/" target="_blank" rel="noopener">SQLite</a>.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -700,7 +708,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a href="https://kde-apps.org" target="_blank" rel="noopener">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a href="https://kde-apps.org" target="_blank" rel="noopener">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -733,7 +741,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Pagi ini membuka akregator dan membaca feeds yang ada. Ada 2 feed yang judulnya menarik perhatian saya:<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Pagi ini membuka akregator dan membaca feeds yang ada. Ada 2 feed yang judulnya menarik perhatian saya:</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -766,7 +774,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a href="http://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a> dengan <a href="https://wiki.archlinux.org/index.php/Deltup" target="_blank" rel="noopener">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a href="http://delta.archlinux.fr/" target="_blank" rel="noopener">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a href="http://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a> dengan <a href="https://wiki.archlinux.org/index.php/Deltup" target="_blank" rel="noopener">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a href="http://delta.archlinux.fr/" target="_blank" rel="noopener">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -799,7 +807,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a href="https://www.facebook.com/walesa/posts/4007252307182" target="_blank" rel="noopener">status</a> Facebooknya om Walesa jadi kepengin menjajal <a href="http://www.kde.org/announcements/announce-4.9-beta2.php" target="_blank" rel="noopener">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a href="https://www.facebook.com/walesa/posts/4007252307182" target="_blank" rel="noopener">status</a> Facebooknya om Walesa jadi kepengin menjajal <a href="http://www.kde.org/announcements/announce-4.9-beta2.php" target="_blank" rel="noopener">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -832,7 +840,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a href="http://www.kde.org/announcements/announce-4.9-rc1.php" target="_blank" rel="noopener">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a href="http://www.kde.org/announcements/announce-4.9-rc1.php" target="_blank" rel="noopener">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -954,7 +962,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Di tulisan yang <a href="https://go2n.github.io/2012/10/10/tidak-ada-lagi-aif/">sebelumnya</a> saya sempat mengeluh mengenai ribetnya instalasi Arch Linux tanpa AIF (Arch Installation Framework). Saya akui, memang tidak mengenakkan alias tidak manusiawi memasang Arch Linux tanpa AIF tersebut, ditambah dengan tidak adanya jaringan internet untuk PC saya. 😐<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Di tulisan yang <a href="https://go2n.github.io/2012/10/10/tidak-ada-lagi-aif/">sebelumnya</a> saya sempat mengeluh mengenai ribetnya instalasi Arch Linux tanpa AIF (Arch Installation Framework). Saya akui, memang tidak mengenakkan alias tidak manusiawi memasang Arch Linux tanpa AIF tersebut, ditambah dengan tidak adanya jaringan internet untuk PC saya. 😐</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -977,7 +985,9 @@
         
 <div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
         <!--SCRIPTS-->
-<script src="/assets/js/script-qjiz6drztq53i3twl96t9xmdxg1x9aaoq2r4lka0ftop0awkj6nyzv0zwx6j.min.js"></script>
+
+<script src="/assets/js/script-oegph4fro0ekphicdulwsyb0llji9ohdgb7vnrvidsror3qsbx1e5nlzgz9x.min.js"></script>
+
 <!--SCRIPTS END-->
 
 
@@ -1002,8 +1012,12 @@
 
 
 
-    <script src="/assets/js/moment-with-locales.js"></script>
-    <script src="/assets/js/algoliasearch.js"></script>
+    
+<script src="/assets/js/moment-with-locales.js"></script>
+
+    
+<script src="/assets/js/algoliasearch.js"></script>
+
     <script>
       var algoliaClient = algoliasearch('5IJHR9MI50', '3fb6d5567abc2c3f45cc5bce5f29d33b');
       var algoliaIndex = algoliaClient.initIndex('Goblog');

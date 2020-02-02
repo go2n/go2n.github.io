@@ -15,22 +15,24 @@
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.\nSaya suka mbuka laptop dengan dua layar. Jadi saat ngihik sesuatu saya bisa buka di layar pertama (primary), lalu di layar kedua saya bisa buka-buka halaman internet untuk membaca dokumentasi atau howto. Di KDE 4 saya bisa mengatur dua monitor melalui System Settings &gt; Display and Monitor. Sayangnya, di KDE 5 saya tidak bisa :(\nPada pengaturan Display and Monitor KDE 5 hanya ada dua sub-kategori saja yaitu: Compositor dan Screen Locking.\nDisplay and Monitor KDE 5 System Settings\nSedangkan di KDE 4 ada 4 sub-kategori\nDisplay and Monitor KDE 4 System Settings\nUntungnya ada program xorg-xrandr, sebuah program cli primitif untuk RandR extension. Dengan xrandr saya bisa mengatur KDE saya tampil di dua layar. \nUntuk mengetahui monitor yang sudah nancep di mesin saya gunakan perintah xrandr -q\nxrandr\nUntuk menampilkan KDE di dua layar saya gunakan perintah ini:\n1xrandr --output LVDS1 --mode 1366x768 --output VGA1 --primary --mode 1440x900 --left-of LVDS1\nJadi gini penjelasannya, output-nya dua layar yaitu: LVDS1 dengan mode 1366x768 dan VGA1 dengan mode 1440x900 sebagai layar utama, posisi layar VGA1 di sebelah kiri layar LVDS1.\nNah udah gitu aja sih, ketok sederhana ya? Untuk keterangan lebih lanjut mengenai xorg-xrandr baca saja manualnya.\nHidop poligami! Hidop KDE!\nRujukan: Archwiki: Multihead.\n","dateCreated":"2014-10-30T00:00:00+07:00","dateModified":"2019-08-12T13:57:54+07:00","datePublished":"2014-10-30T00:00:00+07:00","description":"Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.","headline":"Ndobel monitor di KF5 & Plasma 5","image":["https://go2n.github.io/2014/10/30/ndobel/ssnd-snapshot141.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2014/10/30/ndobel/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2014/10/30/ndobel/","keywords":"archlinux, KDE","thumbnailUrl":"https://go2n.github.io/2014/10/30/ndobel/ssnd-snapshot141.png"}</script>
-    <meta name="description" content="Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.">
-<meta name="keywords" content="archlinux,KDE,linux">
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.\n\n\nSaya suka mbuka laptop dengan dua layar. Jadi saat ngihik sesuatu saya bisa buka di layar pertama (primary), lalu di layar kedua saya bisa buka-buka halaman internet untuk membaca dokumentasi atau howto. Di KDE 4 saya bisa mengatur dua monitor melalui System Settings &gt; Display and Monitor. Sayangnya, di KDE 5 saya tidak bisa :(\nPada pengaturan Display and Monitor KDE 5 hanya ada dua sub-kategori saja yaitu: Compositor dan Screen Locking.\nDisplay and Monitor KDE 5 System Settings\n\nSedangkan di KDE 4 ada 4 sub-kategori\nDisplay and Monitor KDE 4 System Settings\n\nUntungnya ada program xorg-xrandr, sebuah program cli primitif untuk RandR extension. Dengan xrandr saya bisa mengatur KDE saya tampil di dua layar. \nUntuk mengetahui monitor yang sudah nancep di mesin saya gunakan perintah xrandr -q\nxrandr\n\nUntuk menampilkan KDE di dua layar saya gunakan perintah ini:\n1xrandr --output LVDS1 --mode 1366x768 --output VGA1 --primary --mode 1440x900 --left-of LVDS1\n\nJadi gini penjelasannya, output-nya dua layar yaitu: LVDS1 dengan mode 1366x768 dan VGA1 dengan mode 1440x900 sebagai layar utama, posisi layar VGA1 di sebelah kiri layar LVDS1.\nNah udah gitu aja sih, ketok sederhana ya? Untuk keterangan lebih lanjut mengenai xorg-xrandr baca saja manualnya.\nHidop poligami! Hidop KDE!\nRujukan: Archwiki: Multihead.\n","dateCreated":"2014-10-30T00:00:00+07:00","dateModified":"2019-08-12T13:57:54+07:00","datePublished":"2014-10-30T00:00:00+07:00","description":"Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.","headline":"Ndobel monitor di KF5 & Plasma 5","image":["https://go2n.github.io/2014/10/30/ndobel/ssnd-snapshot141.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2014/10/30/ndobel/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2014/10/30/ndobel/","keywords":"archlinux, KDE","thumbnailUrl":"https://go2n.github.io/2014/10/30/ndobel/ssnd-snapshot141.png"}</script>
+    <meta name="description" content="Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor&#x2F;layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Ndobel monitor di KF5 &amp; Plasma 5">
 <meta property="og:url" content="http://go2n.github.io/2014/10/30/ndobel/index.html">
 <meta property="og:site_name" content="Gogon">
-<meta property="og:description" content="Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.">
-<meta property="og:locale" content="id">
+<meta property="og:description" content="Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor&#x2F;layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.">
+<meta property="og:locale" content="id_ID">
 <meta property="og:image" content="http://go2n.github.io/2014/10/30/ndobel/ssnd-snapshot140.png">
 <meta property="og:image" content="http://go2n.github.io/2014/10/30/ndobel/settings-display-and-monitor.png">
 <meta property="og:image" content="http://go2n.github.io/2014/10/30/ndobel/ssnd-snapshot141.png">
-<meta property="og:updated_time" content="2019-08-12T06:57:54.577Z">
+<meta property="article:published_time" content="2014-10-29T17:00:00.000Z">
+<meta property="article:modified_time" content="2019-08-12T06:57:54.000Z">
+<meta property="article:author" content="Gogon">
+<meta property="article:tag" content="archlinux">
+<meta property="article:tag" content="KDE">
+<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ndobel monitor di KF5 &amp; Plasma 5">
-<meta name="twitter:description" content="Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.">
 <meta name="twitter:image" content="http://go2n.github.io/2014/10/30/ndobel/ssnd-snapshot140.png">
     
     
@@ -46,7 +48,9 @@
     
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style-aymlq7k6z0vzcopadshw1z2dtc5rmjtvzebh06dh9me5zeewsmiljj87tpwl.min.css">
+    
+<link rel="stylesheet" href="/assets/css/style-flux9hdc78rveoy7stm2ieeksxdvljhk9blep1eficabq4pvzflk4r80g1jw.min.css">
+
     <!--STYLES END-->
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41394739-3"></script>
@@ -77,12 +81,12 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="5">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a
             class="header-title-link"
-            href="/ "
+            href="/%20"
             aria-label=""
         >
             Gogon
@@ -110,7 +114,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="5">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -133,7 +137,7 @@
                 <li class="sidebar-button">
                     
                         <a  class="sidebar-button-link "
-                             href="/ "
+                             href="/%20"
                             
                             title="Beranda"
                         >
@@ -235,7 +239,7 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="5"
                  class="
                         hasCoverMetaIn
                         ">
@@ -271,17 +275,23 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <p>Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.<br><a id="more"></a></p>
+            <p>Di tulisan kali ini saya akan sedikit surhat tentang dua(l) monitor/layar pada KDE Frameworks 5 dan Plasma 5 di mesin Archlinux saya.</p>
+<a id="more"></a>
+
 <p>Saya suka mbuka laptop dengan dua layar. Jadi saat ngihik sesuatu saya bisa buka di layar pertama (primary), lalu di layar kedua saya bisa buka-buka halaman internet untuk membaca dokumentasi atau howto. Di KDE 4 saya bisa mengatur dua monitor melalui System Settings &gt; Display and Monitor. Sayangnya, di KDE 5 saya tidak bisa :(</p>
 <p>Pada pengaturan Display and Monitor KDE 5 hanya ada dua sub-kategori saja yaitu: Compositor dan Screen Locking.</p>
 <div class="figure center" style="width:;"><a class="fancybox" href="ssnd-snapshot140.png" title="Display and Monitor KDE 5 System Settings" data-caption="Display and Monitor KDE 5 System Settings" data-fancybox="default"><img class="fig-img" src="ssnd-snapshot140.png" alt="Display and Monitor KDE 5 System Settings"></a><span class="caption">Display and Monitor KDE 5 System Settings</span></div>
+
 <p>Sedangkan di KDE 4 ada 4 sub-kategori</p>
 <div class="figure center" style="width:;"><a class="fancybox" href="settings-display-and-monitor.png" title="Display and Monitor KDE 4 System Settings" data-caption="Display and Monitor KDE 4 System Settings" data-fancybox="default"><img class="fig-img" src="settings-display-and-monitor.png" alt="Display and Monitor KDE 4 System Settings"></a><span class="caption">Display and Monitor KDE 4 System Settings</span></div>
+
 <p>Untungnya ada program <code>xorg-xrandr</code>, sebuah program cli primitif untuk RandR extension. Dengan xrandr saya bisa mengatur KDE saya tampil di dua layar. </p>
 <p>Untuk mengetahui monitor yang sudah nancep di mesin saya gunakan perintah <code>xrandr -q</code></p>
 <div class="figure center" style="width:;"><a class="fancybox" href="ssnd-snapshot141.png" title="xrandr" data-caption="xrandr" data-fancybox="default"><img class="fig-img" src="ssnd-snapshot141.png" alt="xrandr"></a><span class="caption">xrandr</span></div>
+
 <p>Untuk menampilkan KDE di dua layar saya gunakan perintah ini:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xrandr --output LVDS1 --mode 1366x768 --output VGA1 --primary --mode 1440x900 --left-of LVDS1</span><br></pre></td></tr></table></figure>
+
 <p>Jadi gini penjelasannya, output-nya dua layar yaitu: LVDS1 dengan mode 1366x768 dan VGA1 dengan mode 1440x900 sebagai layar utama, posisi layar VGA1 di sebelah kiri layar LVDS1.</p>
 <p>Nah udah gitu aja sih, ketok sederhana ya? Untuk keterangan lebih lanjut mengenai <code>xorg-xrandr</code> baca saja <a href="ftp://www.x.org/pub/X11R7.5/doc/man/man1/xrandr.1.html" target="_blank" rel="noopener">manualnya</a>.</p>
 <p>Hidop poligami! Hidop KDE!</p>
@@ -297,7 +307,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">Tag</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/KDE/">KDE</a> <a class="tag tag--primary tag--small t-link" href="/tags/archlinux/">archlinux</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/KDE/" rel="tag">KDE</a> <a class="tag tag--primary tag--small t-link" href="/tags/archlinux/" rel="tag">archlinux</a>
 
             </div>
         
@@ -413,7 +423,7 @@
         
             
                 <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
 </div>
             
         
@@ -424,13 +434,13 @@
 
                 <footer id="footer" class="main-content-wrap">
     <span class="copyrights">
-        Copyrights &copy; 2019 Gogon. All Rights Reserved.
+        Copyrights &copy; 2020 Gogon. All Rights Reserved.
     </span>
 </footer>
 
             </div>
             
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
                     <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
@@ -540,7 +550,7 @@
 
                 </div>
                 
-    <div id="share-options-bar" class="share-options-bar" data-behavior="1">
+    <div id="share-options-bar" class="share-options-bar" data-behavior="5">
         <i id="btn-close-shareoptions" class="fa fa-times"></i>
         <ul class="share-options">
             
@@ -674,7 +684,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Membuat kamus sendiri? Mungkin nggak ya…? Jawabannya adalah mungkin. Dengan memanfaatkan bahasa C, kompiler GCC dan SQLite 3 beserta pustakanya, kita bisa membuat kamus sendiri. Tak perlu interface yang canggih dan keren, yang penting kamus yang dibuat berguna. Pada contoh ini kamus yang dibuat berjalan pada modus command line. Source code pada contoh ini berdasarkan pada dokumentasi <a href="http://www.sqlite.org/" target="_blank" rel="noopener">SQLite</a>.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Membuat kamus sendiri? Mungkin nggak ya…? Jawabannya adalah mungkin. Dengan memanfaatkan bahasa C, kompiler GCC dan SQLite 3 beserta pustakanya, kita bisa membuat kamus sendiri. Tak perlu interface yang canggih dan keren, yang penting kamus yang dibuat berguna. Pada contoh ini kamus yang dibuat berjalan pada modus command line. Source code pada contoh ini berdasarkan pada dokumentasi <a href="http://www.sqlite.org/" target="_blank" rel="noopener">SQLite</a>.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -707,7 +717,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a href="https://kde-apps.org" target="_blank" rel="noopener">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a href="https://kde-apps.org" target="_blank" rel="noopener">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -740,7 +750,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Pagi ini membuka akregator dan membaca feeds yang ada. Ada 2 feed yang judulnya menarik perhatian saya:<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Pagi ini membuka akregator dan membaca feeds yang ada. Ada 2 feed yang judulnya menarik perhatian saya:</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -773,7 +783,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a href="http://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a> dengan <a href="https://wiki.archlinux.org/index.php/Deltup" target="_blank" rel="noopener">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a href="http://delta.archlinux.fr/" target="_blank" rel="noopener">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a href="http://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a> dengan <a href="https://wiki.archlinux.org/index.php/Deltup" target="_blank" rel="noopener">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a href="http://delta.archlinux.fr/" target="_blank" rel="noopener">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -806,7 +816,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a href="https://www.facebook.com/walesa/posts/4007252307182" target="_blank" rel="noopener">status</a> Facebooknya om Walesa jadi kepengin menjajal <a href="http://www.kde.org/announcements/announce-4.9-beta2.php" target="_blank" rel="noopener">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a href="https://www.facebook.com/walesa/posts/4007252307182" target="_blank" rel="noopener">status</a> Facebooknya om Walesa jadi kepengin menjajal <a href="http://www.kde.org/announcements/announce-4.9-beta2.php" target="_blank" rel="noopener">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -839,7 +849,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a href="http://www.kde.org/announcements/announce-4.9-rc1.php" target="_blank" rel="noopener">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a href="http://www.kde.org/announcements/announce-4.9-rc1.php" target="_blank" rel="noopener">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -961,7 +971,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Di tulisan yang <a href="https://go2n.github.io/2012/10/10/tidak-ada-lagi-aif/">sebelumnya</a> saya sempat mengeluh mengenai ribetnya instalasi Arch Linux tanpa AIF (Arch Installation Framework). Saya akui, memang tidak mengenakkan alias tidak manusiawi memasang Arch Linux tanpa AIF tersebut, ditambah dengan tidak adanya jaringan internet untuk PC saya. 😐<br></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Di tulisan yang <a href="https://go2n.github.io/2012/10/10/tidak-ada-lagi-aif/">sebelumnya</a> saya sempat mengeluh mengenai ribetnya instalasi Arch Linux tanpa AIF (Arch Installation Framework). Saya akui, memang tidak mengenakkan alias tidak manusiawi memasang Arch Linux tanpa AIF tersebut, ditambah dengan tidak adanya jaringan internet untuk PC saya. 😐</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -984,7 +994,9 @@
         
 <div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
         <!--SCRIPTS-->
-<script src="/assets/js/script-qjiz6drztq53i3twl96t9xmdxg1x9aaoq2r4lka0ftop0awkj6nyzv0zwx6j.min.js"></script>
+
+<script src="/assets/js/script-oegph4fro0ekphicdulwsyb0llji9ohdgb7vnrvidsror3qsbx1e5nlzgz9x.min.js"></script>
+
 <!--SCRIPTS END-->
 
 
@@ -1009,8 +1021,12 @@
 
 
 
-    <script src="/assets/js/moment-with-locales.js"></script>
-    <script src="/assets/js/algoliasearch.js"></script>
+    
+<script src="/assets/js/moment-with-locales.js"></script>
+
+    
+<script src="/assets/js/algoliasearch.js"></script>
+
     <script>
       var algoliaClient = algoliasearch('5IJHR9MI50', '3fb6d5567abc2c3f45cc5bce5f29d33b');
       var algoliaIndex = algoliaClient.initIndex('Goblog');
