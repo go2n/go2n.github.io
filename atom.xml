@@ -514,8 +514,6 @@
     
       <category term="php" scheme="http://go2n.github.io/tags/php/"/>
     
-      <category term="html" scheme="http://go2n.github.io/tags/html/"/>
-    
       <category term="slims" scheme="http://go2n.github.io/tags/slims/"/>
     
       <category term="senayan" scheme="http://go2n.github.io/tags/senayan/"/>
@@ -523,6 +521,8 @@
       <category term="perpustakaan" scheme="http://go2n.github.io/tags/perpustakaan/"/>
     
       <category term="library" scheme="http://go2n.github.io/tags/library/"/>
+    
+      <category term="html" scheme="http://go2n.github.io/tags/html/"/>
     
   </entry>
   
@@ -547,8 +547,6 @@
     
       <category term="php" scheme="http://go2n.github.io/tags/php/"/>
     
-      <category term="html" scheme="http://go2n.github.io/tags/html/"/>
-    
       <category term="slims" scheme="http://go2n.github.io/tags/slims/"/>
     
       <category term="senayan" scheme="http://go2n.github.io/tags/senayan/"/>
@@ -556,6 +554,8 @@
       <category term="perpustakaan" scheme="http://go2n.github.io/tags/perpustakaan/"/>
     
       <category term="library" scheme="http://go2n.github.io/tags/library/"/>
+    
+      <category term="html" scheme="http://go2n.github.io/tags/html/"/>
     
   </entry>
   
