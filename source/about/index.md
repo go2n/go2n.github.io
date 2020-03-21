@@ -1,5 +1,5 @@
 ---
-title: Tentang
+title: Gogon itu siapa?
 meta: false
 actions: false
 comments: false
