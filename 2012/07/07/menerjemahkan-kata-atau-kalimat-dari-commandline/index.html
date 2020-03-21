@@ -17,7 +17,7 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Mungkin tidak kita menerjemahkan kata atau kalimat menggunakan dari commandline?  Jawabannya, mungkin saja. Dengan memanfaatkan bash, awk dan lynx kita bisa membuat script shell sederhana untuk menerjemahkan suatu kata atau kalimat. Tentu saja script shell ini membutuhkan koneksi internet karena urusan penerjemahan akan diserahkan sepenuhnya pada Google Translate.\nSebelum menuliskan shell script untuk menerjemahkan kata atau kalimat pastikan mesin GNU/Linux anda sudah terinstall Lynx web browser (browser berbasis text). Jika belum silakan anda install terlebih dahulu.\n\nArch Linux   1# pacman -S lynx\nopenSUSE  1zypper install lynx\nUbuntu  1$ sudo apt-get install lynx\n\n\n\nSelanjutnya ketikkan script berikut ini menggunakan teks editor favorit anda:\n12345678#!/bin/bash if [ $# == 3 ]then\techo \"From: $1 To: $2\" lynx -dump \"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&amp;q=$3&amp;langpair=$1|$2\"|awk -F'\"' '&#123;print $6&#125;'else\tlynx -dump \"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&amp;q=$1&amp;langpair=en|id\"|awk -F'\"' '&#123;print $6&#125;'fi\n\nSimpan script tersebut dengan nama, misalkan translate-cli, ubah permission agar bisa di-execute dan jalankan script tersebut.\n1234[me@archlinux ~]$ chmod +x translate-cli[me@archlinux ~]$ translate-cli en id &quot;try this at home&quot;From: en To: id coba ini di rumah\nJika script dijalankan tanpa argumen [bahasa asal] [bahasa terjemahan] maka script tersebut akan menerjemahkan kata atau kalimat dari Inggris ke Bahasa Indonesia secara default.\n12[me@archlinux ~]$ translate-cli &quot;try this at home&quot;coba ini di rumah\n\n\nTulisan ini ditulis setelah membaca artikel di sini.\n\n","dateCreated":"2012-07-07T18:12:00+07:00","dateModified":"2019-08-13T15:08:33+07:00","datePublished":"2012-07-07T18:12:00+07:00","description":"Mungkin tidak kita menerjemahkan kata atau kalimat menggunakan dari commandline?","headline":"Menerjemahkan kata atau kalimat dari commandline","image":["https://www.akashtrehan.com/assets/images/emoji/terminal.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/","keywords":"google, kamus, translate, bash, shell, cli","thumbnailUrl":"https://www.akashtrehan.com/assets/images/emoji/terminal.png"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Mungkin tidak kita menerjemahkan kata atau kalimat menggunakan dari commandline?  Jawabannya, mungkin saja. Dengan memanfaatkan bash, awk dan lynx kita bisa membuat script shell sederhana untuk menerjemahkan suatu kata atau kalimat. Tentu saja script shell ini membutuhkan koneksi internet karena urusan penerjemahan akan diserahkan sepenuhnya pada Google Translate.\nSebelum menuliskan shell script untuk menerjemahkan kata atau kalimat pastikan mesin GNU/Linux anda sudah terinstall Lynx web browser (browser berbasis text). Jika belum silakan anda install terlebih dahulu.\n\nArch Linux   1# pacman -S lynx\nopenSUSE  1zypper install lynx\nUbuntu  1$ sudo apt-get install lynx\n\n\n\nSelanjutnya ketikkan script berikut ini menggunakan teks editor favorit anda:\n12345678#!/bin/bash if [ $# == 3 ]then\techo \"From: $1 To: $2\" lynx -dump \"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&amp;q=$3&amp;langpair=$1|$2\"|awk -F'\"' '&#123;print $6&#125;'else\tlynx -dump \"http://ajax.googleapis.com/ajax/services/language/translate?v=1.0&amp;q=$1&amp;langpair=en|id\"|awk -F'\"' '&#123;print $6&#125;'fi\n\nSimpan script tersebut dengan nama, misalkan translate-cli, ubah permission agar bisa di-execute dan jalankan script tersebut.\n1234[me@archlinux ~]$ chmod +x translate-cli[me@archlinux ~]$ translate-cli en id &quot;try this at home&quot;From: en To: id coba ini di rumah\nJika script dijalankan tanpa argumen [bahasa asal] [bahasa terjemahan] maka script tersebut akan menerjemahkan kata atau kalimat dari Inggris ke Bahasa Indonesia secara default.\n12[me@archlinux ~]$ translate-cli &quot;try this at home&quot;coba ini di rumah\n\n\nTulisan ini ditulis setelah membaca artikel di sini.\n\n","dateCreated":"2012-07-07T18:12:00+07:00","dateModified":"2019-08-13T15:08:33+07:00","datePublished":"2012-07-07T18:12:00+07:00","description":"Mungkin tidak kita menerjemahkan kata atau kalimat menggunakan dari commandline?","headline":"Menerjemahkan kata atau kalimat dari commandline","image":["https://www.akashtrehan.com/assets/images/emoji/terminal.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/","keywords":"kamus, google, translate, bash, shell, cli","thumbnailUrl":"https://www.akashtrehan.com/assets/images/emoji/terminal.png"}</script>
     <meta name="description" content="Mungkin tidak kita menerjemahkan kata atau kalimat menggunakan dari commandline?">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Menerjemahkan kata atau kalimat dari commandline">
@@ -102,7 +102,7 @@
             >
         
         
-            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
+            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
         
         </a>
     
@@ -123,11 +123,11 @@
                     href="/#about"
                     aria-label="Lesen Sie mehr über den Autor"
                 >
-                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
+                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
                 </a>
                 <h4 class="sidebar-profile-name">Gogon</h4>
                 
-                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
+                    <h5 class="sidebar-profile-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
 </h5>
                 
             </div>
@@ -142,10 +142,10 @@
                             href="/"
                             
                             rel="noopener"
-                            title="Home"
+                            title="Beranda"
                         >
                         <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Home</span>
+                        <span class="sidebar-button-desc">Beranda</span>
                     </a>
             </li>
             
@@ -156,10 +156,10 @@
                             href="/all-categories"
                             
                             rel="noopener"
-                            title="Kategorien"
+                            title="Kategori"
                         >
                         <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Kategorien</span>
+                        <span class="sidebar-button-desc">Kategori</span>
                     </a>
             </li>
             
@@ -170,10 +170,10 @@
                             href="/all-tags"
                             
                             rel="noopener"
-                            title="Tags"
+                            title="Tag"
                         >
                         <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Tags</span>
+                        <span class="sidebar-button-desc">Tag</span>
                     </a>
             </li>
             
@@ -184,10 +184,10 @@
                             href="/all-archives"
                             
                             rel="noopener"
-                            title="Archiv"
+                            title="Arsip"
                         >
                         <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Archiv</span>
+                        <span class="sidebar-button-desc">Arsip</span>
                     </a>
             </li>
             
@@ -198,10 +198,10 @@
                             href="#search"
                             
                             rel="noopener"
-                            title="Suche"
+                            title="Cari"
                         >
                         <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Suche</span>
+                        <span class="sidebar-button-desc">Cari</span>
                     </a>
             </li>
             
@@ -212,10 +212,10 @@
                             href="/about"
                             
                             rel="noopener"
-                            title="Über"
+                            title="Tentang"
                         >
                         <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Über</span>
+                        <span class="sidebar-button-desc">Tentang</span>
                     </a>
             </li>
             
@@ -265,11 +265,11 @@
         <div class="post-meta">
     <time datetime="2012-07-07T18:12:00+07:00">
 	
-		    07 Jul 2012
+		    07 Juli 2012
     	
     </time>
     
-        <span>in </span>
+        <span> |  </span>
         
     <a class="category-link" href="/categories/linux/">linux</a>
 
@@ -312,7 +312,7 @@
     <div id="post-footer" class="post-footer main-content-wrap">
         
             <div class="post-footer-tags">
-                <span class="text-color-light text-small">GETAGGT IN</span><br/>
+                <span class="text-color-light text-small">Tag</span><br/>
                 
     <a class="tag tag--primary tag--small t-link" href="/tags/bash/" rel="tag">bash</a> <a class="tag tag--primary tag--small t-link" href="/tags/cli/" rel="tag">cli</a> <a class="tag tag--primary tag--small t-link" href="/tags/google/" rel="tag">google</a> <a class="tag tag--primary tag--small t-link" href="/tags/kamus/" rel="tag">kamus</a> <a class="tag tag--primary tag--small t-link" href="/tags/shell/" rel="tag">shell</a> <a class="tag tag--primary tag--small t-link" href="/tags/translate/" rel="tag">translate</a>
 
@@ -329,11 +329,11 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/10/09/arch-linux-with-kde-4-9-2/"
                     data-tooltip="Arch Linux ❤ KDE 4.9.2"
-                    aria-label="FRÜHER: Arch Linux ❤ KDE 4.9.2"
+                    aria-label="PREVIOUS: Arch Linux ❤ KDE 4.9.2"
                 >
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
             </li>
             <li class="post-action">
@@ -343,10 +343,10 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/06/29/kde-4-9-rc1-4-8-95/"
                     data-tooltip="KDE 4.9 RC1 (4.8.95)"
-                    aria-label="NÄCHSTER: KDE 4.9 RC1 (4.8.95)"
+                    aria-label="NEXT: KDE 4.9 RC1 (4.8.95)"
                 >
                     
-                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
             </li>
@@ -357,7 +357,7 @@
             <a
                 class="post-action-btn btn btn--default btn-open-shareoptions"
                 href="#btn-open-shareoptions"
-                aria-label="Diesen Beitrag teilen"
+                aria-label="Bagikan postingan ini"
             >
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
@@ -369,8 +369,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
-                    title="Teilen auf Facebook"
-                    aria-label="Teilen auf Facebook"
+                    title="Bagikan di Facebook"
+                    aria-label="Bagikan di Facebook"
                 >
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
@@ -382,8 +382,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
-                    title="Teilen auf Twitter"
-                    aria-label="Teilen auf Twitter"
+                    title="Bagikan di Twitter"
+                    aria-label="Bagikan di Twitter"
                 >
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
@@ -395,8 +395,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
-                    title="Teilen auf Google Plus"
-                    aria-label="Teilen auf Google Plus"
+                    title="Bagikan di Google+"
+                    aria-label="Bagikan di Google+"
                 >
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
@@ -408,7 +408,7 @@
                     <a
                         class="post-action-btn btn btn--default"
                         href="#disqus_thread"
-                        aria-label="Kommentieren"
+                        aria-label="Tinggalkan komentar"
                     >
                         <i class="fa fa-comment"></i>
                     </a>
@@ -417,7 +417,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -458,11 +458,11 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/10/09/arch-linux-with-kde-4-9-2/"
                     data-tooltip="Arch Linux ❤ KDE 4.9.2"
-                    aria-label="FRÜHER: Arch Linux ❤ KDE 4.9.2"
+                    aria-label="PREVIOUS: Arch Linux ❤ KDE 4.9.2"
                 >
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
+                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
                     </a>
             </li>
             <li class="post-action">
@@ -472,10 +472,10 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/06/29/kde-4-9-rc1-4-8-95/"
                     data-tooltip="KDE 4.9 RC1 (4.8.95)"
-                    aria-label="NÄCHSTER: KDE 4.9 RC1 (4.8.95)"
+                    aria-label="NEXT: KDE 4.9 RC1 (4.8.95)"
                 >
                     
-                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
+                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
             </li>
@@ -486,7 +486,7 @@
             <a
                 class="post-action-btn btn btn--default btn-open-shareoptions"
                 href="#btn-open-shareoptions"
-                aria-label="Diesen Beitrag teilen"
+                aria-label="Bagikan postingan ini"
             >
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
@@ -498,8 +498,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
-                    title="Teilen auf Facebook"
-                    aria-label="Teilen auf Facebook"
+                    title="Bagikan di Facebook"
+                    aria-label="Bagikan di Facebook"
                 >
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
@@ -511,8 +511,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
-                    title="Teilen auf Twitter"
-                    aria-label="Teilen auf Twitter"
+                    title="Bagikan di Twitter"
+                    aria-label="Bagikan di Twitter"
                 >
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
@@ -524,8 +524,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
-                    title="Teilen auf Google Plus"
-                    aria-label="Teilen auf Google Plus"
+                    title="Bagikan di Google+"
+                    aria-label="Bagikan di Google+"
                 >
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
@@ -537,7 +537,7 @@
                     <a
                         class="post-action-btn btn btn--default"
                         href="#disqus_thread"
-                        aria-label="Kommentieren"
+                        aria-label="Tinggalkan komentar"
                     >
                         <i class="fa fa-comment"></i>
                     </a>
@@ -546,7 +546,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -568,9 +568,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
-                        aria-label="Teilen auf Facebook"
+                        aria-label="Bagikan di Facebook"
                     >
-                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Teilen auf Facebook</span>
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Bagikan di Facebook</span>
                     </a>
                 </li>
             
@@ -581,9 +581,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
-                        aria-label="Teilen auf Twitter"
+                        aria-label="Bagikan di Twitter"
                     >
-                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Teilen auf Twitter</span>
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Bagikan di Twitter</span>
                     </a>
                 </li>
             
@@ -594,9 +594,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://plus.google.com/share?url=http://go2n.github.io/2012/07/07/menerjemahkan-kata-atau-kalimat-dari-commandline/"
-                        aria-label="Teilen auf Google Plus"
+                        aria-label="Bagikan di Google+"
                     >
-                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Teilen auf Google Plus</span>
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Bagikan di Google+</span>
                     </a>
                 </li>
             
@@ -619,18 +619,18 @@
             <i class="fa fa-times"></i>
         </div>
         
-            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
+            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
         
             <h4 id="about-card-name">Gogon</h4>
         
-            <div id="about-card-bio"><p>author.bio</p>
+            <div id="about-card-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
 </div>
         
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br/>
-                <p>author.job</p>
+                <p>Janitor</p>
 
             </div>
         
@@ -661,7 +661,7 @@
             </form>
         </div>
         <div class="modal-body">
-            <div class="no-result text-color-light text-center">keinen Beitrag gefunden</div>
+            <div class="no-result text-color-light text-center">0 post ditemukan</div>
             <div class="results">
                 
                 <div class="media">
@@ -988,10 +988,10 @@
         </div>
         <div class="modal-footer">
             <p class="results-count text-medium"
-                data-message-zero="keinen Beitrag gefunden"
-                data-message-one="1 Beitrag gefunden"
-                data-message-other="{n} Einträge gefunden">
-                44 Einträge gefunden
+                data-message-zero="0 post ditemukan"
+                data-message-one="1 post ditemukan"
+                data-message-other="{n} post ditemukan">
+                44 post ditemukan
             </p>
         </div>
     </div>
