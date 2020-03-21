@@ -22,7 +22,7 @@ Saat selesai setup server FreeBSD saya sering lupa menambahkan user ke dalam gro
 
 Ada dua cara buat menambahkan user ke dalam group, antara lain:
 
-### 1. Menggunakan perintah `pw`:###
+### 1. Menggunakan perintah `pw`:
 
 {% codeblock lang:shell %}
 [root@server] # pw group mod <nama group> -m <nama user>
