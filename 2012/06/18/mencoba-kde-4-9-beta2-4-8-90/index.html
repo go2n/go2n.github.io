@@ -13,7 +13,9 @@
     
     
     
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
     
     <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Gara-gara komentar di status Facebooknya om Walesa jadi kepengin menjajal KDE 4.9 Beta2. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.\n\n\nRitual upgrade dengan pacman -Syu berjalan lantjar djaja. Namun, ketika saya masuk ke desktop ada hal yang tidak biasa. Hal yang saya temui adalah kwin tidak berjalan sebagaimana mestinya. Iseng-iseng saya jalankan ulang kwin dengan perintah kwin --replace ternyata ada masalah dengan kwin decoration. Kwin decoration yang saya pakai ternyata bukan Oxygen tetapi Oxygen Transparent dan itu biang keladinya. 😂\n1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374┌─[archlinux]─[~&#x2F;Documents]└─[$] kwin --replaceQDBusConnection: session D-Bus connection created before QCoreApplication. Application may misbehave.kwin(3655) KWin::Extensions::init: Extensions: shape: 0x &quot;11&quot;  composite: 0x &quot;4&quot;  render: 0x &quot;b&quot;  fixes: 0x &quot;50&quot;  non_native_pixmaps:  truekwin(3655) KDecorationPlugins::loadPlugin: kwin : path  &quot;&#x2F;usr&#x2F;lib&#x2F;kde4&#x2F;kwin3_oxygen_transparent.so&quot;  for  &quot;kwin3_oxygen_transparent&quot;kwin(3655) KDecorationPlugins::loadPlugin: &quot;****** The library &#x2F;usr&#x2F;lib&#x2F;kde4&#x2F;kwin3_oxygen_transparent.so has no API versionPlease use the KWIN_DECORATION or future versions of kwin will no longer load this decoration!*******&quot;kwin(3655) KWin::Workspace::updateClientArea: screens:  1 desktops:  2kwin(3655) KWin::Workspace::updateClientArea: Done.kwin(3655) KWin::Client::readUserTimeMapTimestamp: User timestamp, ASN: 440440kwin(3655) KWin::Client::readUserTimeMapTimestamp: User timestamp, final: &#39;ID: 31457766 ;WMCLASS: &quot;plasma&quot; : &quot;plasma&quot; ;Caption: &quot;plasma-desktop&quot; &#39; : 440440kwin(3655) KWin::Workspace::allowClientActivation: Activation: No client active, allowingkwin(3655) KWin::Workspace::updateClientArea: screens:  1 desktops:  2kwin(3655) KWin::Workspace::updateClientArea: Done.kwin(3655) KWin::Client::readUserTimeMapTimestamp: User timestamp, ASN: 4294967295kwin(3655) KWin::Client::readUserTimeMapTimestamp: User timestamp, final: &#39;ID: 31457775 ;WMCLASS: &quot;plasma&quot; : &quot;plasma&quot; ;Caption: &quot;plasma-desktop&quot; &#39; : 435517kwin(3655) KWin::Workspace::allowClientActivation: Activation: No client active, allowingkwin(3655) KWin::Workspace::updateClientArea: screens:  1 desktops:  2kwin(3655) KWin::Workspace::updateClientArea: Done.kwin(3655) KWin::Client::checkActivities: no activities!?!?kwin(3655) KWin::Client::readUserTimeMapTimestamp: User timestamp, ASN: 455422kwin(3655) KWin::Client::readUserTimeMapTimestamp: User timestamp, final: &#39;ID: 29360146 ;WMCLASS: &quot;konsole&quot; : &quot;konsole&quot; ;Caption: &quot;~&#x2F;Documents : kwin – Konsole&quot; &#39; : 455422kwin(3655) KWin::Workspace::allowClientActivation: Activation: No client active, allowingkwin(3655) KWin::Workspace::updateClientArea: screens:  1 desktops:  2kwin(3655) KWin::Workspace::updateClientArea: Done.kwin(3655) KWin::Workspace::updateClientArea: screens:  1 desktops:  2kwin(3655) KWin::Workspace::updateClientArea: Done.kwin(3655) KWin::Workspace::slotCompositingOptionsInitialized: Initializing OpenGL compositingkwin(3655) KWin::SceneOpenGL::initBufferConfigs: Drawable visual (depth  24 ): 0x &quot;71&quot;kwin(3655) KWin::SceneOpenGL::initBufferConfigs: Drawable visual (depth  32 ): 0x &quot;b4&quot;kwin(3655) KWin::SceneOpenGL::initBuffer: Buffer visual (depth  24 ): 0x &quot;6f&quot;OpenGL vendor string:                   NVIDIA CorporationOpenGL renderer string:                 GeForce 310M&#x2F;PCIe&#x2F;SSE2OpenGL version string:                  3.3.0 NVIDIA 302.17OpenGL shading language version string: 3.30 NVIDIA via Cg compilerDriver:                                 NVIDIADriver version:                         302.17GPU class:                              G80&#x2F;G90OpenGL version:                         3.3GLSL version:                           3.30X server version:                       1.12.2Linux kernel version:                   3.4.2Direct rendering:                       yesRequires strict binding:                noGLSL shaders:                           yesTexture NPOT support:                   yeskwin(3655) KWin::ShaderManager::initShaders: Ortho Shader is validkwin(3655) KWin::ShaderManager::initShaders: Generic Shader is validkwin(3655) KWin::ShaderManager::initShaders: Color Shader is validkwin(3655) KWin::SceneOpenGL::SceneOpenGL: DB: true , Direct: truekwin(3655) KWin::currentRefreshRate: Vertical Refresh Rate (as detected by XF86VM):  59 Hzkwin(3655) KWin::currentRefreshRate: Vertical Refresh rate  59 Hzkwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_slidingpopups&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_magiclamp&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_blur&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_desktopgrid&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_fade&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_slide&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_presentwindows&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_dashboard&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_login&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_startupfeedback&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_outline&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_boxswitch&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_taskbarthumbnail&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_screenshot&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_translucency&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_highlightwindow&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_zoom&quot;kwin(3655) KWin::EffectsHandlerImpl::loadEffect: Trying to load  &quot;kwin4_effect_dialogparent&quot;kwin: symbol lookup error: &#x2F;usr&#x2F;lib&#x2F;kde4&#x2F;kwin3_oxygen_transparent.so: undefined symbol: _ZNK25KCommonDecorationUnstable16clientGroupItemsEv\n\nSetelah menghapus berkas kwinrc di $HOME/.kde4/share/config, baru saya bisa masuk ke desktop KDE 4.9 Beta2 dengan sukses! 😀\n\n\n\n\nSatu hal yang membuat saya cukup terkesan dengan KDE 4.9 Beta2  ini adalah loading yang super cepat dibanding dengan KDE seri 4.8.x. 👍🏽\n","dateCreated":"2012-06-18T07:44:01+07:00","dateModified":"2019-08-14T08:17:33+07:00","datePublished":"2012-06-18T07:44:01+07:00","description":"Gara-gara komentar di status Facebooknya om Walesa jadi kepengin menjajal KDE 4.9 Beta2. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.","headline":"Mencoba KDE 4.9 Beta2 (4.8.90)","image":["./snapshot50.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/","keywords":"archlinux, KDE","thumbnailUrl":"./snapshot50.png"}</script>
     <meta name="description" content="Gara-gara komentar di status Facebooknya om Walesa jadi kepengin menjajal KDE 4.9 Beta2. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.">
@@ -49,7 +51,7 @@
     
     <!--STYLES-->
     
-<link rel="stylesheet" href="/assets/css/style-flux9hdc78rveoy7stm2ieeksxdvljhk9blep1eficabq4pvzflk4r80g1jw.min.css">
+<link rel="stylesheet" href="/assets/css/style-cr6ygx2eptouictmr9m09oubvsh1xi4qunn2yz2xg7umzw0l9spayiq1geeo.min.css">
 
     <!--STYLES END-->
     
@@ -86,7 +88,7 @@
     <div class="header-title">
         <a
             class="header-title-link"
-            href="/"
+            href="/%20"
             aria-label=""
         >
             Gogon ngeBlog
@@ -97,11 +99,11 @@
             <a
                 class="header-right-picture "
                 href="#about"
-                aria-label="Open the link: /#about"
+                aria-label="Öffne den Link: /#about"
             >
         
         
-            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
         
         </a>
     
@@ -120,13 +122,13 @@
             <div class="sidebar-profile">
                 <a
                     href="/#about"
-                    aria-label="Read more about the author"
+                    aria-label="Lesen Sie mehr über den Autor"
                 >
-                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
                 </a>
                 <h4 class="sidebar-profile-name">Gogon</h4>
                 
-                    <h5 class="sidebar-profile-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
 </h5>
                 
             </div>
@@ -136,79 +138,85 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/"
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
                             
-                            title="Beranda"
+                            rel="noopener"
+                            title="Home"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Beranda</span>
+                        <span class="sidebar-button-desc">Home</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-categories"
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
                             
-                            title="Kategori"
+                            rel="noopener"
+                            title="Kategorien"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Kategori</span>
+                        <span class="sidebar-button-desc">Kategorien</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-tags"
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
                             
-                            title="Tag"
+                            rel="noopener"
+                            title="Tags"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Tag</span>
+                        <span class="sidebar-button-desc">Tags</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-archives"
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
                             
-                            title="Arsip"
+                            rel="noopener"
+                            title="Archiv"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Arsip</span>
+                        <span class="sidebar-button-desc">Archiv</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link open-algolia-search"
-                             href="#search"
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
                             
-                            title="Cari"
+                            rel="noopener"
+                            title="Suche"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Cari</span>
+                        <span class="sidebar-button-desc">Suche</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/about"
+                        <a
+                            class="sidebar-button-link "
+                            href="/about"
                             
-                            title="Tentang"
+                            rel="noopener"
+                            title="Über"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Tentang</span>
+                        <span class="sidebar-button-desc">Über</span>
                     </a>
             </li>
             
@@ -222,12 +230,13 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/atom.xml"
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
                             
+                            rel="noopener"
                             title="RSS"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">RSS</span>
                     </a>
@@ -257,11 +266,11 @@
         <div class="post-meta">
     <time datetime="2012-06-18T07:44:01+07:00">
 	
-		    18 Juni 2012
+		    18 Jun 2012
     	
     </time>
     
-        <span> |  </span>
+        <span>in </span>
         
     <a class="category-link" href="/categories/linux/">linux</a>, <a class="category-link" href="/categories/linux/KDE/">KDE</a>
 
@@ -296,7 +305,7 @@
     <div id="post-footer" class="post-footer main-content-wrap">
         
             <div class="post-footer-tags">
-                <span class="text-color-light text-small">Tag</span><br/>
+                <span class="text-color-light text-small">GETAGGT IN</span><br/>
                 
     <a class="tag tag--primary tag--small t-link" href="/tags/KDE/" rel="tag">KDE</a> <a class="tag tag--primary tag--small t-link" href="/tags/archlinux/" rel="tag">archlinux</a>
 
@@ -313,11 +322,11 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/06/29/kde-4-9-rc1-4-8-95/"
                     data-tooltip="KDE 4.9 RC1 (4.8.95)"
-                    aria-label="PREVIOUS: KDE 4.9 RC1 (4.8.95)"
+                    aria-label="FRÜHER: KDE 4.9 RC1 (4.8.95)"
                 >
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
                     </a>
             </li>
             <li class="post-action">
@@ -327,10 +336,10 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/04/06/upgrade-kde-dengan-delta-update-di-arch-linux/"
                     data-tooltip="Upgrade KDE dengan Delta Update di Arch Linux"
-                    aria-label="NEXT: Upgrade KDE dengan Delta Update di Arch Linux"
+                    aria-label="NÄCHSTER: Upgrade KDE dengan Delta Update di Arch Linux"
                 >
                     
-                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
             </li>
@@ -341,7 +350,7 @@
             <a
                 class="post-action-btn btn btn--default btn-open-shareoptions"
                 href="#btn-open-shareoptions"
-                aria-label="Bagikan postingan ini"
+                aria-label="Diesen Beitrag teilen"
             >
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
@@ -353,8 +362,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
-                    title="Bagikan di Facebook"
-                    aria-label="Bagikan di Facebook"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
                 >
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
@@ -366,8 +375,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
-                    title="Bagikan di Twitter"
-                    aria-label="Bagikan di Twitter"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
                 >
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
@@ -379,8 +388,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
-                    title="Bagikan di Google+"
-                    aria-label="Bagikan di Google+"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
                 >
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
@@ -392,7 +401,7 @@
                     <a
                         class="post-action-btn btn btn--default"
                         href="#disqus_thread"
-                        aria-label="Tinggalkan komentar"
+                        aria-label="Kommentieren"
                     >
                         <i class="fa fa-comment"></i>
                     </a>
@@ -401,7 +410,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -442,11 +451,11 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/06/29/kde-4-9-rc1-4-8-95/"
                     data-tooltip="KDE 4.9 RC1 (4.8.95)"
-                    aria-label="PREVIOUS: KDE 4.9 RC1 (4.8.95)"
+                    aria-label="FRÜHER: KDE 4.9 RC1 (4.8.95)"
                 >
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
                     </a>
             </li>
             <li class="post-action">
@@ -456,10 +465,10 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/04/06/upgrade-kde-dengan-delta-update-di-arch-linux/"
                     data-tooltip="Upgrade KDE dengan Delta Update di Arch Linux"
-                    aria-label="NEXT: Upgrade KDE dengan Delta Update di Arch Linux"
+                    aria-label="NÄCHSTER: Upgrade KDE dengan Delta Update di Arch Linux"
                 >
                     
-                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
             </li>
@@ -470,7 +479,7 @@
             <a
                 class="post-action-btn btn btn--default btn-open-shareoptions"
                 href="#btn-open-shareoptions"
-                aria-label="Bagikan postingan ini"
+                aria-label="Diesen Beitrag teilen"
             >
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
@@ -482,8 +491,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
-                    title="Bagikan di Facebook"
-                    aria-label="Bagikan di Facebook"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
                 >
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
@@ -495,8 +504,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
-                    title="Bagikan di Twitter"
-                    aria-label="Bagikan di Twitter"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
                 >
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
@@ -508,8 +517,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
-                    title="Bagikan di Google+"
-                    aria-label="Bagikan di Google+"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
                 >
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
@@ -521,7 +530,7 @@
                     <a
                         class="post-action-btn btn btn--default"
                         href="#disqus_thread"
-                        aria-label="Tinggalkan komentar"
+                        aria-label="Kommentieren"
                     >
                         <i class="fa fa-comment"></i>
                     </a>
@@ -530,7 +539,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -552,9 +561,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
-                        aria-label="Bagikan di Facebook"
+                        aria-label="Teilen auf Facebook"
                     >
-                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Bagikan di Facebook</span>
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Teilen auf Facebook</span>
                     </a>
                 </li>
             
@@ -565,9 +574,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
-                        aria-label="Bagikan di Twitter"
+                        aria-label="Teilen auf Twitter"
                     >
-                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Bagikan di Twitter</span>
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Teilen auf Twitter</span>
                     </a>
                 </li>
             
@@ -578,9 +587,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://plus.google.com/share?url=http://go2n.github.io/2012/06/18/mencoba-kde-4-9-beta2-4-8-90/"
-                        aria-label="Bagikan di Google+"
+                        aria-label="Teilen auf Google Plus"
                     >
-                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Bagikan di Google+</span>
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Teilen auf Google Plus</span>
                     </a>
                 </li>
             
@@ -603,18 +612,18 @@
             <i class="fa fa-times"></i>
         </div>
         
-            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
         
             <h4 id="about-card-name">Gogon</h4>
         
-            <div id="about-card-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+            <div id="about-card-bio"><p>author.bio</p>
 </div>
         
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br/>
-                <p>Janitor</p>
+                <p>author.job</p>
 
             </div>
         
@@ -645,7 +654,7 @@
             </form>
         </div>
         <div class="modal-body">
-            <div class="no-result text-color-light text-center">0 post ditemukan</div>
+            <div class="no-result text-color-light text-center">keinen Beitrag gefunden</div>
             <div class="results">
                 
                 <div class="media">
@@ -972,10 +981,10 @@
         </div>
         <div class="modal-footer">
             <p class="results-count text-medium"
-                data-message-zero="0 post ditemukan"
-                data-message-one="1 post ditemukan"
-                data-message-other="{n} post ditemukan">
-                44 post ditemukan
+                data-message-zero="keinen Beitrag gefunden"
+                data-message-one="1 Beitrag gefunden"
+                data-message-other="{n} Einträge gefunden">
+                44 Einträge gefunden
             </p>
         </div>
     </div>
@@ -983,10 +992,10 @@
 
         
         
-<div id="cover" style="background-image:url('/assets/images/cover-gemini.jpg');"></div>
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
         <!--SCRIPTS-->
 
-<script src="/assets/js/script-oegph4fro0ekphicdulwsyb0llji9ohdgb7vnrvidsror3qsbx1e5nlzgz9x.min.js"></script>
+<script src="/assets/js/script-xl9xkv7botefhpdv5tsehll2rt0wmqq4ptsnspylwkopq9efag494tpe3gpd.min.js"></script>
 
 <!--SCRIPTS END-->
 

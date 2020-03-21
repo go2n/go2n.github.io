@@ -13,7 +13,9 @@
     
     
     
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
     
     <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Baru saja saya jalan-jalan di Planet KDE, di sini saya menemukan tulisan yang cukup menarik mengenai launcher baru oleh Aurélien Gâteau. Launcher baru tersebut adalah Homerun yang dibuat oleh Shaun Reich dan Aurélien Gâteau dari Blue Systems.\n\n\nDeskripsiHomerun is a fullscreen launcher with content organized in tabs. A tab is composed of several “sources”. A source can provide one or more sections to a tab. Homerun comes with a few built-in sources, but custom sources can be written using libhomerun.\n\n\nInstalasiBerhubung saya menggunakan distribusi Arch Linux, saya mencari PKGBUILD untuk di-build di AUR. Hasil pencarian di AUR homerun ada 2 versi, yaitu versi git dan non-git. Ada 2 metode instalasi, yang pertama yang termudah dengan menggunakan yaourt, dan yang kedua metode yang sedikit ribet.\n\nInstalasi dengan yaourt\n1yaourt -S kdeplasma-applets-homerun\n\nDownload; ekstrak; build\n\nDownload kdeplasma-applets-homerun.tar.gz \n1wget https:&#x2F;&#x2F;aur.archlinux.org&#x2F;packages&#x2F;kd&#x2F;kdeplasma-applets-homerun&#x2F;kdeplasma-applets-homerun.tar.gz -O &#x2F;tmp&#x2F;kdeplasma-applets-homerun.tar.gz&#96;\n\nEkstrak\n1&#96;cd &#x2F;tmp ; tar xzvf kdeplasma-applets-homerun.tar.gz\n\nBuild\n1cd kdeplasma-applets-homerun&#x2F; ; makepkg -si\n\nSetelah menjalankan perintah makepkg tinggal menunggu proses yang berjalan dan berikan konfirmasi instalasi saat ditanyakan.\n\n\n\n\nPenampakan\nHome\nTab Home pada Homerun berisikan Favorite Applications (dapat ditambahkan), Favorite Places dan Recent Documents\n\n\nApplications\nTab Applications ini berisikan kategori aplikasi yang terinstall\n\n\nFiles\nTab Files berisikan berkas-berkas yang ada $HOME\n\n\nPower\nTab Power berisikan shorcut untuk session dan power\n\n\n\n\nSumber:\n\nhttp://userbase.kde.org/Homerun\nhttp://agateau.com/2012/11/14/introducing-homerun/\n\n","dateCreated":"2012-11-16T12:29:00+07:00","dateModified":"2019-08-13T15:01:20+07:00","datePublished":"2012-11-16T12:29:00+07:00","description":"Baru saja saya jalan-jalan di Planet KDE, di sini saya menemukan tulisan yang cukup menarik mengenai launcher baru oleh Aurélien Gâteau. Launcher baru tersebut adalah Homerun yang dibuat oleh Shaun Reich dan Aurélien Gâteau dari Blue Systems.","headline":"Homerun Launcher","image":["./snapshot1061.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2012/11/16/homerun-launcher/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2012/11/16/homerun-launcher/","keywords":"archlinux, KDE, aur","thumbnailUrl":"./snapshot1061.png"}</script>
     <meta name="description" content="Baru saja saya jalan-jalan di Planet KDE, di sini saya menemukan tulisan yang cukup menarik mengenai launcher baru oleh Aurélien Gâteau. Launcher baru tersebut adalah Homerun yang dibuat oleh Shaun Re">
@@ -53,7 +55,7 @@
     
     <!--STYLES-->
     
-<link rel="stylesheet" href="/assets/css/style-flux9hdc78rveoy7stm2ieeksxdvljhk9blep1eficabq4pvzflk4r80g1jw.min.css">
+<link rel="stylesheet" href="/assets/css/style-cr6ygx2eptouictmr9m09oubvsh1xi4qunn2yz2xg7umzw0l9spayiq1geeo.min.css">
 
     <!--STYLES END-->
     
@@ -90,7 +92,7 @@
     <div class="header-title">
         <a
             class="header-title-link"
-            href="/"
+            href="/%20"
             aria-label=""
         >
             Gogon ngeBlog
@@ -101,11 +103,11 @@
             <a
                 class="header-right-picture "
                 href="#about"
-                aria-label="Open the link: /#about"
+                aria-label="Öffne den Link: /#about"
             >
         
         
-            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
         
         </a>
     
@@ -124,13 +126,13 @@
             <div class="sidebar-profile">
                 <a
                     href="/#about"
-                    aria-label="Read more about the author"
+                    aria-label="Lesen Sie mehr über den Autor"
                 >
-                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
                 </a>
                 <h4 class="sidebar-profile-name">Gogon</h4>
                 
-                    <h5 class="sidebar-profile-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
 </h5>
                 
             </div>
@@ -140,79 +142,85 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/"
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
                             
-                            title="Beranda"
+                            rel="noopener"
+                            title="Home"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Beranda</span>
+                        <span class="sidebar-button-desc">Home</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-categories"
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
                             
-                            title="Kategori"
+                            rel="noopener"
+                            title="Kategorien"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Kategori</span>
+                        <span class="sidebar-button-desc">Kategorien</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-tags"
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
                             
-                            title="Tag"
+                            rel="noopener"
+                            title="Tags"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Tag</span>
+                        <span class="sidebar-button-desc">Tags</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-archives"
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
                             
-                            title="Arsip"
+                            rel="noopener"
+                            title="Archiv"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Arsip</span>
+                        <span class="sidebar-button-desc">Archiv</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link open-algolia-search"
-                             href="#search"
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
                             
-                            title="Cari"
+                            rel="noopener"
+                            title="Suche"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Cari</span>
+                        <span class="sidebar-button-desc">Suche</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/about"
+                        <a
+                            class="sidebar-button-link "
+                            href="/about"
                             
-                            title="Tentang"
+                            rel="noopener"
+                            title="Über"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Tentang</span>
+                        <span class="sidebar-button-desc">Über</span>
                     </a>
             </li>
             
@@ -226,12 +234,13 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/atom.xml"
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
                             
+                            rel="noopener"
                             title="RSS"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">RSS</span>
                     </a>
@@ -261,11 +270,11 @@
         <div class="post-meta">
     <time datetime="2012-11-16T12:29:00+07:00">
 	
-		    16 November 2012
+		    16 Nov 2012
     	
     </time>
     
-        <span> |  </span>
+        <span>in </span>
         
     <a class="category-link" href="/categories/linux/">linux</a>, <a class="category-link" href="/categories/linux/KDE/">KDE</a>
 
@@ -339,7 +348,7 @@
     <div id="post-footer" class="post-footer main-content-wrap">
         
             <div class="post-footer-tags">
-                <span class="text-color-light text-small">Tag</span><br/>
+                <span class="text-color-light text-small">GETAGGT IN</span><br/>
                 
     <a class="tag tag--primary tag--small t-link" href="/tags/KDE/" rel="tag">KDE</a> <a class="tag tag--primary tag--small t-link" href="/tags/archlinux/" rel="tag">archlinux</a> <a class="tag tag--primary tag--small t-link" href="/tags/aur/" rel="tag">aur</a>
 
@@ -356,11 +365,11 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/12/17/the-battle-of-compression-tool/"
                     data-tooltip="The battle of compression tools (Sebuah perbandingan)"
-                    aria-label="PREVIOUS: The battle of compression tools (Sebuah perbandingan)"
+                    aria-label="FRÜHER: The battle of compression tools (Sebuah perbandingan)"
                 >
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
                     </a>
             </li>
             <li class="post-action">
@@ -370,10 +379,10 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/11/13/ternyata-namanya-covergloobus/"
                     data-tooltip="Ternyata namanya CoverGloobus"
-                    aria-label="NEXT: Ternyata namanya CoverGloobus"
+                    aria-label="NÄCHSTER: Ternyata namanya CoverGloobus"
                 >
                     
-                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
             </li>
@@ -384,7 +393,7 @@
             <a
                 class="post-action-btn btn btn--default btn-open-shareoptions"
                 href="#btn-open-shareoptions"
-                aria-label="Bagikan postingan ini"
+                aria-label="Diesen Beitrag teilen"
             >
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
@@ -396,8 +405,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/11/16/homerun-launcher/"
-                    title="Bagikan di Facebook"
-                    aria-label="Bagikan di Facebook"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
                 >
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
@@ -409,8 +418,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/11/16/homerun-launcher/"
-                    title="Bagikan di Twitter"
-                    aria-label="Bagikan di Twitter"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
                 >
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
@@ -422,8 +431,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2012/11/16/homerun-launcher/"
-                    title="Bagikan di Google+"
-                    aria-label="Bagikan di Google+"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
                 >
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
@@ -435,7 +444,7 @@
                     <a
                         class="post-action-btn btn btn--default"
                         href="#disqus_thread"
-                        aria-label="Tinggalkan komentar"
+                        aria-label="Kommentieren"
                     >
                         <i class="fa fa-comment"></i>
                     </a>
@@ -444,7 +453,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -485,11 +494,11 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/12/17/the-battle-of-compression-tool/"
                     data-tooltip="The battle of compression tools (Sebuah perbandingan)"
-                    aria-label="PREVIOUS: The battle of compression tools (Sebuah perbandingan)"
+                    aria-label="FRÜHER: The battle of compression tools (Sebuah perbandingan)"
                 >
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
                     </a>
             </li>
             <li class="post-action">
@@ -499,10 +508,10 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2012/11/13/ternyata-namanya-covergloobus/"
                     data-tooltip="Ternyata namanya CoverGloobus"
-                    aria-label="NEXT: Ternyata namanya CoverGloobus"
+                    aria-label="NÄCHSTER: Ternyata namanya CoverGloobus"
                 >
                     
-                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
             </li>
@@ -513,7 +522,7 @@
             <a
                 class="post-action-btn btn btn--default btn-open-shareoptions"
                 href="#btn-open-shareoptions"
-                aria-label="Bagikan postingan ini"
+                aria-label="Diesen Beitrag teilen"
             >
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
@@ -525,8 +534,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/11/16/homerun-launcher/"
-                    title="Bagikan di Facebook"
-                    aria-label="Bagikan di Facebook"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
                 >
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
@@ -538,8 +547,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/11/16/homerun-launcher/"
-                    title="Bagikan di Twitter"
-                    aria-label="Bagikan di Twitter"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
                 >
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
@@ -551,8 +560,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2012/11/16/homerun-launcher/"
-                    title="Bagikan di Google+"
-                    aria-label="Bagikan di Google+"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
                 >
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
@@ -564,7 +573,7 @@
                     <a
                         class="post-action-btn btn btn--default"
                         href="#disqus_thread"
-                        aria-label="Tinggalkan komentar"
+                        aria-label="Kommentieren"
                     >
                         <i class="fa fa-comment"></i>
                     </a>
@@ -573,7 +582,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -595,9 +604,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2012/11/16/homerun-launcher/"
-                        aria-label="Bagikan di Facebook"
+                        aria-label="Teilen auf Facebook"
                     >
-                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Bagikan di Facebook</span>
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Teilen auf Facebook</span>
                     </a>
                 </li>
             
@@ -608,9 +617,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2012/11/16/homerun-launcher/"
-                        aria-label="Bagikan di Twitter"
+                        aria-label="Teilen auf Twitter"
                     >
-                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Bagikan di Twitter</span>
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Teilen auf Twitter</span>
                     </a>
                 </li>
             
@@ -621,9 +630,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://plus.google.com/share?url=http://go2n.github.io/2012/11/16/homerun-launcher/"
-                        aria-label="Bagikan di Google+"
+                        aria-label="Teilen auf Google Plus"
                     >
-                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Bagikan di Google+</span>
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Teilen auf Google Plus</span>
                     </a>
                 </li>
             
@@ -646,18 +655,18 @@
             <i class="fa fa-times"></i>
         </div>
         
-            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
         
             <h4 id="about-card-name">Gogon</h4>
         
-            <div id="about-card-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+            <div id="about-card-bio"><p>author.bio</p>
 </div>
         
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br/>
-                <p>Janitor</p>
+                <p>author.job</p>
 
             </div>
         
@@ -688,7 +697,7 @@
             </form>
         </div>
         <div class="modal-body">
-            <div class="no-result text-color-light text-center">0 post ditemukan</div>
+            <div class="no-result text-color-light text-center">keinen Beitrag gefunden</div>
             <div class="results">
                 
                 <div class="media">
@@ -1015,10 +1024,10 @@
         </div>
         <div class="modal-footer">
             <p class="results-count text-medium"
-                data-message-zero="0 post ditemukan"
-                data-message-one="1 post ditemukan"
-                data-message-other="{n} post ditemukan">
-                44 post ditemukan
+                data-message-zero="keinen Beitrag gefunden"
+                data-message-one="1 Beitrag gefunden"
+                data-message-other="{n} Einträge gefunden">
+                44 Einträge gefunden
             </p>
         </div>
     </div>
@@ -1026,10 +1035,10 @@
 
         
         
-<div id="cover" style="background-image:url('/assets/images/cover-gemini.jpg');"></div>
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
         <!--SCRIPTS-->
 
-<script src="/assets/js/script-oegph4fro0ekphicdulwsyb0llji9ohdgb7vnrvidsror3qsbx1e5nlzgz9x.min.js"></script>
+<script src="/assets/js/script-xl9xkv7botefhpdv5tsehll2rt0wmqq4ptsnspylwkopq9efag494tpe3gpd.min.js"></script>
 
 <!--SCRIPTS END-->
 

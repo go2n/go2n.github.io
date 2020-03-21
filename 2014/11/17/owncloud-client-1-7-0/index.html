@@ -13,7 +13,9 @@
     
     
     
-        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
+            <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+        
     
     <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Hae… Tanggal 7 November 2014 kemarin ownCloud client 1.7.0 ternyata sudah dirilis, dan saya baru sempat kompel hari ini. Berikut ini changelog ownCloud client 1.7.0:\nPKGBUILD owncloud-client sudah dihapus dari repo\n\n\n\noC7 Sharing: Handle new sharing options of ownCloud 7 correctly.\nAdded Selective sync: Ability to unselect server folders which are excluded from syncing, plus GUI and setup GUI\nImproved local change detection: consider file size, detect files with ongoing changes and do not upload immediately\nImproved HTTP request timeout handler: all successful requests reset the timeout counter\nImprovements for syncing command line tool: netrc support, improved SSL support, non interactive mode\nAdded a socket based API to provide file management shells with status information about the sync status of files. That is a prerequisite for the overlay icons in the file managers.\nPermission system: ownCloud 7 delivers file and folder permissions, added ability to deal with it for shared folders and more.\nIgnore handling: Do not recurse into ignored or excluded directories\nMajor sync journal database improvements for more stability and performance\nNew library interface to sqlite3\nImprove “resync handling” if errors occur\nBlacklist improvements\nImproved logging: more useful meta info, removed noise\nUpdated to latest Qt5 versions on Windows and OS X\nOS X: Sparkle update to provide pkg format properly\nOS X: Change distribution format from dmg to pkg with new installer.\nWin: Fix handling of filenames with trailing dot or space\n\nBuat yang mau membangun paket owncloud client 1.7.0 dengan PKGBUILD saya monggo lho: https://github.com/go2n/archlinux-pkgbuild/tree/master/owncloud-client.\nownCloud Client\n","dateCreated":"2014-11-17T00:00:00+07:00","dateModified":"2019-08-12T14:10:49+07:00","datePublished":"2014-11-17T00:00:00+07:00","description":"Hae… Tanggal 7 November 2014 kemarin ownCloud client 1.7.0 ternyata sudah dirilis, dan saya baru sempat kompel hari ini. Berikut ini changelog ownCloud client 1.7.0:","headline":"ownCloud client 1.7.0","image":["https://go2n.github.io/2014/11/17/owncloud-client-1-7-0/owncloud-client-1-7-0.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/","keywords":"archlinux, pkgbuild, owncloud","thumbnailUrl":"https://go2n.github.io/2014/11/17/owncloud-client-1-7-0/owncloud-client-1-7-0.png"}</script>
     <meta name="description" content="Update PKGBUILD ownCloud client 1.7.0">
@@ -48,7 +50,7 @@
     
     <!--STYLES-->
     
-<link rel="stylesheet" href="/assets/css/style-flux9hdc78rveoy7stm2ieeksxdvljhk9blep1eficabq4pvzflk4r80g1jw.min.css">
+<link rel="stylesheet" href="/assets/css/style-cr6ygx2eptouictmr9m09oubvsh1xi4qunn2yz2xg7umzw0l9spayiq1geeo.min.css">
 
     <!--STYLES END-->
     
@@ -85,7 +87,7 @@
     <div class="header-title">
         <a
             class="header-title-link"
-            href="/"
+            href="/%20"
             aria-label=""
         >
             Gogon ngeBlog
@@ -96,11 +98,11 @@
             <a
                 class="header-right-picture "
                 href="#about"
-                aria-label="Open the link: /#about"
+                aria-label="Öffne den Link: /#about"
             >
         
         
-            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+            <img class="header-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
         
         </a>
     
@@ -119,13 +121,13 @@
             <div class="sidebar-profile">
                 <a
                     href="/#about"
-                    aria-label="Read more about the author"
+                    aria-label="Lesen Sie mehr über den Autor"
                 >
-                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+                    <img class="sidebar-profile-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
                 </a>
                 <h4 class="sidebar-profile-name">Gogon</h4>
                 
-                    <h5 class="sidebar-profile-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+                    <h5 class="sidebar-profile-bio"><p>author.bio</p>
 </h5>
                 
             </div>
@@ -135,79 +137,85 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/"
+                        <a
+                            class="sidebar-button-link "
+                            href="/"
                             
-                            title="Beranda"
+                            rel="noopener"
+                            title="Home"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-home" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Beranda</span>
+                        <span class="sidebar-button-desc">Home</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-categories"
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-categories"
                             
-                            title="Kategori"
+                            rel="noopener"
+                            title="Kategorien"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-bookmark" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Kategori</span>
+                        <span class="sidebar-button-desc">Kategorien</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-tags"
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-tags"
                             
-                            title="Tag"
+                            rel="noopener"
+                            title="Tags"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-tags" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Tag</span>
+                        <span class="sidebar-button-desc">Tags</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/all-archives"
+                        <a
+                            class="sidebar-button-link "
+                            href="/all-archives"
                             
-                            title="Arsip"
+                            rel="noopener"
+                            title="Archiv"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-archive" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Arsip</span>
+                        <span class="sidebar-button-desc">Archiv</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link open-algolia-search"
-                             href="#search"
+                        <a
+                            class="sidebar-button-link open-algolia-search"
+                            href="#search"
                             
-                            title="Cari"
+                            rel="noopener"
+                            title="Suche"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-search" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Cari</span>
+                        <span class="sidebar-button-desc">Suche</span>
                     </a>
             </li>
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/about"
+                        <a
+                            class="sidebar-button-link "
+                            href="/about"
                             
-                            title="Tentang"
+                            rel="noopener"
+                            title="Über"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-question" aria-hidden="true"></i>
-                        <span class="sidebar-button-desc">Tentang</span>
+                        <span class="sidebar-button-desc">Über</span>
                     </a>
             </li>
             
@@ -221,12 +229,13 @@
             
                 <li class="sidebar-button">
                     
-                        <a  class="sidebar-button-link "
-                             href="/atom.xml"
+                        <a
+                            class="sidebar-button-link "
+                            href="/atom.xml"
                             
+                            rel="noopener"
                             title="RSS"
                         >
-                    
                         <i class="sidebar-button-icon fa fa-rss" aria-hidden="true"></i>
                         <span class="sidebar-button-desc">RSS</span>
                     </a>
@@ -256,11 +265,11 @@
         <div class="post-meta">
     <time datetime="2014-11-17T00:00:00+07:00">
 	
-		    17 November 2014
+		    17 Nov 2014
     	
     </time>
     
-        <span> |  </span>
+        <span>in </span>
         
     <a class="category-link" href="/categories/linux/">linux</a>
 
@@ -308,7 +317,7 @@
     <div id="post-footer" class="post-footer main-content-wrap">
         
             <div class="post-footer-tags">
-                <span class="text-color-light text-small">Tag</span><br/>
+                <span class="text-color-light text-small">GETAGGT IN</span><br/>
                 
     <a class="tag tag--primary tag--small t-link" href="/tags/archlinux/" rel="tag">archlinux</a> <a class="tag tag--primary tag--small t-link" href="/tags/owncloud/" rel="tag">owncloud</a> <a class="tag tag--primary tag--small t-link" href="/tags/pkgbuild/" rel="tag">pkgbuild</a>
 
@@ -325,11 +334,11 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2014/12/30/owncloud-client-1-7-1/"
                     data-tooltip="ownCloud client 1.7.1"
-                    aria-label="PREVIOUS: ownCloud client 1.7.1"
+                    aria-label="FRÜHER: ownCloud client 1.7.1"
                 >
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
                     </a>
             </li>
             <li class="post-action">
@@ -339,10 +348,10 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2014/10/30/ndobel/"
                     data-tooltip="Ndobel monitor di KF5 &amp; Plasma 5"
-                    aria-label="NEXT: Ndobel monitor di KF5 &amp; Plasma 5"
+                    aria-label="NÄCHSTER: Ndobel monitor di KF5 &amp; Plasma 5"
                 >
                     
-                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
             </li>
@@ -353,7 +362,7 @@
             <a
                 class="post-action-btn btn btn--default btn-open-shareoptions"
                 href="#btn-open-shareoptions"
-                aria-label="Bagikan postingan ini"
+                aria-label="Diesen Beitrag teilen"
             >
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
@@ -365,8 +374,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/"
-                    title="Bagikan di Facebook"
-                    aria-label="Bagikan di Facebook"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
                 >
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
@@ -378,8 +387,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/"
-                    title="Bagikan di Twitter"
-                    aria-label="Bagikan di Twitter"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
                 >
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
@@ -391,8 +400,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/"
-                    title="Bagikan di Google+"
-                    aria-label="Bagikan di Google+"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
                 >
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
@@ -404,7 +413,7 @@
                     <a
                         class="post-action-btn btn btn--default"
                         href="#disqus_thread"
-                        aria-label="Tinggalkan komentar"
+                        aria-label="Kommentieren"
                     >
                         <i class="fa fa-comment"></i>
                     </a>
@@ -413,7 +422,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -454,11 +463,11 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2014/12/30/owncloud-client-1-7-1/"
                     data-tooltip="ownCloud client 1.7.1"
-                    aria-label="PREVIOUS: ownCloud client 1.7.1"
+                    aria-label="FRÜHER: ownCloud client 1.7.1"
                 >
                     
                         <i class="fa fa-angle-left" aria-hidden="true"></i>
-                        <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                        <span class="hide-xs hide-sm text-small icon-ml">FRÜHER</span>
                     </a>
             </li>
             <li class="post-action">
@@ -468,10 +477,10 @@
                     class="post-action-btn btn btn--default tooltip--top"
                     href="/2014/10/30/ndobel/"
                     data-tooltip="Ndobel monitor di KF5 &amp; Plasma 5"
-                    aria-label="NEXT: Ndobel monitor di KF5 &amp; Plasma 5"
+                    aria-label="NÄCHSTER: Ndobel monitor di KF5 &amp; Plasma 5"
                 >
                     
-                        <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                        <span class="hide-xs hide-sm text-small icon-mr">NÄCHSTER</span>
                         <i class="fa fa-angle-right" aria-hidden="true"></i>
                     </a>
             </li>
@@ -482,7 +491,7 @@
             <a
                 class="post-action-btn btn btn--default btn-open-shareoptions"
                 href="#btn-open-shareoptions"
-                aria-label="Bagikan postingan ini"
+                aria-label="Diesen Beitrag teilen"
             >
                 <i class="fa fa-share-alt" aria-hidden="true"></i>
             </a>
@@ -494,8 +503,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/"
-                    title="Bagikan di Facebook"
-                    aria-label="Bagikan di Facebook"
+                    title="Teilen auf Facebook"
+                    aria-label="Teilen auf Facebook"
                 >
                     <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
@@ -507,8 +516,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/"
-                    title="Bagikan di Twitter"
-                    aria-label="Bagikan di Twitter"
+                    title="Teilen auf Twitter"
+                    aria-label="Teilen auf Twitter"
                 >
                     <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
@@ -520,8 +529,8 @@
                 <a
                     class="post-action-btn btn btn--default"
                     target="new" href="https://plus.google.com/share?url=http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/"
-                    title="Bagikan di Google+"
-                    aria-label="Bagikan di Google+"
+                    title="Teilen auf Google Plus"
+                    aria-label="Teilen auf Google Plus"
                 >
                     <i class="fab fa-google-plus" aria-hidden="true"></i>
                 </a>
@@ -533,7 +542,7 @@
                     <a
                         class="post-action-btn btn btn--default"
                         href="#disqus_thread"
-                        aria-label="Tinggalkan komentar"
+                        aria-label="Kommentieren"
                     >
                         <i class="fa fa-comment"></i>
                     </a>
@@ -542,7 +551,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#" aria-label="Atas">
+                <a class="post-action-btn btn btn--default" href="#" aria-label="Nach oben">
             
                 <i class="fa fa-list" aria-hidden="true"></i>
             </a>
@@ -564,9 +573,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://www.facebook.com/sharer/sharer.php?u=http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/"
-                        aria-label="Bagikan di Facebook"
+                        aria-label="Teilen auf Facebook"
                     >
-                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Bagikan di Facebook</span>
+                        <i class="fab fa-facebook" aria-hidden="true"></i><span>Teilen auf Facebook</span>
                     </a>
                 </li>
             
@@ -577,9 +586,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://twitter.com/intent/tweet?text=http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/"
-                        aria-label="Bagikan di Twitter"
+                        aria-label="Teilen auf Twitter"
                     >
-                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Bagikan di Twitter</span>
+                        <i class="fab fa-twitter" aria-hidden="true"></i><span>Teilen auf Twitter</span>
                     </a>
                 </li>
             
@@ -590,9 +599,9 @@
                         class="share-option-btn"
                         target="new"
                         href="https://plus.google.com/share?url=http://go2n.github.io/2014/11/17/owncloud-client-1-7-0/"
-                        aria-label="Bagikan di Google+"
+                        aria-label="Teilen auf Google Plus"
                     >
-                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Bagikan di Google+</span>
+                        <i class="fab fa-google-plus" aria-hidden="true"></i><span>Teilen auf Google Plus</span>
                     </a>
                 </li>
             
@@ -615,18 +624,18 @@
             <i class="fa fa-times"></i>
         </div>
         
-            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Penulis"/>
+            <img id="about-card-picture" src="/assets/images/go2n.jpg" alt="Bild des Autors"/>
         
             <h4 id="about-card-name">Gogon</h4>
         
-            <div id="about-card-bio"><p>Bukan Gogon Srimulat • Suka dengan KDE • Programmer Gagal  😐</p>
+            <div id="about-card-bio"><p>author.bio</p>
 </div>
         
         
             <div id="about-card-job">
                 <i class="fa fa-briefcase"></i>
                 <br/>
-                <p>Janitor</p>
+                <p>author.job</p>
 
             </div>
         
@@ -657,7 +666,7 @@
             </form>
         </div>
         <div class="modal-body">
-            <div class="no-result text-color-light text-center">0 post ditemukan</div>
+            <div class="no-result text-color-light text-center">keinen Beitrag gefunden</div>
             <div class="results">
                 
                 <div class="media">
@@ -984,10 +993,10 @@
         </div>
         <div class="modal-footer">
             <p class="results-count text-medium"
-                data-message-zero="0 post ditemukan"
-                data-message-one="1 post ditemukan"
-                data-message-other="{n} post ditemukan">
-                44 post ditemukan
+                data-message-zero="keinen Beitrag gefunden"
+                data-message-one="1 Beitrag gefunden"
+                data-message-other="{n} Einträge gefunden">
+                44 Einträge gefunden
             </p>
         </div>
     </div>
@@ -995,10 +1004,10 @@
 
         
         
-<div id="cover" style="background-image:url('/assets/images/cover-gemini.jpg');"></div>
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
         <!--SCRIPTS-->
 
-<script src="/assets/js/script-oegph4fro0ekphicdulwsyb0llji9ohdgb7vnrvidsror3qsbx1e5nlzgz9x.min.js"></script>
+<script src="/assets/js/script-xl9xkv7botefhpdv5tsehll2rt0wmqq4ptsnspylwkopq9efag494tpe3gpd.min.js"></script>
 
 <!--SCRIPTS END-->
 
