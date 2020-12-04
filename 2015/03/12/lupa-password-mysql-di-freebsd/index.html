@@ -17,7 +17,7 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"\nSekedar catatan saja saat lupa password root MySQL di mesin FreeBSD.\n\nUbah /etc/rc.conf, buka komentar pada mysql_args, restart MySQL dan login. Dengan asumsi isi dari mysql_args adalah &quot;--skip-grant-tables --skip-networking&quot;\n\n\n123[root@server] # perl -pi -e \"s/#mysql_args/mysql_args/g\" /etc/rc.conf[root@server] # /usr/local/etc/rc.d/mysql-server restart[root@server] # mysql -u root\n\nUbah Password\n1mysql&gt; UPDATE mysql.user SET Password=PASSWORD('PASSWORD BARU') WHERE user='root';\n\nEdit /etc/rc.conf, berikan komentar pada mysql_args dan restart MySQL\n12[root@server] # perl -pi -e \"s/mysql_args/#mysql_args/g\" /etc/rc.conf[root@server] # /usr/local/etc/rc.d/mysql-server restart\n\nUdah gitu aja, tinggal login MySQL dengan password root yang baru.\n","dateCreated":"2015-03-12T00:00:00+07:00","dateModified":"2019-08-12T12:57:18+07:00","datePublished":"2015-03-12T00:00:00+07:00","description":"\nSekedar catatan saja saat lupa password root MySQL di mesin FreeBSD.\n\nUbah /etc/rc.conf, buka komentar pada mysql_args, restart MySQL dan login. Dengan asumsi isi dari mysql_args adalah &quot;--skip-grant-tables --skip-networking&quot;","headline":"Lupa Password Root MySQL di FreeBSD","image":["dhemit.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/","keywords":"freebsd, mysql, database","thumbnailUrl":"dhemit.png"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"\nSekedar catatan saja saat lupa password root MySQL di mesin FreeBSD.\n\nUbah /etc/rc.conf, buka komentar pada mysql_args, restart MySQL dan login. Dengan asumsi isi dari mysql_args adalah &quot;--skip-grant-tables --skip-networking&quot;\n\n\n123[root@server] # perl -pi -e &quot;s/#mysql_args/mysql_args/g&quot; /etc/rc.conf[root@server] # /usr/local/etc/rc.d/mysql-server restart[root@server] # mysql -u root\n\nUbah Password\n1mysql&gt; UPDATE mysql.user SET Password=PASSWORD(&#x27;PASSWORD BARU&#x27;) WHERE user=&#x27;root&#x27;;\n\nEdit /etc/rc.conf, berikan komentar pada mysql_args dan restart MySQL\n12[root@server] # perl -pi -e &quot;s/mysql_args/#mysql_args/g&quot; /etc/rc.conf[root@server] # /usr/local/etc/rc.d/mysql-server restart\n\nUdah gitu aja, tinggal login MySQL dengan password root yang baru.\n","dateCreated":"2015-03-12T00:00:00+07:00","dateModified":"2019-08-12T12:57:18+07:00","datePublished":"2015-03-12T00:00:00+07:00","description":"\nSekedar catatan saja saat lupa password root MySQL di mesin FreeBSD.\n\nUbah /etc/rc.conf, buka komentar pada mysql_args, restart MySQL dan login. Dengan asumsi isi dari mysql_args adalah &quot;--skip-grant-tables --skip-networking&quot;","headline":"Lupa Password Root MySQL di FreeBSD","image":["dhemit.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2015/03/12/lupa-password-mysql-di-freebsd/","keywords":"freebsd, mysql, database","thumbnailUrl":"dhemit.png"}</script>
     <meta name="description" content="Sekedar catatan saja saat lupa password root MySQL di mesin FreeBSD">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="Lupa Password Root MySQL di FreeBSD">
@@ -286,13 +286,13 @@
 <p>Ubah /etc/rc.conf, buka komentar pada mysql_args, restart MySQL dan login. Dengan asumsi isi dari mysql_args adalah <code>&quot;--skip-grant-tables --skip-networking&quot;</code></p>
 <a id="more"></a>
 
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@server] # perl -pi -e "s/#mysql_args/mysql_args/g" /etc/rc.conf</span><br><span class="line">[root@server] # /usr/local/etc/rc.d/mysql-server restart</span><br><span class="line">[root@server] # mysql -u root</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@server] # perl -pi -e &quot;s/#mysql_args/mysql_args/g&quot; /etc/rc.conf</span><br><span class="line">[root@server] # /usr/local/etc/rc.d/mysql-server restart</span><br><span class="line">[root@server] # mysql -u root</span><br></pre></td></tr></table></figure>
 
 <p>Ubah Password</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; UPDATE mysql.user SET Password=PASSWORD('PASSWORD BARU') WHERE user='root';</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; UPDATE mysql.user SET Password=PASSWORD(&#x27;PASSWORD BARU&#x27;) WHERE user=&#x27;root&#x27;;</span><br></pre></td></tr></table></figure>
 
 <p>Edit /etc/rc.conf, berikan komentar pada mysql_args dan restart MySQL</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@server] # perl -pi -e "s/mysql_args/#mysql_args/g" /etc/rc.conf</span><br><span class="line">[root@server] # /usr/local/etc/rc.d/mysql-server restart</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@server] # perl -pi -e &quot;s/mysql_args/#mysql_args/g&quot; /etc/rc.conf</span><br><span class="line">[root@server] # /usr/local/etc/rc.d/mysql-server restart</span><br></pre></td></tr></table></figure>
 
 <p>Udah gitu aja, tinggal login MySQL dengan password root yang baru.</p>
 
@@ -306,7 +306,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">Tag</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/database/" rel="tag">database</a> <a class="tag tag--primary tag--small t-link" href="/tags/freebsd/" rel="tag">freebsd</a> <a class="tag tag--primary tag--small t-link" href="/tags/mysql/" rel="tag">mysql</a>
+    <a class="tag tag--primary tag--small t-none-link" href="/tags/database/" rel="tag">database</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/freebsd/" rel="tag">freebsd</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/mysql/" rel="tag">mysql</a>
 
             </div>
         
@@ -422,7 +422,7 @@
         
             
                 <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
             
         
@@ -683,7 +683,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Membuat kamus sendiri? Mungkin nggak ya…? Jawabannya adalah mungkin. Dengan memanfaatkan bahasa C, kompiler GCC dan SQLite 3 beserta pustakanya, kita bisa membuat kamus sendiri. Tak perlu interface yang canggih dan keren, yang penting kamus yang dibuat berguna. Pada contoh ini kamus yang dibuat berjalan pada modus command line. Source code pada contoh ini berdasarkan pada dokumentasi <a href="http://www.sqlite.org/" target="_blank" rel="noopener">SQLite</a>.</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Membuat kamus sendiri? Mungkin nggak ya…? Jawabannya adalah mungkin. Dengan memanfaatkan bahasa C, kompiler GCC dan SQLite 3 beserta pustakanya, kita bisa membuat kamus sendiri. Tak perlu interface yang canggih dan keren, yang penting kamus yang dibuat berguna. Pada contoh ini kamus yang dibuat berjalan pada modus command line. Source code pada contoh ini berdasarkan pada dokumentasi <a target="_blank" rel="noopener" href="http://www.sqlite.org/">SQLite</a>.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -716,7 +716,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a href="https://kde-apps.org" target="_blank" rel="noopener">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a target="_blank" rel="noopener" href="https://kde-apps.org">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -782,7 +782,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a href="http://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a> dengan <a href="https://wiki.archlinux.org/index.php/Deltup" target="_blank" rel="noopener">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a href="http://delta.archlinux.fr/" target="_blank" rel="noopener">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a target="_blank" rel="noopener" href="http://www.archlinux.org/">Arch Linux</a> dengan <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Deltup">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a target="_blank" rel="noopener" href="http://delta.archlinux.fr/">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -815,7 +815,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a href="https://www.facebook.com/walesa/posts/4007252307182" target="_blank" rel="noopener">status</a> Facebooknya om Walesa jadi kepengin menjajal <a href="http://www.kde.org/announcements/announce-4.9-beta2.php" target="_blank" rel="noopener">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a target="_blank" rel="noopener" href="https://www.facebook.com/walesa/posts/4007252307182">status</a> Facebooknya om Walesa jadi kepengin menjajal <a target="_blank" rel="noopener" href="http://www.kde.org/announcements/announce-4.9-beta2.php">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -848,7 +848,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a href="http://www.kde.org/announcements/announce-4.9-rc1.php" target="_blank" rel="noopener">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a target="_blank" rel="noopener" href="http://www.kde.org/announcements/announce-4.9-rc1.php">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -1027,7 +1027,7 @@
 <script src="/assets/js/algoliasearch.js"></script>
 
     <script>
-      var algoliaClient = algoliasearch('5IJHR9MI50', '3fb6d5567abc2c3f45cc5bce5f29d33b');
+      var algoliaClient = algoliasearch('AKI0Y37EA1', '9b0084f5343d3a80d8e0e1c7f04851e2');
       var algoliaIndex = algoliaClient.initIndex('Goblog');
     </script>
 

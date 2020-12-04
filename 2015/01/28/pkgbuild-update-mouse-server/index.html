@@ -17,7 +17,7 @@
             <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
         
     
-    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Kemarin malam dapat notifikasi via email bahwa ada komentar untuk paket AUR mouse server yang saya submit dari Tobse Topic. Dalam komentar tersebut dia menyebutkan bahwa ada masalah pada CMakeLists.txt mouseserver. Katanya:\n\n\n\nHi there,\n/usr/sbin is hard coded in CMakeLists.txt, so CMAKE_INSTALL_PREFIX parameter for cmake is ignored.\nI added the following line. Now cmake respects the INSTALL PREFIX:sed -i &#39;s,/usr/sbin,${CMAKE_INSTALL_PREFIX},g&#39; ../CMakeLists.txt\nIf you want mouseserver to be installed to /usr/bin change next line to:cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/bin\n\nDuh, selama ini saya tidak memperhatikan. Untung saja ada yang mengoreksi 😓\nPerubahan yang saya lakukan adalah menambahkan fungsi prepare() untuk persiapan membangun paket dan mengubah INSTALL PREFIX serta mengganti parameter CMAKE_INSTALL_PREFIX dari /usr menjadi /usr/bin pada fungsi build().\nMonggo kalau mau lihat perubahannya di sini. Untuk paket AUR-nya saya submit di sini. 😊\nMouse Server for Linux\n","dateCreated":"2015-01-28T00:00:00+07:00","dateModified":"2019-08-12T14:09:14+07:00","datePublished":"2015-01-28T00:00:00+07:00","description":"Kemarin malam dapat notifikasi via email bahwa ada komentar untuk paket AUR mouse server yang saya submit dari Tobse Topic. Dalam komentar tersebut dia menyebutkan bahwa ada masalah pada CMakeLists.txt mouseserver. Katanya:","headline":"PKGBUILD Update: mouseserver 1.0.1-3","image":["https://go2n.github.io/2015/01/28/pkgbuild-update-mouse-server/mouse-server.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2015/01/28/pkgbuild-update-mouse-server/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2015/01/28/pkgbuild-update-mouse-server/","keywords":"archlinux, pkgbuild, mouse server","thumbnailUrl":"https://go2n.github.io/2015/01/28/pkgbuild-update-mouse-server/mouse-server.png"}</script>
+    <script type="application/ld+json">{"@context":"http://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Gogon","sameAs":[],"image":"go2n.jpg"},"articleBody":"Kemarin malam dapat notifikasi via email bahwa ada komentar untuk paket AUR mouse server yang saya submit dari Tobse Topic. Dalam komentar tersebut dia menyebutkan bahwa ada masalah pada CMakeLists.txt mouseserver. Katanya:\n\n\n\nHi there,\n/usr/sbin is hard coded in CMakeLists.txt, so CMAKE_INSTALL_PREFIX parameter for cmake is ignored.\nI added the following line. Now cmake respects the INSTALL PREFIX:sed -i &#39;s,/usr/sbin,$&#123;CMAKE_INSTALL_PREFIX&#125;,g&#39; ../CMakeLists.txt\nIf you want mouseserver to be installed to /usr/bin change next line to:cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/bin\n\nDuh, selama ini saya tidak memperhatikan. Untung saja ada yang mengoreksi 😓\nPerubahan yang saya lakukan adalah menambahkan fungsi prepare() untuk persiapan membangun paket dan mengubah INSTALL PREFIX serta mengganti parameter CMAKE_INSTALL_PREFIX dari /usr menjadi /usr/bin pada fungsi build().\nMonggo kalau mau lihat perubahannya di sini. Untuk paket AUR-nya saya submit di sini. 😊\nMouse Server for Linux\n","dateCreated":"2015-01-28T00:00:00+07:00","dateModified":"2019-08-12T14:09:14+07:00","datePublished":"2015-01-28T00:00:00+07:00","description":"Kemarin malam dapat notifikasi via email bahwa ada komentar untuk paket AUR mouse server yang saya submit dari Tobse Topic. Dalam komentar tersebut dia menyebutkan bahwa ada masalah pada CMakeLists.txt mouseserver. Katanya:","headline":"PKGBUILD Update: mouseserver 1.0.1-3","image":["https://go2n.github.io/2015/01/28/pkgbuild-update-mouse-server/mouse-server.png"],"mainEntityOfPage":{"@type":"WebPage","@id":"http://go2n.github.io/2015/01/28/pkgbuild-update-mouse-server/"},"publisher":{"@type":"Organization","name":"Gogon","sameAs":[],"image":"go2n.jpg","logo":{"@type":"ImageObject","url":"go2n.jpg"}},"url":"http://go2n.github.io/2015/01/28/pkgbuild-update-mouse-server/","keywords":"archlinux, pkgbuild, mouse server","thumbnailUrl":"https://go2n.github.io/2015/01/28/pkgbuild-update-mouse-server/mouse-server.png"}</script>
     <meta name="description" content="Kemarin malam dapat notifikasi via email bahwa ada komentar untuk paket AUR mouse server yang saya submit dari Tobse Topic. Dalam komentar tersebut dia menyebutkan bahwa ada masalah pada CMakeLists.tx">
 <meta property="og:type" content="blog">
 <meta property="og:title" content="PKGBUILD Update: mouseserver 1.0.1-3">
@@ -32,7 +32,6 @@
 <meta property="article:tag" content="archlinux">
 <meta property="article:tag" content="pkgbuild">
 <meta property="article:tag" content="mouse server">
-<meta property="article:tag" content="linux">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://go2n.github.io/2015/01/28/pkgbuild-update-mouse-server/mouse-server.png">
     
@@ -283,18 +282,18 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <p>Kemarin malam dapat notifikasi via email bahwa ada komentar untuk paket <a href="https://aur.archlinux.org/packages/mouseserver/" target="_blank" rel="noopener">AUR mouse server</a> yang saya submit dari <a href="https://aur.archlinux.org/account/generalt/" target="_blank" rel="noopener">Tobse Topic</a>. Dalam komentar tersebut dia menyebutkan bahwa ada masalah pada CMakeLists.txt mouseserver. Katanya:</p>
+            <p>Kemarin malam dapat notifikasi via email bahwa ada komentar untuk paket <a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/mouseserver/">AUR mouse server</a> yang saya submit dari <a target="_blank" rel="noopener" href="https://aur.archlinux.org/account/generalt/">Tobse Topic</a>. Dalam komentar tersebut dia menyebutkan bahwa ada masalah pada CMakeLists.txt mouseserver. Katanya:</p>
 <a id="more"></a>
 
 <blockquote>
 <p>Hi there,</p>
 <p><code>/usr/sbin</code> is hard coded in CMakeLists.txt, so <code>CMAKE_INSTALL_PREFIX</code> parameter for cmake is ignored.</p>
-<p>I added the following line. Now cmake respects the INSTALL PREFIX:<br><code>sed -i &#39;s,/usr/sbin,${CMAKE_INSTALL_PREFIX},g&#39; ../CMakeLists.txt</code></p>
+<p>I added the following line. Now cmake respects the INSTALL PREFIX:<br><code>sed -i &#39;s,/usr/sbin,$&#123;CMAKE_INSTALL_PREFIX&#125;,g&#39; ../CMakeLists.txt</code></p>
 <p>If you want mouseserver to be installed to <code>/usr/bin</code> change next line to:<br><code>cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/bin</code></p>
 </blockquote>
 <p>Duh, selama ini saya tidak memperhatikan. Untung saja ada yang mengoreksi 😓</p>
 <p>Perubahan yang saya lakukan adalah menambahkan fungsi <code>prepare()</code> untuk persiapan membangun paket dan mengubah INSTALL PREFIX serta mengganti parameter <code>CMAKE_INSTALL_PREFIX</code> dari <code>/usr</code> menjadi <code>/usr/bin</code> pada fungsi <code>build()</code>.</p>
-<p>Monggo kalau mau lihat perubahannya di <a href="https://github.com/go2n/archlinux-pkgbuild/commit/a69d2382e365d5442aaa6a1fb6d286b21a45250a?diff=split#diff-fdf85429fb82f55d422abdce53acee2f" target="_blank" rel="noopener">sini</a>. Untuk paket AUR-nya saya submit di <a href="https://aur.archlinux.org/packages/mouseserver/" target="_blank" rel="noopener">sini</a>. 😊</p>
+<p>Monggo kalau mau lihat perubahannya di <a target="_blank" rel="noopener" href="https://github.com/go2n/archlinux-pkgbuild/commit/a69d2382e365d5442aaa6a1fb6d286b21a45250a?diff=split#diff-fdf85429fb82f55d422abdce53acee2f">sini</a>. Untuk paket AUR-nya saya submit di <a target="_blank" rel="noopener" href="https://aur.archlinux.org/packages/mouseserver/">sini</a>. 😊</p>
 <div class="figure center" style="width:;"><a class="fancybox" href="mouse-server.png" title="Mouse Server for Linux" data-caption="Mouse Server for Linux" data-fancybox="default"><img class="fig-img" src="mouse-server.png" alt="Mouse Server for Linux"></a><span class="caption">Mouse Server for Linux</span></div>
 
             
@@ -307,7 +306,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">Tag</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/archlinux/" rel="tag">archlinux</a> <a class="tag tag--primary tag--small t-link" href="/tags/mouse-server/" rel="tag">mouse server</a> <a class="tag tag--primary tag--small t-link" href="/tags/pkgbuild/" rel="tag">pkgbuild</a>
+    <a class="tag tag--primary tag--small t-none-link" href="/tags/archlinux/" rel="tag">archlinux</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/mouse-server/" rel="tag">mouse server</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/pkgbuild/" rel="tag">pkgbuild</a>
 
             </div>
         
@@ -423,7 +422,7 @@
         
             
                 <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
             
         
@@ -684,7 +683,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Membuat kamus sendiri? Mungkin nggak ya…? Jawabannya adalah mungkin. Dengan memanfaatkan bahasa C, kompiler GCC dan SQLite 3 beserta pustakanya, kita bisa membuat kamus sendiri. Tak perlu interface yang canggih dan keren, yang penting kamus yang dibuat berguna. Pada contoh ini kamus yang dibuat berjalan pada modus command line. Source code pada contoh ini berdasarkan pada dokumentasi <a href="http://www.sqlite.org/" target="_blank" rel="noopener">SQLite</a>.</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Membuat kamus sendiri? Mungkin nggak ya…? Jawabannya adalah mungkin. Dengan memanfaatkan bahasa C, kompiler GCC dan SQLite 3 beserta pustakanya, kita bisa membuat kamus sendiri. Tak perlu interface yang canggih dan keren, yang penting kamus yang dibuat berguna. Pada contoh ini kamus yang dibuat berjalan pada modus command line. Source code pada contoh ini berdasarkan pada dokumentasi <a target="_blank" rel="noopener" href="http://www.sqlite.org/">SQLite</a>.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -717,7 +716,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a href="https://kde-apps.org" target="_blank" rel="noopener">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a target="_blank" rel="noopener" href="https://kde-apps.org">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -783,7 +782,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a href="http://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a> dengan <a href="https://wiki.archlinux.org/index.php/Deltup" target="_blank" rel="noopener">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a href="http://delta.archlinux.fr/" target="_blank" rel="noopener">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a target="_blank" rel="noopener" href="http://www.archlinux.org/">Arch Linux</a> dengan <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Deltup">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a target="_blank" rel="noopener" href="http://delta.archlinux.fr/">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -816,7 +815,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a href="https://www.facebook.com/walesa/posts/4007252307182" target="_blank" rel="noopener">status</a> Facebooknya om Walesa jadi kepengin menjajal <a href="http://www.kde.org/announcements/announce-4.9-beta2.php" target="_blank" rel="noopener">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a target="_blank" rel="noopener" href="https://www.facebook.com/walesa/posts/4007252307182">status</a> Facebooknya om Walesa jadi kepengin menjajal <a target="_blank" rel="noopener" href="http://www.kde.org/announcements/announce-4.9-beta2.php">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -849,7 +848,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a href="http://www.kde.org/announcements/announce-4.9-rc1.php" target="_blank" rel="noopener">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a target="_blank" rel="noopener" href="http://www.kde.org/announcements/announce-4.9-rc1.php">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -1028,7 +1027,7 @@
 <script src="/assets/js/algoliasearch.js"></script>
 
     <script>
-      var algoliaClient = algoliasearch('5IJHR9MI50', '3fb6d5567abc2c3f45cc5bce5f29d33b');
+      var algoliaClient = algoliasearch('AKI0Y37EA1', '9b0084f5343d3a80d8e0e1c7f04851e2');
       var algoliaIndex = algoliaClient.initIndex('Goblog');
     </script>
 

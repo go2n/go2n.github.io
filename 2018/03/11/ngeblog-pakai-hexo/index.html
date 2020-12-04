@@ -28,12 +28,9 @@
 <meta property="article:published_time" content="2018-03-11T12:29:50.000Z">
 <meta property="article:modified_time" content="2019-08-13T01:12:40.000Z">
 <meta property="article:author" content="Gogon">
-<meta property="article:tag" content="blog">
-<meta property="article:tag" content="github">
-<meta property="article:tag" content="jekyll">
-<meta property="article:tag" content="hexo">
 <meta property="article:tag" content="archlinux">
-<meta property="article:tag" content="linux">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="jekyll">
 <meta name="twitter:card" content="summary">
     
     
@@ -283,15 +280,15 @@
     
     <div class="post-content markdown">
         <div class="main-content-wrap">
-            <p>Sudah dua tahun lebih saya tidak ngeblog, cukup lama juga blog ini nggak kopèn. Setelah sekian lama, akhirnya kelakon juga saya menulis di sini lagi. Kali ini saya akan menulis tentang framework untuk membuat blog ini. Sebelumnya blog ini dibuat menggunakan <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> dan dihosting di <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.</p>
+            <p>Sudah dua tahun lebih saya tidak ngeblog, cukup lama juga blog ini nggak kopèn. Setelah sekian lama, akhirnya kelakon juga saya menulis di sini lagi. Kali ini saya akan menulis tentang framework untuk membuat blog ini. Sebelumnya blog ini dibuat menggunakan <a target="_blank" rel="noopener" href="https://jekyllrb.com/">Jekyll</a> dan dihosting di <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a>.</p>
 <a id="more"></a>
 
 <p>Jekyll, kalau boleh saya bilang framework ini lumayan ribet dan rumit. Biasanya sebelum posting ke blog, saya melakukan pratinjau di mesin Linux saya dengan perintah:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ jekyll serve</span><br></pre></td></tr></table></figure>
 
 <p>Tapi, entah kenapa setelah melakukan ritual update di mesin Arch Linux saya waktu itu Jekyll tidak bisa dijalankan seperti biasanya. Sekalinya sudah bisa dijalankan tampilan blog tidak sesuai dengan yang saya atur sebelumnya. Itulah yang menjadi salah satu alasan kenapa blog ini tidak update selama ini. 😅</p>
-<p>Sekitar pertengahan tahun 2017 yang lalu saya mendengar tentang <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>. Setelah membaca artikel tentang Hexo saya punya rencana untuk mulai membuat blog dengan Hexo dan memindahkan tulisan-tulisan saya. Berhubung waktu itu saya tidak selo dan lupa (halah), maka baru hari ini saya memulainya. Kemungkinan tulisan-tulisan saya di blog yang lain juga akan dipindahkan ke blog ini. 😁</p>
-<h2 id="Apa-itu-Hexo"><a href="#Apa-itu-Hexo" class="headerlink" title="Apa itu Hexo?"></a>Apa itu Hexo?</h2><p>Hexo adalah framework blog yang cepat, sederhana dan powerfull yang didukung oleh Node.js. Hexo ini konon katanya super cepat, hanya membutuhkan waktu beberapa detik untuk membangun sebuah website lengkap. Dokumentasi lengkapnya ada di <a href="https://hexo.io/docs/" target="_blank" rel="noopener">https://hexo.io/docs/</a>.</p>
+<p>Sekitar pertengahan tahun 2017 yang lalu saya mendengar tentang <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>. Setelah membaca artikel tentang Hexo saya punya rencana untuk mulai membuat blog dengan Hexo dan memindahkan tulisan-tulisan saya. Berhubung waktu itu saya tidak selo dan lupa (halah), maka baru hari ini saya memulainya. Kemungkinan tulisan-tulisan saya di blog yang lain juga akan dipindahkan ke blog ini. 😁</p>
+<h2 id="Apa-itu-Hexo"><a href="#Apa-itu-Hexo" class="headerlink" title="Apa itu Hexo?"></a>Apa itu Hexo?</h2><p>Hexo adalah framework blog yang cepat, sederhana dan powerfull yang didukung oleh Node.js. Hexo ini konon katanya super cepat, hanya membutuhkan waktu beberapa detik untuk membangun sebuah website lengkap. Dokumentasi lengkapnya ada di <a target="_blank" rel="noopener" href="https://hexo.io/docs/">https://hexo.io/docs/</a>.</p>
 <h3 id="Fitur"><a href="#Fitur" class="headerlink" title="Fitur"></a>Fitur</h3><ul>
 <li>Blazing fast generating</li>
 <li>Mendukung Markdownnya GitHub dan plugin-plugin Octopress</li>
@@ -301,7 +298,7 @@
 <h3 id="Instalasi"><a href="#Instalasi" class="headerlink" title="Instalasi"></a>Instalasi</h3><p>Untuk instalasi cukup gampang, yang penting <code>nodejs</code> dan <code>git</code> sudah diinstall di mesin:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 
-<p>Instalasi Hexo di Arch Linux melalui <a href="https://aur.archlinux.org/" target="_blank" rel="noopener">AUR</a> menggunakan <code>yaourt</code>, <code>packer</code> atau <a href="https://wiki.archlinux.org/index.php/AUR_helpers" target="_blank" rel="noopener">program yang sejenisnya</a>:</p>
+<p>Instalasi Hexo di Arch Linux melalui <a target="_blank" rel="noopener" href="https://aur.archlinux.org/">AUR</a> menggunakan <code>yaourt</code>, <code>packer</code> atau <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/AUR_helpers">program yang sejenisnya</a>:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ yaourt -S nodejs-hexo-cli</span><br></pre></td></tr></table></figure>
 
 <h3 id="Ngeblog"><a href="#Ngeblog" class="headerlink" title="Ngeblog"></a>Ngeblog</h3><p>Perintah yang digunakan untuk mulai membuat blog dengan Hexo:</p>
@@ -310,26 +307,26 @@
 <p>Isi dari direktori <code>blog</code>:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
 
-<p>Konfigurasi blog ada di berkas <code>_config.yml</code>. Info lebih lanjut: <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="noopener">https://hexo.io/docs/configuration.html</a>.</p>
+<p>Konfigurasi blog ada di berkas <code>_config.yml</code>. Info lebih lanjut: <a target="_blank" rel="noopener" href="https://hexo.io/docs/configuration.html">https://hexo.io/docs/configuration.html</a>.</p>
 <h4 id="Membuat-tulisan-baru"><a href="#Membuat-tulisan-baru" class="headerlink" title="Membuat tulisan baru"></a>Membuat tulisan baru</h4><p>Untuk membuat tulisan baru cukup gampang:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new post &quot;Judul&quot;</span><br><span class="line">INFO  Created: ~&#x2F;dev&#x2F;github&#x2F;blog&#x2F;source&#x2F;_posts&#x2F;Judul.md</span><br></pre></td></tr></table></figure>
 
-<p>Info lebih lanjut: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">https://hexo.io/docs/writing.html</a></p>
+<p>Info lebih lanjut: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">https://hexo.io/docs/writing.html</a></p>
 <h4 id="Jalankan-server"><a href="#Jalankan-server" class="headerlink" title="Jalankan server"></a>Jalankan server</h4><p>Untuk melihat pratinjau blog yang baru saja dibuat:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http:&#x2F;&#x2F;localhost:4000&#x2F;. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure>
 
-<p>Info lebih lanjut: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">https://hexo.io/docs/server.html</a></p>
+<p>Info lebih lanjut: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">https://hexo.io/docs/server.html</a></p>
 <h4 id="Generate-berkas-statis"><a href="#Generate-berkas-statis" class="headerlink" title="Generate berkas statis"></a>Generate berkas statis</h4><p>Membuat berkas statis dengan Hexo cukup gampang dan cepat:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in 213 ms</span><br><span class="line">INFO  Generated: index.html</span><br><span class="line">INFO  Generated: archives&#x2F;index.html</span><br><span class="line">INFO  Generated: fancybox&#x2F;blank.gif</span><br><span class="line">INFO  Generated: fancybox&#x2F;jquery.fancybox.css</span><br><span class="line">INFO  Generated: fancybox&#x2F;jquery.fancybox.pack.js</span><br><span class="line">INFO  Generated: fancybox&#x2F;jquery.fancybox.js</span><br><span class="line">INFO  Generated: fancybox&#x2F;fancybox_loading.gif</span><br><span class="line">INFO  Generated: fancybox&#x2F;fancybox_loading@2x.gif</span><br><span class="line">INFO  Generated: fancybox&#x2F;fancybox_overlay.png</span><br><span class="line">INFO  Generated: fancybox&#x2F;fancybox_sprite.png</span><br><span class="line">INFO  Generated: fancybox&#x2F;fancybox_sprite@2x.png</span><br><span class="line">INFO  Generated: archives&#x2F;2018&#x2F;03&#x2F;index.html</span><br><span class="line">INFO  Generated: archives&#x2F;2018&#x2F;index.html</span><br><span class="line">INFO  Generated: css&#x2F;fonts&#x2F;FontAwesome.otf</span><br><span class="line">INFO  Generated: js&#x2F;script.js</span><br><span class="line">INFO  Generated: fancybox&#x2F;helpers&#x2F;jquery.fancybox-buttons.css</span><br><span class="line">INFO  Generated: fancybox&#x2F;helpers&#x2F;jquery.fancybox-buttons.js</span><br><span class="line">INFO  Generated: fancybox&#x2F;helpers&#x2F;jquery.fancybox-thumbs.css</span><br><span class="line">INFO  Generated: fancybox&#x2F;helpers&#x2F;jquery.fancybox-media.js</span><br><span class="line">INFO  Generated: fancybox&#x2F;helpers&#x2F;jquery.fancybox-thumbs.js</span><br><span class="line">INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.eot</span><br><span class="line">INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.woff</span><br><span class="line">INFO  Generated: css&#x2F;style.css</span><br><span class="line">INFO  Generated: fancybox&#x2F;helpers&#x2F;fancybox_buttons.png</span><br><span class="line">INFO  Generated: css&#x2F;images&#x2F;banner.jpg</span><br><span class="line">INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.svg</span><br><span class="line">INFO  Generated: css&#x2F;fonts&#x2F;fontawesome-webfont.ttf</span><br><span class="line">INFO  Generated: 2018&#x2F;03&#x2F;11&#x2F;hello-world&#x2F;index.html</span><br><span class="line">INFO  Generated: 2018&#x2F;03&#x2F;11&#x2F;Judul&#x2F;index.html</span><br><span class="line">INFO  29 files generated in 710 ms</span><br></pre></td></tr></table></figure>
 
-<p>Info lebih lanjut: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">https://hexo.io/docs/generating.html</a></p>
+<p>Info lebih lanjut: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">https://hexo.io/docs/generating.html</a></p>
 <h4 id="Deploy"><a href="#Deploy" class="headerlink" title="Deploy"></a>Deploy</h4><p>Sebelum deploy ke GitHub, pasang dulu plugin <code>hexo-deployer-git</code>:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save <span class="comment"># &lt;~ dijalankan di dalam direktori blog</span></span><br></pre></td></tr></table></figure>
 
 <p>Edit berkas <code>_config.yml</code> lalu atur bagian deployment:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: &lt;repo github&gt;</span><br><span class="line">  branch: master</span><br><span class="line">  message: &lt;message&gt;</span><br></pre></td></tr></table></figure>
 
-<p>Info lebih lanjut: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">https://hexo.io/docs/deployment.html</a></p>
+<p>Info lebih lanjut: <a target="_blank" rel="noopener" href="https://hexo.io/docs/deployment.html">https://hexo.io/docs/deployment.html</a></p>
 <p>Untuk deploy blog bisa menggunakan salah satu perintah di bawah ini:</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy       <span class="comment"># &lt;~ deploy blog</span></span><br><span class="line">atau</span><br><span class="line">$ hexo deploy -g    <span class="comment"># &lt;~ generate blog lalu deploy</span></span><br><span class="line">atau</span><br><span class="line">$ hexo generate -d  <span class="comment"># &lt;~ generate blog lalu deploy</span></span><br></pre></td></tr></table></figure>
 
@@ -345,7 +342,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">Tag</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/archlinux/" rel="tag">archlinux</a> <a class="tag tag--primary tag--small t-link" href="/tags/hexo/" rel="tag">hexo</a> <a class="tag tag--primary tag--small t-link" href="/tags/jekyll/" rel="tag">jekyll</a>
+    <a class="tag tag--primary tag--small t-none-link" href="/tags/archlinux/" rel="tag">archlinux</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/hexo/" rel="tag">hexo</a> <a class="tag tag--primary tag--small t-none-link" href="/tags/jekyll/" rel="tag">jekyll</a>
 
             </div>
         
@@ -461,7 +458,7 @@
         
             
                 <div id="disqus_thread">
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
             
         
@@ -722,7 +719,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Membuat kamus sendiri? Mungkin nggak ya…? Jawabannya adalah mungkin. Dengan memanfaatkan bahasa C, kompiler GCC dan SQLite 3 beserta pustakanya, kita bisa membuat kamus sendiri. Tak perlu interface yang canggih dan keren, yang penting kamus yang dibuat berguna. Pada contoh ini kamus yang dibuat berjalan pada modus command line. Source code pada contoh ini berdasarkan pada dokumentasi <a href="http://www.sqlite.org/" target="_blank" rel="noopener">SQLite</a>.</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Membuat kamus sendiri? Mungkin nggak ya…? Jawabannya adalah mungkin. Dengan memanfaatkan bahasa C, kompiler GCC dan SQLite 3 beserta pustakanya, kita bisa membuat kamus sendiri. Tak perlu interface yang canggih dan keren, yang penting kamus yang dibuat berguna. Pada contoh ini kamus yang dibuat berjalan pada modus command line. Source code pada contoh ini berdasarkan pada dokumentasi <a target="_blank" rel="noopener" href="http://www.sqlite.org/">SQLite</a>.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -755,7 +752,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a href="https://kde-apps.org" target="_blank" rel="noopener">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Tadi pagi membaca feed dari <a target="_blank" rel="noopener" href="https://kde-apps.org">https://kde-apps.org</a>, ada berita bahwa Wicd KDE 0.3.0 telah dirilis. Wicd KDE adalah Wicd klien untuk KDE Platform. Apa yang baru dengan Wicd KDE 0.3.0? Pada rilis yang sekarang ini Wicd KDE adalah sebuah plasmoid. Iseng-iseng saya update Wicd KDE melalui AUR, namun ternyata paket dari AUR sudah out of dated. 😦</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -821,7 +818,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a href="http://www.archlinux.org/" target="_blank" rel="noopener">Arch Linux</a> dengan <a href="https://wiki.archlinux.org/index.php/Deltup" target="_blank" rel="noopener">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a href="http://delta.archlinux.fr/" target="_blank" rel="noopener">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Waah ternyata lumayan lama juga saya ndak nulis di blog ini. Kali ini saya akan berbagi tulisan mengenai pengalaman saya meng-<em>upgrade</em> <a target="_blank" rel="noopener" href="http://www.archlinux.org/">Arch Linux</a> dengan <a target="_blank" rel="noopener" href="https://wiki.archlinux.org/index.php/Deltup">delta update</a>. Pada awalnya saya sempat ragu menggunakan delta karena delta update sendiri belum didukung secara <em>official</em>. Selain itu mirror yang menyediakan paket delta baru 1 yaitu <a target="_blank" rel="noopener" href="http://delta.archlinux.fr/">http://delta.archlinux.fr/</a>. Namun pada akhirnya saya nekat saja, kalau ndak nekat kapan saya punya pengalaman upgrade menggunakan delta? 😁</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -854,7 +851,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a href="https://www.facebook.com/walesa/posts/4007252307182" target="_blank" rel="noopener">status</a> Facebooknya om Walesa jadi kepengin menjajal <a href="http://www.kde.org/announcements/announce-4.9-beta2.php" target="_blank" rel="noopener">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>Gara-gara komentar di <a target="_blank" rel="noopener" href="https://www.facebook.com/walesa/posts/4007252307182">status</a> Facebooknya om Walesa jadi kepengin menjajal <a target="_blank" rel="noopener" href="http://www.kde.org/announcements/announce-4.9-beta2.php">KDE 4.9 Beta2</a>. Setelah semalaman ketiduran menunggu upgrade KDE, baru pagi ini saya punya kesempatan menjajalnya.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -887,7 +884,7 @@
                                 
                             </span>
                         </span>
-                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a href="http://www.kde.org/announcements/announce-4.9-rc1.php" target="_blank" rel="noopener">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.</p></div>
+                        <div class="media-content hide-xs font-merryweather"><p>27 Juni 2012 kemarin KDE mengumumkan tersedianya <a target="_blank" rel="noopener" href="http://www.kde.org/announcements/announce-4.9-rc1.php">KDE 4.8.95 alias KDE 4.9 RC1</a>, dan semalam saya mengupgrade desktop KDE saya dari 4.8.90 (4.9 beta2) menjadi 4.8.95 (4.9 RC1). Ritual upgrade dengan <code>pacman -Syu</code> berjalan lantjar djaja dan tidak ada masalah sama sekali ketika masuk ke desktop.</p></div>
                     </div>
                     <div style="clear:both;"></div>
                     <hr>
@@ -1066,7 +1063,7 @@
 <script src="/assets/js/algoliasearch.js"></script>
 
     <script>
-      var algoliaClient = algoliasearch('5IJHR9MI50', '3fb6d5567abc2c3f45cc5bce5f29d33b');
+      var algoliaClient = algoliasearch('AKI0Y37EA1', '9b0084f5343d3a80d8e0e1c7f04851e2');
       var algoliaIndex = algoliaClient.initIndex('Goblog');
     </script>
 
